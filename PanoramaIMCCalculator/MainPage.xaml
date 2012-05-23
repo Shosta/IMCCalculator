@@ -1,0 +1,113 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PanoramaIMCCalculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+ 
+        <!--Contrôle Panorama-->
+        <controls:Panorama Title="Calculer votre IMC" Foreground="White">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="PanoramaBackground.png"/>
+            </controls:Panorama.Background>
+ 
+            <!--Élément un de panorama-->
+            <controls:PanoramaItem Header="Calcul" Foreground="White">
+            	<Grid>
+            		<Grid.ColumnDefinitions>
+            			<ColumnDefinition Width="0.65*"/>
+            			<ColumnDefinition Width="0.35*"/>
+            		</Grid.ColumnDefinitions>
+            		<Grid.RowDefinitions>
+            			<RowDefinition Height="0.167*"/>
+            			<RowDefinition Height="0.167*"/>
+            			<RowDefinition Height="0.542*"/>
+            			<RowDefinition Height="0.122*"/>
+            		</Grid.RowDefinitions>
+            		<TextBox x:Name="metricHeightTextBox" TextWrapping="Wrap" Text="Taille" FontSize="32" FontWeight="Bold" Tap="clickMetricHeightTextBox" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" d:LayoutOverrides="Height"/>
+            		<TextBlock Grid.Column="1" Margin="0" TextWrapping="Wrap" Text="cm" HorizontalAlignment="Left" FontSize="32" FontWeight="Bold" VerticalAlignment="Center"/>
+            		<TextBox x:Name="metricWeightTextBox" TextWrapping="Wrap" Text="Poids" FontSize="32" FontWeight="Bold" Tap="clickMetricWeightTextBox" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" Grid.Row="1" d:LayoutOverrides="Height"/>
+            		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="kg" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" FontSize="32" FontWeight="Bold"/>
+            		<TextBlock x:Name="metricIMCResultTextBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="32" Foreground="White" Margin="8,-1,8,8" Grid.Row="2" Grid.ColumnSpan="2"><Run Text="Le calcul de votre "/><Run Text="IMC"/></TextBlock>
+            		<Button Content="Calculer" Click="clickCalculateMetricIMC" Foreground="White" Margin="0,0,-29,0" Grid.Row="3" HorizontalAlignment="Center" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Height="74"/>
+            	</Grid>
+                <!--Liste double trait avec habillage du texte-->
+            </controls:PanoramaItem>
+ 
+            <!--Élément deux de panorama-->
+            <!--Utilisez 'Orientation="Horizontal"' pour activer un panneau qui s'affiche horizontalement-->
+            <controls:PanoramaItem Header="Information" Foreground="White">
+            	<Grid>
+            		<Grid.ColumnDefinitions>
+            			<ColumnDefinition Width="210"/>
+            			<ColumnDefinition Width="210"/>
+            		</Grid.ColumnDefinitions>
+            		<Grid.RowDefinitions>
+            			<RowDefinition Height="0.143*"/>
+            			<RowDefinition Height="0.857*"/>
+            		</Grid.RowDefinitions>
+            		<Rectangle Fill="#00F4F4F5" Stroke="Black" StrokeThickness="5" RadiusX="10" RadiusY="10" Margin="8,0,8,4"/>
+            		<TextBlock TextWrapping="Wrap" Text="Taille" FontSize="18.667" HorizontalAlignment="Left" Margin="9,22,0,24" d:LayoutOverrides="Height" VerticalAlignment="Center">
+            			<TextBlock.Projection>
+            				<PlaneProjection RotationZ="90"/>
+            			</TextBlock.Projection>
+            		</TextBlock>
+            		<TextBlock x:Name="feedbackHeightTextBlock" TextWrapping="Wrap" Text="0 m" TextAlignment="Center" LineHeight="48" FontSize="29.333" FontWeight="Bold" Foreground="White" Margin="50,11,45,13"/>
+            		<Rectangle Fill="#00F4F4F5" RadiusY="10" RadiusX="10" Stroke="Black" StrokeThickness="5" Margin="8,0,8,4" Grid.Column="1"/>
+            		<TextBlock TextWrapping="Wrap" Text="Poids" FontSize="18.667" Margin="3,22,0,24" d:LayoutOverrides="Height" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            			<TextBlock.Projection>
+            				<PlaneProjection RotationZ="90"/>
+            			</TextBlock.Projection>
+            		</TextBlock>
+            		<TextBlock x:Name="feedbackWeightTextBlock" TextWrapping="Wrap" Text="0 kg" TextAlignment="Center" LineHeight="48" FontSize="29.333" FontWeight="Bold" Margin="45,10,45,14" Grid.Column="1"/>
+            		<StackPanel Margin="8,1,8,7" Grid.Row="1" Grid.ColumnSpan="2">
+            			<Canvas Height="60" Background="#FFE7260E">
+            				<TextBlock x:Name="HardObesityZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone d'obésité sévère" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
+            				<TextBlock TextWrapping="Wrap" Width="250" Height="41" Text="Obésité sévère" Canvas.Top="11" Canvas.Left="8" FontWeight="Bold" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            				<TextBlock Canvas.Left="262" TextWrapping="Wrap" Text="35 et plus" Canvas.Top="8" Foreground="Black" FontWeight="Bold" FontSize="29.333" Height="44" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            			</Canvas>
+            			<Canvas Height="70" Background="#FFED9200">
+            				<TextBlock x:Name="ModerateObesityZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone d'obésité modérée" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
+            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Obésité modérée" Canvas.Top="15" Height="38" Width="242" FontWeight="Bold" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            				<TextBlock Canvas.Left="254" TextWrapping="Wrap" Canvas.Top="15" FontSize="29.333" Height="38" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"><Run Text="de 30 à 35"/><LineBreak/><Run/></TextBlock>
+            			</Canvas>
+            			<Canvas Height="70" Background="#FFE4C004">
+            				<TextBlock x:Name="SurpoidsZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone de surpoids" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
+            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Surpoids" Canvas.Top="19" FontWeight="Bold" FontSize="29.333" Width="242"/>
+            				<TextBlock Canvas.Left="254" TextWrapping="Wrap" Canvas.Top="19" Text="de 25 à 30" Foreground="Black" FontSize="29.333" FontWeight="Bold" Height="39"/>
+            			</Canvas>
+            			<Canvas Height="100" Background="#FF0F9D3E">
+            				<TextBlock x:Name="LoseKilosToNormalWeightTextBlock" Height="24" TextWrapping="Wrap" Text="Perdez x kilos pour revenir dans la zone normale" Width="458" FontSize="17.333" FontWeight="Bold" Visibility="Collapsed"/>
+            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Normal" Canvas.Top="31" Width="222" FontWeight="Bold" FontSize="29.333"/>
+            				<TextBlock Canvas.Left="234" TextWrapping="Wrap" Text="de 18.5 à 25" Canvas.Top="31" FontSize="29.333" FontWeight="Bold" Foreground="Black"/>
+            				<TextBlock x:Name="GainKilosToNormalWeightTextBlock" Height="24" TextWrapping="Wrap" Text="Gagnez x kilos pour revenir dans la zone normale" Canvas.Top="76" Width="458" FontSize="17.333" FontWeight="Bold" Visibility="Collapsed"/>
+            			</Canvas>
+            			<Canvas Height="60" Background="#FFE4C004">
+            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Canvas.Top="12" Height="37" Width="201" FontWeight="Bold" FontSize="29.333"><Run Text="Maigreur"/><LineBreak/><Run/></TextBlock>
+            				<TextBlock Canvas.Left="213" TextWrapping="Wrap" Canvas.Top="12" Text="de 16.5 à 18.5" Foreground="Black" FontSize="29.333" FontWeight="Bold" Height="37"/>
+            				<TextBlock x:Name="MaigreurZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone de maigreur" Canvas.Top="40" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
+            			</Canvas>
+            			<Canvas Height="60" Background="#FFE7260E">
+            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Dénutrition" Canvas.Top="9" Width="196" FontWeight="Bold" FontSize="29.333"/>
+            				<TextBlock Canvas.Left="208" TextWrapping="Wrap" Text="moins de 16.5" Canvas.Top="10" FontSize="29.333" FontWeight="Bold" Foreground="Black" Height="38"/>
+            				<TextBlock x:Name="DenutritionZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone de dénutrition" Canvas.Top="40" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
+            			</Canvas>
+            		</StackPanel>
+            	</Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+</phone:PhoneApplicationPage>
