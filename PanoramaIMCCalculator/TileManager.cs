@@ -101,34 +101,25 @@ namespace PanoramaIMCCalculator
         }
 
 
-        private void createImageForBackTile()
+        private void createImageForBackTile(string backBackgroundImageName)
         {
             try
             {
-                BitmapImage logo = new BitmapImage(new Uri("/Resources/Images/thumbs-up.png", UriKind.Absolute));
-
-                WriteableBitmap bmp = new WriteableBitmap(logo);
-
-                bmp.Invalidate();
+                var stream = Application.GetResourceStream(new Uri("Resources/Images/" + backBackgroundImageName, UriKind.Relative));
 
                 var isf = IsolatedStorageFile.GetUserStoreForApplication();
-                var filename = "/Shared/ShellContent/tile.jpg";
-                // ca
-                using (var st = new IsolatedStorageFileStream(filename, FileMode.Create, FileAccess.Write, isf))
+                const string filename = "/Shared/ShellContent/tile.png";
+                
+                using (var st = isf.OpenFile(filename, FileMode.Create, FileAccess.Write))
                 {
-                    bmp.SaveJpeg(st, 173, 173, 0, 100);
-                }
-
-                // ou ca 
-                using (var st = isf.CreateFile("/Shared/ShellContent/tile.jpg"))
-                {
-                    bmp.SaveJpeg(st, 173, 173, 0, 97);
+                    stream.Stream.Position = 0;
+                    stream.Stream.CopyTo(st);
+                    st.Flush();
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("{0} Exception caught.", e);
-
             }
         }
 
@@ -166,7 +157,7 @@ namespace PanoramaIMCCalculator
             // Application should always be found
             if (TileToFind != null)
             {
-                createImageForBackTile();
+                createImageForBackTile(backBackgroundImageName);
 
                 // Set the properties to update for the Application Tile.
                 // Empty strings for the text values and URIs will result in the property being cleared.
@@ -176,7 +167,7 @@ namespace PanoramaIMCCalculator
                     // BackgroundImage = new Uri(textBoxBackgroundImage.Text, UriKind.Relative),
                     Count = Convert.ToInt32(imc),
                     BackTitle = backTitle,
-                    BackBackgroundImage = new Uri("isostore:/Shared/ShellContent/tile.jpg", UriKind.Absolute),
+                    BackBackgroundImage = new Uri("isostore:/Shared/ShellContent/tile.png", UriKind.Absolute),
                     BackContent = backContent
                 };
 
