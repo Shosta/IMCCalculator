@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.Phone" />
     <Reference Include="Microsoft.Phone.Controls" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -99,12 +100,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="PanoramaBackground.png" />
-    <Content Include="Resources\Images\thumbs-down.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Images\thumbs-up.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Resources\Images\BackTileDenutrition.png" />
+    <Content Include="Resources\Images\BackTileDenutritionFemme.png" />
+    <Content Include="Resources\Images\BackTileMaigreur.png" />
+    <Content Include="Resources\Images\BackTileMaigreurFemme.png" />
+    <Content Include="Resources\Images\BackTileNormal.png" />
+    <Content Include="Resources\Images\BackTileNormalFemme.png" />
+    <Content Include="Resources\Images\BackTileObese.png" />
+    <Content Include="Resources\Images\BackTileObeseFemme.png" />
+    <Content Include="Resources\Images\BackTileSurpoids.png" />
+    <Content Include="Resources\Images\BackTileSurpoidsFemme.png" />
+    <Content Include="Resources\Images\men.png" />
+    <Content Include="Resources\Images\menSelected.png" />
+    <Content Include="Resources\Images\women.png" />
+    <Content Include="Resources\Images\womenSelected.png" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />

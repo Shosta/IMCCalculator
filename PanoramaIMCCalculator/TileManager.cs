@@ -21,85 +21,72 @@ namespace PanoramaIMCCalculator
 {
     public class TileManager
     {
-
-        private void saveImage()
+        private string backTitleForIMC(double imc, double currentHeight, double currentWeight)
         {
-            string filename = "Images/app.jpg";
-            StreamResourceInfo sr = Application.GetResourceStream(new Uri(filename, UriKind.Relative));
-
-
-            BitmapImage bmp = new BitmapImage();
-
-
-            bmp.SetSource(sr.Stream);
-            WriteableBitmap wb = new WriteableBitmap(bmp);
-
-            using (IsolatedStorageFile myIsolatedStorage = IsolatedStorageFile.GetUserStoreForApplication())
+            IMCCalculatorManager imcManager = new IMCCalculatorManager();
+            
+            string backTitle = "";
+            if (imc < 16.5) // Dénutrition
             {
-                myIsolatedStorage.CreateDirectory("Images");
-
-                if (myIsolatedStorage.FileExists(filename))
-                {
-                    myIsolatedStorage.DeleteFile(filename);
-                }
-
-                //using (IsolatedStorageFileStream fileStream =  new IsolatedStorageFileStream(filename, FileMode.Create, myIsolatedStorage)
-                //{ 
-
-                IsolatedStorageFileStream filestream = myIsolatedStorage.CreateFile(filename);
-
-                //WriteableBitmap wb = new WriteableBitmap(bitmap);
-                Extensions.SaveJpeg(wb, filestream, wb.PixelWidth, wb.PixelHeight, 0, 100);
-                filestream.Close();
-                // MessageBox.Show("saved suceessfully");
-
-                //BitmapImage bitmap = new BitmapImage();
-                //    bitmap.SetSource(imageStream);
-                //////}
-
-                //wb.SaveJpeg(fileStream, wb.PixelWidth, wb.PixelHeight, 0, 85);
-                //fileStream.Close();
+                backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
+}
+            if (imc < 18.5 && imc > 16.5) // Maigreur
+            {
+                backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
             }
+            if (imc > 25 && imc < 30) // Obésité modérée
+            {
+                backTitle = imcManager.weightToLoseFromIMC(imc, currentHeight, currentWeight);
+            }
+            if (imc > 30) // Obésité sévère
+            {
+                backTitle = imcManager.weightToLoseFromIMC(imc, currentHeight, currentWeight);
+             }
+            if (18.5 <= imc && imc <= 25) // Zone normale
+            {
+                backTitle = "Ne changez rien.";
+             }
+
+            return backTitle;
         }
 
-
-        private void readImage()
+        private string imageFileNameForIMC(double imc)
         {
-            byte[] data;
-
-
-
-            // Read the entire image in one go into a byte array
-
-            using (IsolatedStorageFile isf = IsolatedStorageFile.GetUserStoreForApplication())
+            string backBackgroundImageName = "";
+            // On recupere le nom de la ressource en fonction de l'imc.
+            if (imc < 16.5) // Dénutrition
             {
-                // Open the file - error handling omitted for brevity
-                // Note: If the image does not exist in isolated storage the following exception will be generated:
-                // System.IO.IsolatedStorage.IsolatedStorageException was unhandled 
-                // Message=Operation not permitted on IsolatedStorageFileStream 
-                using (IsolatedStorageFileStream isfs = isf.OpenFile("/Images/app.jpg", FileMode.Open, FileAccess.Read))
-                {
-                    // Allocate an array large enough for the entire file
-                    data = new byte[isfs.Length];
-
-                    // Read the entire file and then close it
-                    isfs.Read(data, 0, data.Length);
-                    isfs.Close();
-                }
+                 backBackgroundImageName = "BackTileDenutrition";
+            }
+            if (imc < 18.5 && imc > 16.5) // Maigreur
+            {
+                backBackgroundImageName = "BackTileMaigreur";
+            }
+            if (imc > 25 && imc < 30) // Obésité modérée
+            {
+                backBackgroundImageName = "BackTileSurpoids";
+            }
+            if (imc > 30) // Obésité sévère
+            {
+                backBackgroundImageName = "BackTileObese";
+            }
+            if (18.5 <= imc && imc <= 25) // Zone normale
+            {
+                backBackgroundImageName = "BackTileNormal";
             }
 
-            // Create memory stream and bitmap
-            MemoryStream ms = new MemoryStream(data);
-            BitmapImage bi = new BitmapImage();
+            // On ajoute l'extension en fonction du genre de la personne.
+            if (MainPage.isMale)
+            {
+                backBackgroundImageName = backBackgroundImageName + ".png";
+            }
+            else
+            {
+                backBackgroundImageName = backBackgroundImageName + "Femme.png";
+            }
 
-            // Set bitmap source to memory stream
-            bi.SetSource(ms);
-
-            // Create an image UI element – Note: this could be declared in the XAML instead
-            Image image = new Image();
-            image.Source = bi;
+            return backBackgroundImageName;
         }
-
 
         private void createImageForBackTile(string backBackgroundImageName)
         {
@@ -109,7 +96,7 @@ namespace PanoramaIMCCalculator
 
                 var isf = IsolatedStorageFile.GetUserStoreForApplication();
                 const string filename = "/Shared/ShellContent/tile.png";
-                
+
                 using (var st = isf.OpenFile(filename, FileMode.Create, FileAccess.Write))
                 {
                     stream.Stream.Position = 0;
@@ -133,23 +120,9 @@ namespace PanoramaIMCCalculator
         public void changeBackTile(double imc, double currentHeight, double currentWeight, string backContent)
         {
             IMCCalculatorManager imcManager = new IMCCalculatorManager();
-            string backTitle = "";
-            string backBackgroundImageName = "";
-            if (imc < 18.5)
-            {
-                backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
-                backBackgroundImageName = "thumbs-down.png";
-            }
-            if (imc > 25)
-            {
-                backTitle = imcManager.weightToLoseFromIMC(imc, currentHeight, currentWeight);
-                backBackgroundImageName = "thumbs-down.png";
-            }
-            if (18.5 <= imc && imc <= 25)
-            {
-                backTitle = "Ne changez rien.";
-                backBackgroundImageName = "thumbs-up.png";
-            }
+            string backTitle = backTitleForIMC(imc, currentHeight, currentWeight);
+            string backBackgroundImageName = imageFileNameForIMC(imc);
+           
 
             // Application Tile is always the first Tile, even if it is not pinned to Start.
             ShellTile TileToFind = ShellTile.ActiveTiles.First();

@@ -17,6 +17,9 @@ namespace PanoramaIMCCalculator
 {
     public partial class MainPage : PhoneApplicationPage
     {
+
+        public static Boolean isMale = true;
+
         // Constructeur
         public MainPage()
         {
@@ -186,6 +189,41 @@ namespace PanoramaIMCCalculator
             feedbackWeightTextBlock.Text = weight;
         }
 
+        private void changeBackHubTile(double imc)
+        {
+            ObesiteSevereHubTile.Message = "";
+            ObesiteHubTile.Message = "";
+            SurpoidsHubTile.Message = "";
+            NormalHubTile.Message = "";
+            MaigreurHubTile.Message = "";
+            DenutritionHubTile.Message = "";
+
+            if (imc > 35)
+            {
+                ObesiteSevereHubTile.Message = "Vous êtes dans la zone d'obésité sévère.";
+            }
+            else if (30 < imc && imc < 35)
+            {
+                ObesiteHubTile.Message = "Vous êtes dans la zone d'obésité modérée.";
+            }
+            else if (25 < imc && imc < 30)
+            {
+                SurpoidsHubTile.Message = "Vous êtes dans la zone de surpoids.";
+            }
+            else if ( 18.5 < imc && imc < 25)
+            {
+                NormalHubTile.Message = "Vous etes dans la zone normale. Bravo!!";
+            }
+            else if (16.5 < imc && imc < 18.5)
+            {
+                MaigreurHubTile.Message = "Vous êtes dans la zone de maigreur.";
+            }
+            else if (imc < 16.5)
+            {
+                DenutritionHubTile.Message = "Vous êtes dans la zone de dénutrition.";
+            }
+        }
+
         private void clickCalculateMetricIMC(object sender, System.Windows.RoutedEventArgs e)
         {
             try
@@ -209,11 +247,53 @@ namespace PanoramaIMCCalculator
                 TileManager tileManager = new TileManager();
                 IMCCalculatorManager imcManager = new IMCCalculatorManager();
                 tileManager.changeBackTile(imc, height, weight, imcManager.infoFromIMC(imc));
+                changeBackHubTile(imc);
             }
             catch
             {
                 metricIMCResultTextBlock.Text = "Un problème est survenu lors du calcul de votre IMC.\nVeuillez entrer à nouveau votre taille et votre poids.";
             }
+        }
+
+        private void changeToWomen(object sender, System.Windows.RoutedEventArgs e)
+        {
+            menImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/men.png", UriKind.RelativeOrAbsolute));
+            womenImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/womenSelected.png", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void changeToMen(object sender, System.Windows.RoutedEventArgs e)
+        {
+            menImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/menSelected.png", UriKind.RelativeOrAbsolute));
+            womenImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/women.png", UriKind.RelativeOrAbsolute));
+
+        }
+
+        private void displayDenutritionView(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+        }
+
+       
+
+        private void displayMaigreurView(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+        }
+
+        private void displayNormalView(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+        }
+
+        private void displaySurpoidsView(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+        }
+
+        private void displayObesiteView(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
         }
 
     }
