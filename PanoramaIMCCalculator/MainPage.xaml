@@ -27,8 +27,8 @@
  
             <!--Élément un de panorama-->
             <controls:PanoramaItem Header="Calcul" Foreground="White">
-            	<ScrollViewer>
-            		<Grid Height="498">
+            	<ScrollViewer x:Name="mainViewScrollViewer" Height="498">
+            		<Grid>
             			<Grid.ColumnDefinitions>
             				<ColumnDefinition Width="140"/>
             				<ColumnDefinition Width="141"/>
@@ -44,10 +44,10 @@
             			<Image x:Name="menImage" Margin="8" Source="/Resources/Images/menSelected.png"/>
             			<toolkit:ToggleSwitch x:Name="genderToggleSwitch" Header="" Margin="0,0,0,2" Grid.Column="1" Content="" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="changeToWomen" Unchecked="changeToMen"/>
             			<Image x:Name="womenImage" Margin="3,0,8,8" Source="/Resources/Images/women.png" Grid.Column="2" VerticalAlignment="Center"/>
-            			<TextBox x:Name="metricHeightTextBox" TextWrapping="Wrap" Text="Taille" FontSize="32" FontWeight="Bold" Tap="clickMetricHeightTextBox" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" d:LayoutOverrides="Height" Grid.Row="1" Grid.ColumnSpan="2"/>
+            			<TextBox x:Name="metricHeightTextBox" TextWrapping="Wrap" Text="Taille" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" d:LayoutOverrides="Height" Grid.Row="1" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
             			<TextBlock Grid.Column="2" Margin="0" TextWrapping="Wrap" Text="cm" HorizontalAlignment="Left" FontSize="32" FontWeight="Bold" VerticalAlignment="Center" Grid.Row="1"/>
-            			<TextBox x:Name="metricWeightTextBox" TextWrapping="Wrap" Text="Poids" FontSize="32" FontWeight="Bold" Tap="clickMetricWeightTextBox" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" Grid.Row="2" d:LayoutOverrides="Height" Grid.ColumnSpan="2"/>
-            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="kg" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" FontSize="32" FontWeight="Bold" d:IsLocked="True"/>
+            			<TextBox x:Name="metricWeightTextBox" TextWrapping="Wrap" Text="Poids" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" Grid.Row="2" d:LayoutOverrides="Height" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
+            			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="kg" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" FontSize="32" FontWeight="Bold"/>
             			<TextBlock x:Name="metricIMCResultTextBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="26.667" Foreground="White" Margin="8,-1,8,1" Grid.Row="3" Grid.ColumnSpan="3"><Run Text="Le calcul de votre "/><Run Text="IMC"/></TextBlock>
             			<Button Content="Calculer" Click="clickCalculateMetricIMC" Foreground="White" Margin="0,-1,-2,0" Grid.Row="4" d:LayoutOverrides="GridBox" Grid.Column="1"/>
             		</Grid>
@@ -57,7 +57,7 @@
  
             <!--Élément deux de panorama-->
             <!--Utilisez 'Orientation="Horizontal"' pour activer un panneau qui s'affiche horizontalement-->
-            <controls:PanoramaItem Header="Information" Foreground="White">
+            <controls:PanoramaItem Header="Résumé" Foreground="White">
             	<Grid>
             		<Grid.ColumnDefinitions>
             			<ColumnDefinition Width="210"/>
@@ -116,14 +116,26 @@
             		</StackPanel>
             	</Grid>
             </controls:PanoramaItem>
-            <controls:PanoramaItem Header="Wrap Panel" Width="600" Orientation="Horizontal">
-            	<toolkit:WrapPanel>
-            		<toolkit:HubTile x:Name="DenutritionHubTile" Height="Auto" Width="Auto" Source="/Resources/Images/BackTileDenutrition.png" Margin="10" Title="Denutrition" Tap="displayDenutritionView" toolkit:TiltEffect.IsTiltEnabled="True"/>
-            		<toolkit:HubTile x:Name="MaigreurHubTile" Height="Auto" Width="Auto" Source="/Resources/Images/BackTileMaigreur.png" Margin="10" Title="Maigreur" toolkit:TiltEffect.IsTiltEnabled="True" Tap="displayMaigreurView"/>
-            		<toolkit:HubTile x:Name="NormalHubTile" Height="Auto" Width="Auto" Source="/Resources/Images/BackTileNormal.png" Margin="10" Title="Normal" toolkit:TiltEffect.IsTiltEnabled="True" Tap="displayNormalView" />
-            		<toolkit:HubTile x:Name="SurpoidsHubTile" Height="Auto" Width="Auto" Source="/Resources/Images/BackTileSurpoids.png" Margin="10" Title="Surpoids" toolkit:TiltEffect.IsTiltEnabled="True" Tap="displaySurpoidsView"/>
-            		<toolkit:HubTile x:Name="ObesiteHubTile" Height="Auto" Width="Auto" Source="/Resources/Images/BackTileObese.png" Margin="10" Title="Obesité" toolkit:TiltEffect.IsTiltEnabled="True" Tap="displayObesiteView"/>
-            		<toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="Auto" Width="Auto" Source="/Resources/Images/BackTileObese.png" Margin="10" Title="Obesité sévère" toolkit:TiltEffect.IsTiltEnabled="True" Tap="displayObesiteView"/>
+            <controls:PanoramaItem Header="Informations" Width="660" Orientation="Horizontal">
+            	<toolkit:WrapPanel toolkit:TiltEffect.IsTiltEnabled="True">
+            		<Button BorderThickness="0" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Click="displayDenutritionView">
+            			<toolkit:HubTile x:Name="DenutritionHubTile" Height="Auto" Width="Auto" Source="Resources/Images/HubTileImages/HommeDenutrition.png" Margin="0" Title="Dénutrition" toolkit:TiltEffect.IsTiltEnabled="True" FontSize="25.333"/>
+            		</Button>
+            		<Button BorderThickness="0" Margin="0" Padding="0" UseLayoutRounding="True" Click="displayMaigreurView">
+            			<toolkit:HubTile x:Name="MaigreurHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeMaigreur.png" Margin="0" Title="Maigreur" toolkit:TiltEffect.IsTiltEnabled="True"/>
+            		</Button>
+            		<Button BorderThickness="0" Margin="0" Padding="0" Click="displayNormalView">
+            			<toolkit:HubTile x:Name="NormalHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeNormalSelected.png" Margin="0" Title="Normal" toolkit:TiltEffect.IsTiltEnabled="True" />
+            		</Button>
+            		<Button BorderThickness="0" Margin="0" Padding="0" Click="displaySurpoidsView">
+            			<toolkit:HubTile x:Name="SurpoidsHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeSurpoids.png" Margin="0" Title="Surpoids" toolkit:TiltEffect.IsTiltEnabled="True"/>
+            		</Button>
+            		<Button BorderThickness="0" Margin="0" Padding="0" Click="displayObesiteView">
+            			<toolkit:HubTile x:Name="ObesiteHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="Obésité" toolkit:TiltEffect.IsTiltEnabled="True"/>
+            		</Button>
+            		<Button BorderThickness="0" Padding="0" Margin="0" Click="displayObesiteView">
+            			<toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeSurpoids.png" Margin="0" Title="Obésité sévère" toolkit:TiltEffect.IsTiltEnabled="True"/>
+            		</Button>
             	</toolkit:WrapPanel>
             </controls:PanoramaItem>
         </controls:Panorama>

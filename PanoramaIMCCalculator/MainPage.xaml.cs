@@ -11,7 +11,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using PanoramaIMCCalculator.Model;
-// using Microsoft.Phone.Shell;
 
 namespace PanoramaIMCCalculator
 {
@@ -170,16 +169,28 @@ namespace PanoramaIMCCalculator
 
         // User interface interaction management
 
-        private void clickMetricHeightTextBox(object sender, System.Windows.Input.GestureEventArgs e)
+        private void gotFocusOnTextBox(object sender, System.Windows.RoutedEventArgs e)
         {
-            deleteTextBoxContent(metricHeightTextBox);
+            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            deleteTextBoxContent((TextBox)sender);
+            mainViewScrollViewer.Height = 300;
         }
-
-        private void clickMetricWeightTextBox(object sender, System.Windows.Input.GestureEventArgs e)
+    
+        private void lostFocusOnTextBox(object sender, System.Windows.RoutedEventArgs e)
         {
-            deleteTextBoxContent(metricWeightTextBox);
-        }
+            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            TextBox tb = (TextBox)sender;
+            if ( tb.Text == "")
+            {
+                if ( tb == metricHeightTextBox )
+                    metricHeightTextBox.Text = "Taille";
 
+                if ( tb == metricWeightTextBox )
+                    metricWeightTextBox.Text = "Poids";
+            }
+
+            mainViewScrollViewer.Height = 498;
+        }
 
 
         // Calculate Button action management
@@ -189,8 +200,15 @@ namespace PanoramaIMCCalculator
             feedbackWeightTextBlock.Text = weight;
         }
 
-        private void changeBackHubTile(double imc)
+        private void changeAllHubTilesToStartState()
         {
+            ObesiteSevereHubTile.Title = "Obésité sévère";
+            ObesiteHubTile.Title = "Obésité";
+            SurpoidsHubTile.Title = "Surpoids";
+            NormalHubTile.Title = "Normal";
+            MaigreurHubTile.Title = "Maigreur";
+            DenutritionHubTile.Title = "Dénutrition";
+
             ObesiteSevereHubTile.Message = "";
             ObesiteHubTile.Message = "";
             SurpoidsHubTile.Message = "";
@@ -198,29 +216,53 @@ namespace PanoramaIMCCalculator
             MaigreurHubTile.Message = "";
             DenutritionHubTile.Message = "";
 
+            ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObese.png", UriKind.RelativeOrAbsolute));
+            ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObese.png", UriKind.RelativeOrAbsolute));
+            SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeSurpoids.png", UriKind.RelativeOrAbsolute));
+            NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeNormalSelected.png", UriKind.RelativeOrAbsolute));
+            MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeMaigreur.png", UriKind.RelativeOrAbsolute));
+            DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeDenutrition.png", UriKind.RelativeOrAbsolute));
+        }
+
+        private void changeBackHubTile(double imc)
+        {
+            changeAllHubTilesToStartState();
+
             if (imc > 35)
             {
+                ObesiteSevereHubTile.Title = "";
                 ObesiteSevereHubTile.Message = "Vous êtes dans la zone d'obésité sévère.";
+                ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (30 < imc && imc < 35)
             {
+                ObesiteHubTile.Title = "";
                 ObesiteHubTile.Message = "Vous êtes dans la zone d'obésité modérée.";
+                ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (25 < imc && imc < 30)
             {
+                SurpoidsHubTile.Title = "";
                 SurpoidsHubTile.Message = "Vous êtes dans la zone de surpoids.";
+                SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeSurpoidsSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if ( 18.5 < imc && imc < 25)
             {
+                NormalHubTile.Title = "";
                 NormalHubTile.Message = "Vous etes dans la zone normale. Bravo!!";
+                NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeNormalSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (16.5 < imc && imc < 18.5)
             {
+                MaigreurHubTile.Title = "";
                 MaigreurHubTile.Message = "Vous êtes dans la zone de maigreur.";
+                MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeMaigreurSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (imc < 16.5)
             {
+                DenutritionHubTile.Title = "";
                 DenutritionHubTile.Message = "Vous êtes dans la zone de dénutrition.";
+                DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeDenutritionSelected.png", UriKind.RelativeOrAbsolute));
             }
         }
 
@@ -257,6 +299,7 @@ namespace PanoramaIMCCalculator
 
         private void changeToWomen(object sender, System.Windows.RoutedEventArgs e)
         {
+            isMale = false;
             menImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/men.png", UriKind.RelativeOrAbsolute));
             womenImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/womenSelected.png", UriKind.RelativeOrAbsolute));
 
@@ -264,37 +307,46 @@ namespace PanoramaIMCCalculator
 
         private void changeToMen(object sender, System.Windows.RoutedEventArgs e)
         {
+            isMale = true;
             menImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/menSelected.png", UriKind.RelativeOrAbsolute));
             womenImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/women.png", UriKind.RelativeOrAbsolute));
 
         }
 
-        private void displayDenutritionView(object sender, System.Windows.Input.GestureEventArgs e)
+        private void displayDenutritionView(object sender, System.Windows.RoutedEventArgs e)
         {
         	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            Uri uri = new Uri("/DenutritionPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
         }
 
-       
-
-        private void displayMaigreurView(object sender, System.Windows.Input.GestureEventArgs e)
+        private void displayMaigreurView(object sender, System.Windows.RoutedEventArgs e)
         {
         	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            Uri uri = new Uri("/MaigreurPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
         }
 
-        private void displayNormalView(object sender, System.Windows.Input.GestureEventArgs e)
+        private void displayNormalView(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            Uri uri = new Uri("/NormalPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
         }
 
-        private void displaySurpoidsView(object sender, System.Windows.Input.GestureEventArgs e)
+        private void displaySurpoidsView(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            Uri uri = new Uri("/SurpoidsPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
         }
 
-        private void displayObesiteView(object sender, System.Windows.Input.GestureEventArgs e)
+        private void displayObesiteView(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
+            Uri uri = new Uri("/ObesitePage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
         }
-
+        
     }
 }
