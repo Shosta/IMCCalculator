@@ -200,6 +200,17 @@ namespace PanoramaIMCCalculator
             feedbackWeightTextBlock.Text = weight;
         }
 
+        private string getGender()
+        {
+            string gender = "Homme";
+            if (!isMale)
+            {
+                gender = "Femme";
+            }
+
+            return gender;
+        }
+
         private void changeAllHubTilesToStartState()
         {
             ObesiteSevereHubTile.Title = "Obésité sévère";
@@ -216,53 +227,57 @@ namespace PanoramaIMCCalculator
             MaigreurHubTile.Message = "";
             DenutritionHubTile.Message = "";
 
-            ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObese.png", UriKind.RelativeOrAbsolute));
-            ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObese.png", UriKind.RelativeOrAbsolute));
-            SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeSurpoids.png", UriKind.RelativeOrAbsolute));
-            NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeNormalSelected.png", UriKind.RelativeOrAbsolute));
-            MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeMaigreur.png", UriKind.RelativeOrAbsolute));
-            DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeDenutrition.png", UriKind.RelativeOrAbsolute));
+            string gender = getGender();
+
+            ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "Obese.png", UriKind.RelativeOrAbsolute));
+            ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "Obese.png", UriKind.RelativeOrAbsolute));
+            SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "Surpoids.png", UriKind.RelativeOrAbsolute));
+            NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "NormalSelected.png", UriKind.RelativeOrAbsolute));
+            MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "Maigreur.png", UriKind.RelativeOrAbsolute));
+            DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "Denutrition.png", UriKind.RelativeOrAbsolute));
+            
         }
 
         private void changeBackHubTile(double imc)
         {
             changeAllHubTilesToStartState();
+            string gender = getGender();
 
             if (imc > 35)
             {
                 ObesiteSevereHubTile.Title = "";
                 ObesiteSevereHubTile.Message = "Vous êtes dans la zone d'obésité sévère.";
-                ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObeseSelected.png", UriKind.RelativeOrAbsolute));
+                ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "ObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (30 < imc && imc < 35)
             {
                 ObesiteHubTile.Title = "";
                 ObesiteHubTile.Message = "Vous êtes dans la zone d'obésité modérée.";
-                ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeObeseSelected.png", UriKind.RelativeOrAbsolute));
+                ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "ObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (25 < imc && imc < 30)
             {
                 SurpoidsHubTile.Title = "";
                 SurpoidsHubTile.Message = "Vous êtes dans la zone de surpoids.";
-                SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeSurpoidsSelected.png", UriKind.RelativeOrAbsolute));
+                SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "SurpoidsSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if ( 18.5 < imc && imc < 25)
             {
                 NormalHubTile.Title = "";
                 NormalHubTile.Message = "Vous etes dans la zone normale. Bravo!!";
-                NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeNormalSelected.png", UriKind.RelativeOrAbsolute));
+                NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "NormalSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (16.5 < imc && imc < 18.5)
             {
                 MaigreurHubTile.Title = "";
                 MaigreurHubTile.Message = "Vous êtes dans la zone de maigreur.";
-                MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeMaigreurSelected.png", UriKind.RelativeOrAbsolute));
+                MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "MaigreurSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (imc < 16.5)
             {
                 DenutritionHubTile.Title = "";
                 DenutritionHubTile.Message = "Vous êtes dans la zone de dénutrition.";
-                DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/HommeDenutritionSelected.png", UriKind.RelativeOrAbsolute));
+                DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "DenutritionSelected.png", UriKind.RelativeOrAbsolute));
             }
         }
 
@@ -297,12 +312,16 @@ namespace PanoramaIMCCalculator
             }
         }
 
+
+        // Gender management
+
         private void changeToWomen(object sender, System.Windows.RoutedEventArgs e)
         {
             isMale = false;
             menImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/men.png", UriKind.RelativeOrAbsolute));
             womenImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/womenSelected.png", UriKind.RelativeOrAbsolute));
 
+            changeAllHubTilesToStartState();
         }
 
         private void changeToMen(object sender, System.Windows.RoutedEventArgs e)
@@ -311,7 +330,11 @@ namespace PanoramaIMCCalculator
             menImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/menSelected.png", UriKind.RelativeOrAbsolute));
             womenImage.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("Resources/Images/women.png", UriKind.RelativeOrAbsolute));
 
+            changeAllHubTilesToStartState();
         }
+
+
+        // Navigation logic
 
         private void displayDenutritionView(object sender, System.Windows.RoutedEventArgs e)
         {

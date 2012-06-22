@@ -152,6 +152,15 @@
     <Content Include="Resources\Images\BackTileObeseFemme.png" />
     <Content Include="Resources\Images\BackTileSurpoids.png" />
     <Content Include="Resources\Images\BackTileSurpoidsFemme.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeDenutrition.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeDenutritionSelected.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeMaigreur.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeMaigreurSelected.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeNormalSelected.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeObese.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeObeseSelected.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeSurpoids.png" />
+    <Content Include="Resources\Images\HubTileImages\FemmeSurpoidsSelected.png" />
     <Content Include="Resources\Images\HubTileImages\HommeDenutrition.png" />
     <Content Include="Resources\Images\HubTileImages\HommeDenutritionSelected.png" />
     <Content Include="Resources\Images\HubTileImages\HommeMaigreur.png" />
