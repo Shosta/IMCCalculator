@@ -28,7 +28,9 @@
 
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-        	<TextBlock TextWrapping="Wrap" Text="De l'information sur le surpoids." Margin="1,0,-1,0"/></Grid>
+        	<ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock TextWrapping="Wrap"><Run Text="Le surpoids est l'état d'une personne présentant une corpulence considérée comme légèrement plus importante que la normale ou la moyenne dans une société donnée. "/><LineBreak/><Run/><LineBreak/><Run Text="Il est définie par l'Organisation mondiale de la santé comme l'attribut des individus présentant un indice de masse corporelle compris entre 25 et 30 kilogrammes par mètres carrés et est, selon ces critères, bornée par la minceur (ou corpulence normale) et l'obésité modérée."/><LineBreak/><LineBreak/><Run Text="Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids"/></TextBlock>
+        	</ScrollViewer></Grid>
     </Grid>
  
     <!--Exemple de code illustrant l'utilisation de l'ApplicationBar-->

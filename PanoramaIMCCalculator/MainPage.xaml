@@ -134,7 +134,7 @@
             			<toolkit:HubTile x:Name="ObesiteHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="Obésité" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
             		<Button BorderThickness="0" Padding="0" Margin="0" Click="displayObesiteView">
-            			<toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeSurpoids.png" Margin="0" Title="Obésité sévère" toolkit:TiltEffect.IsTiltEnabled="True"/>
+            			<toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="173" Width="173" Source="/Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="Obésité sévère" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
             	</toolkit:WrapPanel>
             </controls:PanoramaItem>
