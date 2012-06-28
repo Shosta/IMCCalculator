@@ -26,7 +26,7 @@
             </controls:Panorama.Background>
  
             <!--Élément un de panorama-->
-            <controls:PanoramaItem Header="Calcul" Foreground="White">
+            <controls:PanoramaItem Header="calcul" Foreground="White">
             	<ScrollViewer x:Name="mainViewScrollViewer" Height="498">
             		<Grid>
             			<Grid.ColumnDefinitions>
@@ -57,7 +57,7 @@
  
             <!--Élément deux de panorama-->
             <!--Utilisez 'Orientation="Horizontal"' pour activer un panneau qui s'affiche horizontalement-->
-            <controls:PanoramaItem Header="Résumé" Foreground="White">
+            <controls:PanoramaItem Header="résumé" Foreground="White">
             	<Grid>
             		<Grid.ColumnDefinitions>
             			<ColumnDefinition Width="210"/>
@@ -116,7 +116,7 @@
             		</StackPanel>
             	</Grid>
             </controls:PanoramaItem>
-            <controls:PanoramaItem Header="Informations" Width="660" Orientation="Horizontal">
+            <controls:PanoramaItem Header="informations" Width="660" Orientation="Horizontal">
             	<toolkit:WrapPanel toolkit:TiltEffect.IsTiltEnabled="True">
             		<Button BorderThickness="0" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Click="displayDenutritionView">
             			<toolkit:HubTile x:Name="DenutritionHubTile" Height="Auto" Width="Auto" Source="Resources/Images/HubTileImages/HommeDenutrition.png" Margin="0" Title="Dénutrition" toolkit:TiltEffect.IsTiltEnabled="True" FontSize="25.333"/>
