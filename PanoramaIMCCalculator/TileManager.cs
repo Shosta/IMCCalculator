@@ -30,15 +30,15 @@ namespace PanoramaIMCCalculator
             {
                 backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
 }
-            if (imc < 18.5 && imc > 16.5) // Maigreur
+            if (16.5 <= imc && imc < 18.5) // Maigreur
             {
                 backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
             }
-            if (imc > 25 && imc < 30) // Obésité modérée
+            if (25 < imc && imc <= 30) // Surpoids
             {
                 backTitle = imcManager.weightToLoseFromIMC(imc, currentHeight, currentWeight);
             }
-            if (imc > 30) // Obésité sévère
+            if (30 < imc) // Obésité et Obésité sévère
             {
                 backTitle = imcManager.weightToLoseFromIMC(imc, currentHeight, currentWeight);
              }
@@ -58,15 +58,15 @@ namespace PanoramaIMCCalculator
             {
                  backBackgroundImageName = "BackTileDenutrition";
             }
-            if (imc < 18.5 && imc > 16.5) // Maigreur
+            if (16.5 <= imc && imc < 18.5) // Maigreur
             {
                 backBackgroundImageName = "BackTileMaigreur";
             }
-            if (imc > 25 && imc < 30) // Obésité modérée
+            if (25 < imc && imc <= 30) // Surpoids
             {
                 backBackgroundImageName = "BackTileSurpoids";
             }
-            if (imc > 30) // Obésité sévère
+            if (imc > 30) // Obésité modérée et sévère
             {
                 backBackgroundImageName = "BackTileObese";
             }

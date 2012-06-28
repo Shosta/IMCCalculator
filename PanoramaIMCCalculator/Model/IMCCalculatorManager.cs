@@ -41,7 +41,7 @@ namespace PanoramaIMCCalculator.Model
             double desiredIMC = 18.5;
             double desiredWeight = desiredIMC * (currentHeight / 100) * (currentHeight / 100);
 
-            double kiloToGain = desiredWeight - currentWeight;
+            double kiloToGain = desiredWeight - currentWeight; 
 
             return "Gagnez " + Math.Round(kiloToGain, 2) + " kilos.";
         }
@@ -75,15 +75,15 @@ namespace PanoramaIMCCalculator.Model
             {
                 result = "Vous êtes dans la zone d'obésité sévère.";
             }
-            else if (30 < imc && imc < 35)
+            else if (30 < imc && imc <= 35)
             {
                 result = "Vous êtes dans la zone d'obésité modérée.";
             }
-            else if (25 < imc && imc < 30)
+            else if (25 < imc && imc <= 30)
             {
                 result = "Vous êtes dans la zone de surpoids.";
             }
-            else if (16.5 < imc && imc < 18.5)
+            else if (16.5 <= imc && imc < 18.5)
             {
                 result = "Vous êtes dans la zone de maigreur.";
             }

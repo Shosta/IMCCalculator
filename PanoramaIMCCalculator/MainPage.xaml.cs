@@ -249,25 +249,25 @@ namespace PanoramaIMCCalculator
                 ObesiteSevereHubTile.Message = "Vous êtes dans la zone d'obésité sévère.";
                 ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "ObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
-            else if (30 < imc && imc < 35)
+            else if (30 < imc && imc <= 35)
             {
                 ObesiteHubTile.Title = "";
                 ObesiteHubTile.Message = "Vous êtes dans la zone d'obésité modérée.";
                 ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "ObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
-            else if (25 < imc && imc < 30)
+            else if (25 < imc && imc <= 30)
             {
                 SurpoidsHubTile.Title = "";
                 SurpoidsHubTile.Message = "Vous êtes dans la zone de surpoids.";
                 SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "SurpoidsSelected.png", UriKind.RelativeOrAbsolute));
             }
-            else if ( 18.5 < imc && imc < 25)
+            else if ( 18.5 <= imc && imc <= 25)
             {
                 NormalHubTile.Title = "";
                 NormalHubTile.Message = "Vous etes dans la zone normale. Bravo!!";
                 NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "NormalSelected.png", UriKind.RelativeOrAbsolute));
             }
-            else if (16.5 < imc && imc < 18.5)
+            else if (16.5 <= imc && imc < 18.5)
             {
                 MaigreurHubTile.Title = "";
                 MaigreurHubTile.Message = "Vous êtes dans la zone de maigreur.";
@@ -295,7 +295,7 @@ namespace PanoramaIMCCalculator
 
                 Double height = Double.Parse(s_height);
                 Double weight = Double.Parse(s_weight);
-                Double imc = Math.Floor(calculateMetricIMC(height, weight));
+                Double imc = calculateMetricIMC(height, weight);
 
 
                 defineFeedbackHeightandWeightTextBlocks(metricHeightTextBox.Text + " cm", metricWeightTextBox.Text + " kg");

@@ -27,9 +27,9 @@
         </StackPanel>
 
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-        	<ScrollViewer Margin="0,0,8,8">
-                <TextBlock TextWrapping="Wrap"><Run Text="La maigreur est l'état de ce qui est maigre. Dans le cas d'une personne, on parle d'insuffisance pondérale. À ce titre, elle est définie par l'Organisation mondiale de la santé comme la condition anormale des individus dont l'indice de masse corporelle est comprise entre 15 et 18,5."/><LineBreak/><Run/><LineBreak/><Run Text="La maigreur pathologique augmente le risque de maladies diverses parmi lesquelles on peut citer les infections ou l'ostéoporose mais peut également être le symptôme de l'une d'elles. Elle peut être également un état non pathologique, c'est-à-dire constitutionnelle, stable et ne s'accompagnant d'aucun trouble."/><LineBreak/><Run/><LineBreak/><Run Text="Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids"/></TextBlock>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0">
+        	<ScrollViewer Margin="24,0,24,8">
+                <TextBlock TextWrapping="Wrap" FontSize="{StaticResource PhoneFontSizeMedium}"><Run Text="La maigreur est l'état de ce qui est maigre. Dans le cas d'une personne, on parle d'insuffisance pondérale. À ce titre, elle est définie par l'Organisation mondiale de la santé comme la condition anormale des individus dont l'indice de masse corporelle est comprise entre 15 et 18,5."/><LineBreak/><Run/><LineBreak/><Run Text="La maigreur pathologique augmente le risque de maladies diverses parmi lesquelles on peut citer les infections ou l'ostéoporose mais peut également être le symptôme de l'une d'elles. Elle peut être également un état non pathologique, c'est-à-dire constitutionnelle, stable et ne s'accompagnant d'aucun trouble."/><LineBreak/><Run/><LineBreak/><Run Text="Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids"/></TextBlock>
         	</ScrollViewer></Grid>
     </Grid>
  
