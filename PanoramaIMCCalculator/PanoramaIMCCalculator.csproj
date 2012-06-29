@@ -60,46 +60,33 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DenutritionPage.xaml.cs">
-      <DependentUpon>DenutritionPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MaigreurPage.xaml.cs">
-      <DependentUpon>MaigreurPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\IMCCalculatorManager.cs" />
-    <Compile Include="NormalPage.xaml.cs">
-      <DependentUpon>NormalPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ObesitePage.xaml.cs">
-      <DependentUpon>ObesitePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ObesiteSeverePage.xaml.cs">
       <DependentUpon>ObesiteSeverePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SurpoidsPage.xaml.cs">
-      <DependentUpon>SurpoidsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TileManager.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ZoneDetailPage.xaml.cs">
+      <DependentUpon>ZoneDetailPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="DenutritionPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MaigreurPage.xaml">
+    <Page Include="AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,19 +98,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
-    <Page Include="NormalPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ObesitePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ObesiteSeverePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SurpoidsPage.xaml">
+    <Page Include="ZoneDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

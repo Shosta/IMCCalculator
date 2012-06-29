@@ -13,9 +13,9 @@ using Microsoft.Phone.Controls;
 
 namespace PanoramaIMCCalculator
 {
-    public partial class DenutritionPage : PhoneApplicationPage
+    public partial class AboutPage : PhoneApplicationPage
     {
-        public DenutritionPage()
+        public AboutPage()
         {
             InitializeComponent();
         }

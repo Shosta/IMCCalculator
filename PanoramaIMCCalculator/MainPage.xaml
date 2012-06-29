@@ -136,6 +136,7 @@
             		<Button BorderThickness="0" Padding="0" Margin="0" Click="displayObesiteView">
             			<toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="173" Width="173" Source="/Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="Obésité sévère" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
+            		<HyperlinkButton Content="A propos" Margin="0,30,0,0" NavigateUri="/PanoramaIMCCalculator;component/AboutPage.xaml"/>
             	</toolkit:WrapPanel>
             </controls:PanoramaItem>
         </controls:Panorama>

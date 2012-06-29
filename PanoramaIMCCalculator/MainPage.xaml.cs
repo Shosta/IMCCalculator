@@ -339,35 +339,56 @@ namespace PanoramaIMCCalculator
         private void displayDenutritionView(object sender, System.Windows.RoutedEventArgs e)
         {
         	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
-            Uri uri = new Uri("/DenutritionPage.xaml", UriKind.Relative);
+            string gender = "Homme";
+            if (!isMale)
+                gender = "Femme";
+
+            Uri uri = new Uri("/ZoneDetailPage.xaml?type=Denutrition&gender=" + gender, UriKind.Relative);
+            // Uri uri = new Uri("/DenutritionPage.xaml", UriKind.Relative);
             NavigationService.Navigate(uri);
         }
 
         private void displayMaigreurView(object sender, System.Windows.RoutedEventArgs e)
         {
         	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
-            Uri uri = new Uri("/MaigreurPage.xaml", UriKind.Relative);
+            string gender = "Homme";
+            if (!isMale)
+                gender = "Femme";
+
+            Uri uri = new Uri("/ZoneDetailPage.xaml?type=Maigreur&gender=" + gender, UriKind.Relative);
             NavigationService.Navigate(uri);
         }
 
         private void displayNormalView(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
-            Uri uri = new Uri("/NormalPage.xaml", UriKind.Relative);
+            string gender = "Homme";
+            if (!isMale)
+                gender = "Femme";
+
+            Uri uri = new Uri("/ZoneDetailPage.xaml?type=Normal&gender=" + gender, UriKind.Relative);
             NavigationService.Navigate(uri);
         }
 
         private void displaySurpoidsView(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
-            Uri uri = new Uri("/SurpoidsPage.xaml", UriKind.Relative);
+            string gender = "Homme";
+            if (!isMale)
+                gender = "Femme";
+
+            Uri uri = new Uri("/ZoneDetailPage.xaml?type=Surpoids&gender=" + gender, UriKind.Relative);
             NavigationService.Navigate(uri);
         }
 
         private void displayObesiteView(object sender, System.Windows.RoutedEventArgs e)
         {
             // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
-            Uri uri = new Uri("/ObesitePage.xaml", UriKind.Relative);
+            string gender = "Homme";
+            if (!isMale)
+                gender = "Femme";
+
+            Uri uri = new Uri("/ZoneDetailPage.xaml?type=Obese&gender=" + gender, UriKind.Relative);
             NavigationService.Navigate(uri);
         }
         
