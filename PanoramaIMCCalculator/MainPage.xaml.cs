@@ -246,37 +246,37 @@ namespace PanoramaIMCCalculator
             if (imc > 35)
             {
                 ObesiteSevereHubTile.Title = "";
-                ObesiteSevereHubTile.Message = "Vous êtes dans la zone d'obésité sévère.";
+                ObesiteSevereHubTile.Message = AppResources.ObesiteSevereHubTileMessage;
                 ObesiteSevereHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "ObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (30 < imc && imc <= 35)
             {
                 ObesiteHubTile.Title = "";
-                ObesiteHubTile.Message = "Vous êtes dans la zone d'obésité modérée.";
+                ObesiteHubTile.Message = AppResources.ObesiteHubTileMessage;
                 ObesiteHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "ObeseSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (25 < imc && imc <= 30)
             {
                 SurpoidsHubTile.Title = "";
-                SurpoidsHubTile.Message = "Vous êtes dans la zone de surpoids.";
+                SurpoidsHubTile.Message = AppResources.SurpoidsHubTileMessage;
                 SurpoidsHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "SurpoidsSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if ( 18.5 <= imc && imc <= 25)
             {
                 NormalHubTile.Title = "";
-                NormalHubTile.Message = "Vous etes dans la zone normale. Bravo!!";
+                NormalHubTile.Message = AppResources.NormalHubTileMessage;
                 NormalHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "NormalSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (16.5 <= imc && imc < 18.5)
             {
                 MaigreurHubTile.Title = "";
-                MaigreurHubTile.Message = "Vous êtes dans la zone de maigreur.";
+                MaigreurHubTile.Message = AppResources.MaigreurHubTileMessage;
                 MaigreurHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "MaigreurSelected.png", UriKind.RelativeOrAbsolute));
             }
             else if (imc < 16.5)
             {
                 DenutritionHubTile.Title = "";
-                DenutritionHubTile.Message = "Vous êtes dans la zone de dénutrition.";
+                DenutritionHubTile.Message = AppResources.DenutritionHubTileMessage;
                 DenutritionHubTile.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri("/Resources/Images/HubTileImages/" + gender + "DenutritionSelected.png", UriKind.RelativeOrAbsolute));
             }
         }
@@ -308,7 +308,7 @@ namespace PanoramaIMCCalculator
             }
             catch
             {
-                metricIMCResultTextBlock.Text = "Un problème est survenu lors du calcul de votre IMC.\nVeuillez entrer à nouveau votre taille et votre poids.";
+                metricIMCResultTextBlock.Text = AppResources.IMCCalculationError;
             }
         }
 
