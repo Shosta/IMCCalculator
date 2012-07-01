@@ -20,17 +20,87 @@
         <controls:Pivot Title="IMC Calculator">
             <!--Élément un de tableau croisé dynamique-->
             <controls:PivotItem Header="à propos">
-                <Grid/>
+                <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
+            		<Grid Margin="12,0,0,8">
+            			<Grid.RowDefinitions>
+            				<RowDefinition Height="0.066*"/>
+            				<RowDefinition Height="0.062*"/>
+            				<RowDefinition Height="0.058*"/>
+            				<RowDefinition Height="0.092*"/>
+            				<RowDefinition Height="0.077*"/>
+            				<RowDefinition Height="0.034*"/>
+            				<RowDefinition Height="0.092*"/>
+            				<RowDefinition Height="0.106*"/>
+            				<RowDefinition Height="0.092*"/>
+            				<RowDefinition Height="0.082*"/>
+            				<RowDefinition Height="0.1*"/>
+            				<RowDefinition Height="0.034*"/>
+            				<RowDefinition Height="0.034*"/>
+            				<RowDefinition Height="0.034*"/>
+            				<RowDefinition Height="0.034*"/>
+            			</Grid.RowDefinitions>
+            			<Grid.ColumnDefinitions>
+            				<ColumnDefinition Width="0.225*"/>
+            				<ColumnDefinition Width="0.775*"/>
+            			</Grid.ColumnDefinitions>
+            			<Image Source="/ApplicationIcon.png" Margin="0" Grid.RowSpan="2"/>
+            			<TextBlock TextWrapping="Wrap" Text="IMC Calculator" Grid.Column="1" Margin="8,0,0,0" FontSize="{StaticResource PhoneFontSizeMedium}" VerticalAlignment="Center"/>
+            			<TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Text="v1.3" d:LayoutOverrides="Width" Foreground="Gray" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" FontSize="{StaticResource PhoneFontSizeNormal}"/>
+            			<TextBlock Margin="0,8" TextWrapping="Wrap" Text="par Rémi Lavedrine" d:LayoutOverrides="Width, Height" Grid.Row="2" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            			<TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="donner votre avis" d:LayoutOverrides="Width, Height" Grid.Row="3" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock TextWrapping="Wrap" Text="Envoyer vos commentaires, questions, louanges à :" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.ColumnSpan="2" Grid.Row="4" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            			<TextBlock TextWrapping="Wrap" Text="remilavedrine-imccalculator@yahoo.fr" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="5" Grid.ColumnSpan="2"/>
+            			<TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="disclaimer" d:LayoutOverrides="Width, Height" Grid.Row="6" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock Margin="0,0,18,4" TextWrapping="Wrap" Text="IMC Calculator ne peut être tenu pour responsable de la mauvaise utilisation que vous pouvez faire des données fournies." d:LayoutOverrides="Width, Height" Grid.Row="7" Grid.ColumnSpan="2"/>
+            			<TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="vie privée" d:LayoutOverrides="Width, Height" Grid.Row="8" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock Margin="0,0,0,4" TextWrapping="Wrap" Text="IMC Calculator ne collecte aucune information vous concernant." d:LayoutOverrides="Width, Height" Grid.Row="9" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            			<TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="merci à" d:LayoutOverrides="Width, Height" Grid.Row="10" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock TextWrapping="Wrap" Text="Patrick Sachet" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="11" Grid.ColumnSpan="2"/>
+            			<TextBlock TextWrapping="Wrap" Text="Andréas Saudemont" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="12" Grid.ColumnSpan="2"/>
+            			<TextBlock TextWrapping="Wrap" Text="Denis Prevot" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="13" Grid.ColumnSpan="2"/>
+            			<TextBlock Margin="0" TextWrapping="Wrap" Text="Silverlight for Windows Phone Toolkit" VerticalAlignment="Center" d:LayoutOverrides="Width" Grid.Row="14" Grid.ColumnSpan="2"/>
+            		</Grid>
+            	</ScrollViewer>
             </controls:PivotItem>
 
             <!--Élément deux de tableau croisé dynamique-->
             <controls:PivotItem Header="nouveautés">
-                <Grid/>
+                <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
+            		<Grid Margin="12,0,0,8">
+            			<Grid.RowDefinitions>
+            				<RowDefinition Height="0.146*"/>
+            				<RowDefinition Height="0.363*"/>
+            				<RowDefinition Height="0.214*"/>
+            				<RowDefinition Height="0.139*"/>
+            				<RowDefinition Height="0.087*"/>
+            				<RowDefinition Height="0.051*"/>
+            			</Grid.RowDefinitions>
+            			<TextBlock Margin="0,0,0,8" TextWrapping="Wrap" Text="version 1.3" d:LayoutOverrides="Width, Height" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock Margin="0,0,0,6" TextWrapping="Wrap" Text="Ajout de la partie about et correction d'un bug dans le calcul de l'imc pour certaines valeurs d'imc et de la non correspondance de la bonne image sur la live tile." d:LayoutOverrides="Width, Height" Grid.Row="1" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,24,0,8" TextWrapping="Wrap" Text="version 1.1" d:LayoutOverrides="Height" Grid.Row="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,0,0,6" TextWrapping="Wrap" Text="Ajout du Live Tile lors du calcul de l'IMC et gestion des images et du calcul lorsque l'utilisateur est un homme ou une femme." d:LayoutOverrides="Height" Grid.Row="3" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,24,0,8" TextWrapping="Wrap" Text="version 1.0" d:LayoutOverrides="Height" Grid.Row="4" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,0,0,6" TextWrapping="Wrap" Text="Premmière version de l'application" d:LayoutOverrides="Height" Grid.Row="5" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            		</Grid>
+            	</ScrollViewer>
             </controls:PivotItem>
 
             <!--Élément trois de tableau croisé dynamique-->
             <controls:PivotItem Header="legalese">
-                <Grid/>
+                <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
+            		<Grid Margin="12,0,0,0">
+            			<Grid.RowDefinitions>
+            				<RowDefinition Height="0.524*"/>
+            				<RowDefinition Height="0.238*"/>
+            				<RowDefinition Height="0.122*"/>
+            				<RowDefinition Height="0.116*"/>
+            			</Grid.RowDefinitions>
+            			<TextBlock TextWrapping="Wrap" Text="IMC Calculator" VerticalAlignment="Top" d:LayoutOverrides="Width" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,0,0,-1.5" TextWrapping="Wrap" Text="Copyright Rémi Lavedrine" d:LayoutOverrides="Height" Grid.Row="1" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,24,0,8" TextWrapping="Wrap" Text="Silverlight for Windows Phone Toolkit" d:LayoutOverrides="Height" Grid.Row="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
+            			<TextBlock HorizontalAlignment="Left" Margin="0,0,0,8" TextWrapping="Wrap" Text="http://silverlight.codeplex.com/ Copyright Microsoft Corporation this source is subject to the Microsoft Public License (Ms-PL). Please see http://go.microsoft.com/fwlink/?LinkID=131993 for details. All other rights reserved." d:LayoutOverrides="Height" Grid.Row="3" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+            		</Grid>
+            	</ScrollViewer>
             </controls:PivotItem>
         </controls:Pivot>
     </Grid>
