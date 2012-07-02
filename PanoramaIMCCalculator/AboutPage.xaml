@@ -49,16 +49,16 @@
                         <TextBlock Margin="0,8" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposAuthor, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="2" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
                         <TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposDonnerVotreAvisText, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="3" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
                         <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposEnvoyerCommentairesText, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.ColumnSpan="2" Grid.Row="4" FontSize="{StaticResource PhoneFontSizeMedium}"/>
-            			<TextBlock TextWrapping="Wrap" Text="remilavedrine-imccalculator@yahoo.fr" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="5" Grid.ColumnSpan="2"/>
+                        <TextBlock TextWrapping="Wrap" Text="remilavedrine-imccalculator@yahoo.fr" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="5" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
             			<TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="disclaimer" d:LayoutOverrides="Width, Height" Grid.Row="6" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
-                        <TextBlock Margin="0,0,18,4" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposNonResponsableText, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="7" Grid.ColumnSpan="2"/>
+                        <TextBlock Margin="0,0,18,4" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposNonResponsableText, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="7" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
                         <TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposViePriveeText, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="8" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
                         <TextBlock Margin="0,0,0,4" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposAucuneInformationCollecteeText, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="9" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
                         <TextBlock Margin="0,24,0,6" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AProposThanksTo, Source={StaticResource LocalizedStrings}}" d:LayoutOverrides="Width, Height" Grid.Row="10" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeLarge}"/>
-            			<TextBlock TextWrapping="Wrap" Text="Patrick Sachet" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="11" Grid.ColumnSpan="2"/>
-            			<TextBlock TextWrapping="Wrap" Text="Andréas Saudemont" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="12" Grid.ColumnSpan="2"/>
-            			<TextBlock TextWrapping="Wrap" Text="Denis Prevot" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="13" Grid.ColumnSpan="2"/>
-            			<TextBlock Margin="0" TextWrapping="Wrap" Text="Silverlight for Windows Phone Toolkit" VerticalAlignment="Center" d:LayoutOverrides="Width" Grid.Row="14" Grid.ColumnSpan="2"/>
+                        <TextBlock TextWrapping="Wrap" Text="Patrick Sachet" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="11" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                        <TextBlock TextWrapping="Wrap" Text="Andréas Saudemont" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="12" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                        <TextBlock TextWrapping="Wrap" Text="Denis Prevot" VerticalAlignment="Top" d:LayoutOverrides="Width" Grid.Row="13" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
+                        <TextBlock Margin="0" TextWrapping="Wrap" Text="Silverlight for Windows Phone Toolkit" VerticalAlignment="Center" d:LayoutOverrides="Width" Grid.Row="14" Grid.ColumnSpan="2" FontSize="{StaticResource PhoneFontSizeMedium}"/>
             		</Grid>
             	</ScrollViewer>
             </controls:PivotItem>
