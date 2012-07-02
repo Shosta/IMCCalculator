@@ -26,7 +26,7 @@
             </controls:Panorama.Background>
  
             <!--Élément un de panorama-->
-            <controls:PanoramaItem Header="calcul" Foreground="White">
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.CalculPanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Foreground="White">
             	<ScrollViewer x:Name="mainViewScrollViewer" Height="498">
             		<Grid>
             			<Grid.ColumnDefinitions>
@@ -44,12 +44,12 @@
             			<Image x:Name="menImage" Margin="8" Source="/Resources/Images/menSelected.png"/>
             			<toolkit:ToggleSwitch x:Name="genderToggleSwitch" Header="" Margin="0,0,0,2" Grid.Column="1" Content="" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Checked="changeToWomen" Unchecked="changeToMen"/>
             			<Image x:Name="womenImage" Margin="3,0,8,8" Source="/Resources/Images/women.png" Grid.Column="2" VerticalAlignment="Center"/>
-            			<TextBox x:Name="metricHeightTextBox" TextWrapping="Wrap" Text="Taille" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" d:LayoutOverrides="Height" Grid.Row="1" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
+                        <TextBox x:Name="metricHeightTextBox" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.metricHeightTextBoxText, Source={StaticResource LocalizedStrings}}" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" d:LayoutOverrides="Height" Grid.Row="1" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
             			<TextBlock Grid.Column="2" Margin="0" TextWrapping="Wrap" Text="cm" HorizontalAlignment="Left" FontSize="32" FontWeight="Bold" VerticalAlignment="Center" Grid.Row="1"/>
-            			<TextBox x:Name="metricWeightTextBox" TextWrapping="Wrap" Text="Poids" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" Grid.Row="2" d:LayoutOverrides="Height" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
+                        <TextBox x:Name="metricWeightTextBox" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.metricWeightTextBoxText, Source={StaticResource LocalizedStrings}}" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" Grid.Row="2" d:LayoutOverrides="Height" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
             			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="kg" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" FontSize="32" FontWeight="Bold"/>
-            			<TextBlock x:Name="metricIMCResultTextBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="26.667" Foreground="White" Margin="8,-1,8,1" Grid.Row="3" Grid.ColumnSpan="3"><Run Text="Le calcul de votre "/><Run Text="IMC"/></TextBlock>
-            			<Button Content="Calculer" Click="clickCalculateMetricIMC" Foreground="White" Margin="0,-1,-2,0" Grid.Row="4" d:LayoutOverrides="GridBox" Grid.Column="1"/>
+                        <TextBlock x:Name="metricIMCResultTextBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="26.667" Foreground="White" Margin="8,-1,8,1" Grid.Row="3" Grid.ColumnSpan="3"><Run Text="{Binding Path=LocalizedResources.MetricIMCResultTextBlock, Source={StaticResource LocalizedStrings}}"/></TextBlock>
+                        <Button Content="{Binding Path=LocalizedResources.CalculateIMCButtonText, Source={StaticResource LocalizedStrings}}" Click="clickCalculateMetricIMC" Foreground="White" Margin="0,-1,-2,0" Grid.Row="4" d:LayoutOverrides="GridBox" Grid.Column="1"/>
             		</Grid>
             	</ScrollViewer>
                 <!--Liste double trait avec habillage du texte-->
@@ -57,86 +57,140 @@
  
             <!--Élément deux de panorama-->
             <!--Utilisez 'Orientation="Horizontal"' pour activer un panneau qui s'affiche horizontalement-->
-            <controls:PanoramaItem Header="résumé" Foreground="White">
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.ResumePanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Foreground="White">
             	<Grid>
             		<Grid.ColumnDefinitions>
-            			<ColumnDefinition Width="210"/>
-            			<ColumnDefinition Width="210"/>
+            			<ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
             		</Grid.ColumnDefinitions>
             		<Grid.RowDefinitions>
             			<RowDefinition Height="0.143*"/>
             			<RowDefinition Height="0.857*"/>
             		</Grid.RowDefinitions>
             		<Rectangle Fill="#00F4F4F5" Stroke="Black" StrokeThickness="5" RadiusX="10" RadiusY="10" Margin="8,0,8,4"/>
-            		<TextBlock TextWrapping="Wrap" Text="Taille" FontSize="18.667" HorizontalAlignment="Left" Margin="9,22,0,24" d:LayoutOverrides="Height" VerticalAlignment="Center">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.ResumeTailleText, Source={StaticResource LocalizedStrings}}" FontSize="18.667" HorizontalAlignment="Left" Margin="9,22,0,24" d:LayoutOverrides="Height" VerticalAlignment="Center">
             			<TextBlock.Projection>
             				<PlaneProjection RotationZ="90"/>
             			</TextBlock.Projection>
             		</TextBlock>
             		<TextBlock x:Name="feedbackHeightTextBlock" TextWrapping="Wrap" Text="0 m" TextAlignment="Center" LineHeight="48" FontSize="29.333" FontWeight="Bold" Foreground="White" Margin="50,11,45,13"/>
             		<Rectangle Fill="#00F4F4F5" RadiusY="10" RadiusX="10" Stroke="Black" StrokeThickness="5" Margin="8,0,8,4" Grid.Column="1"/>
-            		<TextBlock TextWrapping="Wrap" Text="Poids" FontSize="18.667" Margin="3,22,0,24" d:LayoutOverrides="Height" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.ResumePoidsText, Source={StaticResource LocalizedStrings}}" FontSize="18.667" Margin="3,22,0,24" d:LayoutOverrides="Height" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             			<TextBlock.Projection>
             				<PlaneProjection RotationZ="90"/>
             			</TextBlock.Projection>
             		</TextBlock>
             		<TextBlock x:Name="feedbackWeightTextBlock" TextWrapping="Wrap" Text="0 kg" TextAlignment="Center" LineHeight="48" FontSize="29.333" FontWeight="Bold" Margin="45,10,45,14" Grid.Column="1"/>
             		<StackPanel Margin="8,1,8,7" Grid.Row="1" Grid.ColumnSpan="2">
-            			<Canvas Height="60" Background="#FFE7260E">
-            				<TextBlock x:Name="HardObesityZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone d'obésité sévère" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
-            				<TextBlock TextWrapping="Wrap" Width="250" Height="41" Text="Obésité sévère" Canvas.Top="11" Canvas.Left="8" FontWeight="Bold" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            				<TextBlock Canvas.Left="262" TextWrapping="Wrap" Text="35 et plus" Canvas.Top="8" Foreground="Black" FontWeight="Bold" FontSize="29.333" Height="44" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            			</Canvas>
-            			<Canvas Height="70" Background="#FFED9200">
-            				<TextBlock x:Name="ModerateObesityZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone d'obésité modérée" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
-            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Obésité modérée" Canvas.Top="15" Height="38" Width="242" FontWeight="Bold" FontSize="29.333" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            				<TextBlock Canvas.Left="254" TextWrapping="Wrap" Canvas.Top="15" FontSize="29.333" Height="38" Foreground="Black" FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center"><Run Text="de 30 à 35"/><LineBreak/><Run/></TextBlock>
-            			</Canvas>
-            			<Canvas Height="70" Background="#FFE4C004">
-            				<TextBlock x:Name="SurpoidsZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone de surpoids" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
-            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Surpoids" Canvas.Top="19" FontWeight="Bold" FontSize="29.333" Width="242"/>
-            				<TextBlock Canvas.Left="254" TextWrapping="Wrap" Canvas.Top="19" Text="de 25 à 30" Foreground="Black" FontSize="29.333" FontWeight="Bold" Height="39"/>
-            			</Canvas>
-            			<Canvas Height="100" Background="#FF0F9D3E">
-            				<TextBlock x:Name="LoseKilosToNormalWeightTextBlock" Height="24" TextWrapping="Wrap" Text="Perdez x kilos pour revenir dans la zone normale" Width="458" FontSize="17.333" FontWeight="Bold" Visibility="Collapsed"/>
-            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Normal" Canvas.Top="31" Width="222" FontWeight="Bold" FontSize="29.333"/>
-            				<TextBlock Canvas.Left="234" TextWrapping="Wrap" Text="de 18.5 à 25" Canvas.Top="31" FontSize="29.333" FontWeight="Bold" Foreground="Black"/>
-            				<TextBlock x:Name="GainKilosToNormalWeightTextBlock" Height="24" TextWrapping="Wrap" Text="Gagnez x kilos pour revenir dans la zone normale" Canvas.Top="76" Width="458" FontSize="17.333" FontWeight="Bold" Visibility="Collapsed"/>
-            			</Canvas>
-            			<Canvas Height="60" Background="#FFE4C004">
-            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Canvas.Top="12" Height="37" Width="201" FontWeight="Bold" FontSize="29.333"><Run Text="Maigreur"/><LineBreak/><Run/></TextBlock>
-            				<TextBlock Canvas.Left="213" TextWrapping="Wrap" Canvas.Top="12" Text="de 16.5 à 18.5" Foreground="Black" FontSize="29.333" FontWeight="Bold" Height="37"/>
-            				<TextBlock x:Name="MaigreurZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone de maigreur" Canvas.Top="40" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
-            			</Canvas>
-            			<Canvas Height="60" Background="#FFE7260E">
-            				<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Dénutrition" Canvas.Top="9" Width="196" FontWeight="Bold" FontSize="29.333"/>
-            				<TextBlock Canvas.Left="208" TextWrapping="Wrap" Text="moins de 16.5" Canvas.Top="10" FontSize="29.333" FontWeight="Bold" Foreground="Black" Height="38"/>
-            				<TextBlock x:Name="DenutritionZoneTextBlock" Height="20" TextWrapping="Wrap" Text="Vous êtes dans la zone de dénutrition" Canvas.Top="40" Width="404" FontSize="16" FontWeight="Bold" Visibility="Collapsed"/>
-            			</Canvas>
-            		</StackPanel>
+                        <Grid Height="60" Background="#FFE7260E">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.15*"/>
+                                <RowDefinition Height="0.55*"/>
+                                <RowDefinition Height="0.3*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteSevereTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteSevereZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="HardObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteSevereInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                        <Grid Height="60" Background="#FFED9200">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.15*"/>
+                                <RowDefinition Height="0.55*"/>
+                                <RowDefinition Height="0.3*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="ModerateObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                        <Grid Height="60" Background="#FFE4C004">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.15*"/>
+                                <RowDefinition Height="0.55*"/>
+                                <RowDefinition Height="0.3*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelSurpoidsTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelSurpoidsZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="SurpoidsZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelSurpoidsInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                        <Grid Height="100" Background="#FF0F9D3E">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.33*"/>
+                                <RowDefinition Height="0.33*"/>
+                                <RowDefinition Height="0.33*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock x:Name="LoseKilosToNormalWeightTextBlock" TextWrapping="Wrap" Text="Perdez x kilos pour revenir dans la zone normale" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="0" Grid.Column="0"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelNormalTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelNormalZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="GainKilosToNormalWeightTextBlock" TextWrapping="Wrap" Text="Gagnez x kilos pour revenir dans la zone normale" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                        <Grid Height="60" Background="#FFE4C004">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.15*"/>
+                                <RowDefinition Height="0.55*"/>
+                                <RowDefinition Height="0.3*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelMaigreurTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelMaigreurZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="MaigreurZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelMaigreurInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                        </Grid>
+                        <Grid Height="60" Background="#FFE7260E">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.15*"/>
+                                <RowDefinition Height="0.55*"/>
+                                <RowDefinition Height="0.3*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelDenutritionTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelDenutritionZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="DenutritionZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelDenutritionInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                         </Grid>
+                    </StackPanel>
             	</Grid>
             </controls:PanoramaItem>
-            <controls:PanoramaItem Header="informations" Width="660" Orientation="Horizontal">
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.InformationsPanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Width="660" Orientation="Horizontal">
             	<toolkit:WrapPanel toolkit:TiltEffect.IsTiltEnabled="True">
             		<Button BorderThickness="0" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Click="displayDenutritionView">
-            			<toolkit:HubTile x:Name="DenutritionHubTile" Height="Auto" Width="Auto" Source="Resources/Images/HubTileImages/HommeDenutrition.png" Margin="0" Title="Dénutrition" toolkit:TiltEffect.IsTiltEnabled="True" FontSize="25.333"/>
+                        <toolkit:HubTile x:Name="DenutritionHubTile" Height="Auto" Width="Auto" Source="Resources/Images/HubTileImages/HommeDenutrition.png" Margin="0" Title="{Binding Path=LocalizedResources.DenutritionHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True" FontSize="25.333"/>
             		</Button>
             		<Button BorderThickness="0" Margin="0" Padding="0" UseLayoutRounding="True" Click="displayMaigreurView">
-            			<toolkit:HubTile x:Name="MaigreurHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeMaigreur.png" Margin="0" Title="Maigreur" toolkit:TiltEffect.IsTiltEnabled="True"/>
+                        <toolkit:HubTile x:Name="MaigreurHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeMaigreur.png" Margin="0" Title="{Binding Path=LocalizedResources.MaigreurHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
             		<Button BorderThickness="0" Margin="0" Padding="0" Click="displayNormalView">
-            			<toolkit:HubTile x:Name="NormalHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeNormalSelected.png" Margin="0" Title="Normal" toolkit:TiltEffect.IsTiltEnabled="True" />
+                        <toolkit:HubTile x:Name="NormalHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeNormalSelected.png" Margin="0" Title="{Binding Path=LocalizedResources.NormalHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True" />
             		</Button>
             		<Button BorderThickness="0" Margin="0" Padding="0" Click="displaySurpoidsView">
-            			<toolkit:HubTile x:Name="SurpoidsHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeSurpoids.png" Margin="0" Title="Surpoids" toolkit:TiltEffect.IsTiltEnabled="True"/>
+                        <toolkit:HubTile x:Name="SurpoidsHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeSurpoids.png" Margin="0" Title="{Binding Path=LocalizedResources.SurpoidsHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
             		<Button BorderThickness="0" Margin="0" Padding="0" Click="displayObesiteView">
-            			<toolkit:HubTile x:Name="ObesiteHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="Obésité" toolkit:TiltEffect.IsTiltEnabled="True"/>
+                        <toolkit:HubTile x:Name="ObesiteHubTile" Height="173" Width="173" Source="Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="{Binding Path=LocalizedResources.ObesiteHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
             		<Button BorderThickness="0" Padding="0" Margin="0" Click="displayObesiteView">
-            			<toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="173" Width="173" Source="/Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="Obésité sévère" toolkit:TiltEffect.IsTiltEnabled="True"/>
+                        <toolkit:HubTile x:Name="ObesiteSevereHubTile" Height="173" Width="173" Source="/Resources/Images/HubTileImages/HommeObese.png" Margin="0" Title="{Binding Path=LocalizedResources.ObesiteSevereHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True"/>
             		</Button>
-            		<HyperlinkButton Content="A propos" Margin="0,30,0,0" NavigateUri="/PanoramaIMCCalculator;component/AboutPage.xaml"/>
+                    <HyperlinkButton Content="{Binding Path=LocalizedResources.AProposText, Source={StaticResource LocalizedStrings}}" Margin="0,30,0,0" NavigateUri="/PanoramaIMCCalculator;component/AboutPage.xaml"/>
             	</toolkit:WrapPanel>
             </controls:PanoramaItem>
         </controls:Panorama>

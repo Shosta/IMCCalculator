@@ -41,9 +41,9 @@ namespace PanoramaIMCCalculator.Model
             double desiredIMC = 18.5;
             double desiredWeight = desiredIMC * (currentHeight / 100) * (currentHeight / 100);
 
-            double kiloToGain = desiredWeight - currentWeight; 
+            double kiloToGain = desiredWeight - currentWeight;
 
-            return "Gagnez " + Math.Round(kiloToGain, 2) + " kilos.";
+            return AppResources.WeightToGainFirstPart + Math.Round(kiloToGain, 2) + AppResources.WeightToGainLastPart;
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace PanoramaIMCCalculator.Model
 
             double kiloToLose = currentWeight - desiredWeight;
 
-            return "Perdez " + Math.Round(kiloToLose, 2) + " kilos.";
+            return AppResources.WeightToLoseFirstPart + Math.Round(kiloToLose, 2) + AppResources.WeightToLoseLastPart;
         }
         
         /// <summary>
@@ -70,26 +70,26 @@ namespace PanoramaIMCCalculator.Model
         /// <returns></returns>
         public string infoFromIMC(double imc)
         {
-            string result = "Vous êtes dans la zone normale.";
+            string result = AppResources.InfoFromNormalIMC;
             if (imc > 35)
             {
-                result = "Vous êtes dans la zone d'obésité sévère.";
+                result = AppResources.InfoFromObesiteSevereIMC;
             }
             else if (30 < imc && imc <= 35)
             {
-                result = "Vous êtes dans la zone d'obésité modérée.";
+                result = AppResources.InfoFromObesiteIMC;
             }
             else if (25 < imc && imc <= 30)
             {
-                result = "Vous êtes dans la zone de surpoids.";
+                result = AppResources.InfoFromSurpoidsIMC;
             }
             else if (16.5 <= imc && imc < 18.5)
             {
-                result = "Vous êtes dans la zone de maigreur.";
+                result = AppResources.InfoFromMaigreurIMC;
             }
             else if (imc < 16.5)
             {
-                result = "Vous êtes dans la zone de dénutrition.";
+                result = AppResources.InfoFromDenutritionIMC;
             }
 
             return result;

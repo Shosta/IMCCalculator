@@ -75,9 +75,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\IMCCalculatorManager.cs" />
-    <Compile Include="ObesiteSeverePage.xaml.cs">
-      <DependentUpon>ObesiteSeverePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TileManager.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
@@ -103,10 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </DesignData>
-    <Page Include="ObesiteSeverePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ZoneDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

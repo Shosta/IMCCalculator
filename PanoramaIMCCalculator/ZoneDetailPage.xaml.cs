@@ -93,9 +93,10 @@ namespace PanoramaIMCCalculator
         /// </summary>
         private void setDenutritionDataContext()
         {
-            PageTitle.Text = "Dénutrition";
+            PageTitle.Text = AppResources.DenutritionDetailPageTitle;
 
-            zoneDetailTextBlock.Text = "Dénutrition : \n" +
+            zoneDetailTextBlock.Text = AppResources.DenutritionDetailPageContent;
+                /*"Dénutrition : \n" +
                 "La dénutrition est un état pathologique résultant d'apports nutritionnels insuffisants en regard des dépenses énergétiques de l'organisme. Lorsque les apports sont inadaptés en plus d'être insuffisants, on parle de malnutrition.\n" +
                 "La dénutrition est classée dans la section marasme nutritionnel de la classification internationale des maladies.\n" +
                 "\n" +
@@ -113,7 +114,7 @@ namespace PanoramaIMCCalculator
                 "\n" +
                 "* Phase terminale : Lorsque les réserves lipidiques sont épuisées, les taux plasmatiques d'acides gras et de corps cétoniques s'abaissent, tandis que la glycémie remonte. En effet, on observe alors un surcroît de mobilisation des protéines des muscles squelettiques pour la néoglucogenèse. Cette dernière entraîne un accroissement de l'excrétion d'urée et d'azote et se solde par une forte morbi-mortalité.\n" +
                 "\n" +
-                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Dénutrition";
+                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Dénutrition";*/
         }
 
         /// <summary>
@@ -121,9 +122,10 @@ namespace PanoramaIMCCalculator
         /// </summary>
         private void setMaigreurDataContext()
         {
-            PageTitle.Text = "Maigreur";
+            PageTitle.Text = AppResources.MaigreurDetailPageTitle;
 
-            zoneDetailTextBlock.Text = "Maigreur :\n" +
+            zoneDetailTextBlock.Text = AppResources.MaigreurDetailPageContent;
+                /*"Maigreur :\n" +
                 "\n" +
                 "La maigreur est l'état de ce qui est maigre. Dans le cas d'une personne, on parle d'insuffisance pondérale. À ce titre, elle est définie par l'Organisation mondiale de la santé comme la condition anormale des individus dont l'indice de masse corporelle est comprise entre 15 et 18,5.\n" +
                 "La maigreur pathologique augmente le risque de maladies diverses parmi lesquelles on peut citer les infections ou l'ostéoporose mais peut également être le symptôme de l'une d'elles. Elle peut être également un état non pathologique, c'est-à-dire constitutionnelle, stable et ne s'accompagnant d'aucun trouble.\n" +
@@ -136,7 +138,7 @@ namespace PanoramaIMCCalculator
                 "* Morphologiques : os fins, muscles fins\n" +
                 "* La maigreur constitutionnelle\n" +
                 "\n" +
-                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids";
+                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids";*/
         }
 
         /// <summary>
@@ -144,9 +146,10 @@ namespace PanoramaIMCCalculator
         /// </summary>
         private void setNormalDataContext()
         {
-            PageTitle.Text = "Normal";
+            PageTitle.Text = AppResources.NormalDetailPageTitle;
 
-            zoneDetailTextBlock.Text = "Il ne faut pas confondre la masse (grave) et le poids.\n" +
+            zoneDetailTextBlock.Text = AppResources.NormalDetailPageContent;
+                /*"Il ne faut pas confondre la masse (grave) et le poids.\n" +
                 "Le poids d'un corps est une force, due principalement à l'action qu'exerce sur lui le champ gravitationnel.\n" +
                 "\n" +
                 "Réserves à l'égard de l'IMC\n" +
@@ -154,7 +157,7 @@ namespace PanoramaIMCCalculator
                 "Par ailleurs, il faut garder à l'esprit les limites des seuils recommandés par l'OMS. S'ils sont pratiques à utiliser, ces seuils devraient idéalement varier selon le sexe, l'âge et l'origine ethnique et ces derniers ne doivent s'appliquer qu'avec prudence au diagnostic individuel.\n" +
                 "Le jugement de son poids au moyen de l'indice de masse grasse doit donc se faire avec l'aide d'un médecin et la consultation d’un médecin nutritionniste ou d’un diététicien diplômé est recommandée.\n" +
                 "\n" +
-                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle";
+                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle";*/
         }
 
         /// <summary>
@@ -162,12 +165,13 @@ namespace PanoramaIMCCalculator
         /// </summary>
         private void setSurpoidsDataContext()
         {
-            PageTitle.Text = "Surpoids";
+            PageTitle.Text = AppResources.SurpoidsDetailPageTitle;
 
-            zoneDetailTextBlock.Text = "Le surpoids est l'état d'une personne présentant une corpulence considérée comme légèrement plus importante que la normale ou la moyenne dans une société donnée.\n" +
+            zoneDetailTextBlock.Text = AppResources.SurpoidsDetailPageContent;
+                /*"Le surpoids est l'état d'une personne présentant une corpulence considérée comme légèrement plus importante que la normale ou la moyenne dans une société donnée.\n" +
                 "\n" +
                 "Il est définie par l'Organisation mondiale de la santé comme l'attribut des individus présentant un indice de masse corporelle compris entre 25 et 30 kilogrammes par mètres carrés et est, selon ces critères, bornée par la minceur (ou corpulence normale) et l'obésité modérée.\n" +
-                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids";
+                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids";*/
         }
 
         /// <summary>
@@ -175,9 +179,10 @@ namespace PanoramaIMCCalculator
         /// </summary>
         private void setObesiteDataContext()
         {
-            PageTitle.Text = "Obésité";
+            PageTitle.Text = AppResources.ObesiteDetailPageTitle;
 
-            zoneDetailTextBlock.Text = "L'obésité est l'état d'un individu ayant une masse corporelle largement supérieure à ce qui est souhaitable ou acceptable, généralement dû à une accumulation de masse adipeuse. L'obésité humaine a été reconnue comme une maladie en 1997 par l'OMS. Cette organisation définit « le surpoids et l'obésité comme une accumulation anormale ou excessive de graisse corporelle qui peut nuire à la santé ». Sa prévention est un problème de santé publique dans les pays développés. Elle peut avoir des répercussions importantes sur la santé de l'individu.\n" +
+            zoneDetailTextBlock.Text = AppResources.ObesiteDetailPageContent;
+                /*"L'obésité est l'état d'un individu ayant une masse corporelle largement supérieure à ce qui est souhaitable ou acceptable, généralement dû à une accumulation de masse adipeuse. L'obésité humaine a été reconnue comme une maladie en 1997 par l'OMS. Cette organisation définit « le surpoids et l'obésité comme une accumulation anormale ou excessive de graisse corporelle qui peut nuire à la santé ». Sa prévention est un problème de santé publique dans les pays développés. Elle peut avoir des répercussions importantes sur la santé de l'individu.\n" +
                 "Cette maladie multifactorielle est considérée aujourd'hui par métaphore comme une pandémie, bien qu'il ne s'agisse pas d'une maladie infectieuse.\n" +
                 "\n" +
                 "Définition\n" +
@@ -190,7 +195,7 @@ namespace PanoramaIMCCalculator
                 "* le type III : l'accumulation de graisse se fait dans l'abdomen : il est question d'obésité viscérale ;\n" +
                 "* le type IV : la graisse se localise au niveau des hanches et des cuisses (niveau glutéofémoral) : c'est une obésité gynoïde.\n" +
                 "\n" +
-                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Obésité";
+                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Obésité";*/
         }
 
         /// <summary>
@@ -198,9 +203,10 @@ namespace PanoramaIMCCalculator
         /// </summary>
         private void setObesiteSevereDataContext()
         {
-            PageTitle.Text = "Obésité sévère";
+            PageTitle.Text = AppResources.ObesiteSevereDetailPageTitle;
 
-            zoneDetailTextBlock.Text = "L'obésité est l'état d'un individu ayant une masse corporelle largement supérieure à ce qui est souhaitable ou acceptable, généralement dû à une accumulation de masse adipeuse. L'obésité humaine a été reconnue comme une maladie en 1997 par l'OMS. Cette organisation définit « le surpoids et l'obésité comme une accumulation anormale ou excessive de graisse corporelle qui peut nuire à la santé ». Sa prévention est un problème de santé publique dans les pays développés. Elle peut avoir des répercussions importantes sur la santé de l'individu.\n" +
+            zoneDetailTextBlock.Text = AppResources.ObesiteSevereDetailPageContent;
+                /*"L'obésité est l'état d'un individu ayant une masse corporelle largement supérieure à ce qui est souhaitable ou acceptable, généralement dû à une accumulation de masse adipeuse. L'obésité humaine a été reconnue comme une maladie en 1997 par l'OMS. Cette organisation définit « le surpoids et l'obésité comme une accumulation anormale ou excessive de graisse corporelle qui peut nuire à la santé ». Sa prévention est un problème de santé publique dans les pays développés. Elle peut avoir des répercussions importantes sur la santé de l'individu.\n" +
                 "Cette maladie multifactorielle est considérée aujourd'hui par métaphore comme une pandémie, bien qu'il ne s'agisse pas d'une maladie infectieuse.\n" +
                 "\n" +
                 "Définition\n" +
@@ -213,7 +219,7 @@ namespace PanoramaIMCCalculator
                 "* le type III : l'accumulation de graisse se fait dans l'abdomen : il est question d'obésité viscérale ;\n" +
                 "* le type IV : la graisse se localise au niveau des hanches et des cuisses (niveau glutéofémoral) : c'est une obésité gynoïde.\n" +
                 "\n" +
-                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Obésité";
+                "Credits Wikipedia : http://fr.wikipedia.org/wiki/Obésité";*/
         }
     }
 }

@@ -182,11 +182,11 @@ namespace PanoramaIMCCalculator
             TextBox tb = (TextBox)sender;
             if ( tb.Text == "")
             {
-                if ( tb == metricHeightTextBox )
-                    metricHeightTextBox.Text = "Taille";
+                if (tb == metricHeightTextBox)
+                    metricHeightTextBox.Text = AppResources.metricHeightTextBoxText;
 
-                if ( tb == metricWeightTextBox )
-                    metricWeightTextBox.Text = "Poids";
+                if (tb == metricWeightTextBox)
+                    metricWeightTextBox.Text = AppResources.metricWeightTextBoxText;
             }
 
             mainViewScrollViewer.Height = 498;
@@ -213,12 +213,12 @@ namespace PanoramaIMCCalculator
 
         private void changeAllHubTilesToStartState()
         {
-            ObesiteSevereHubTile.Title = "Obésité sévère";
-            ObesiteHubTile.Title = "Obésité";
-            SurpoidsHubTile.Title = "Surpoids";
-            NormalHubTile.Title = "Normal";
-            MaigreurHubTile.Title = "Maigreur";
-            DenutritionHubTile.Title = "Dénutrition";
+            ObesiteSevereHubTile.Title = AppResources.ObesiteSevereHubTileTitle;
+            ObesiteHubTile.Title = AppResources.ObesiteHubTileTitle;
+            SurpoidsHubTile.Title = AppResources.SurpoidsHubTileTitle;
+            NormalHubTile.Title = AppResources.NormalHubTileTitle;
+            MaigreurHubTile.Title = AppResources.MaigreurHubTileTitle;
+            DenutritionHubTile.Title = AppResources.DenutritionHubTileTitle;
 
             ObesiteSevereHubTile.Message = "";
             ObesiteHubTile.Message = "";

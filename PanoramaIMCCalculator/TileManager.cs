@@ -44,7 +44,7 @@ namespace PanoramaIMCCalculator
              }
             if (18.5 <= imc && imc <= 25) // Zone normale
             {
-                backTitle = "Ne changez rien.";
+                backTitle = AppResources.LiveTileBackTitleNormal;
              }
 
             return backTitle;
