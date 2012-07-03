@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AProposText" xml:space="preserve">
+    <value>über</value>
+  </data>
+  <data name="CalculateIMCButtonText" xml:space="preserve">
+    <value>Berechnen</value>
+    <comment>Le bouton permettant de calculer son IMC.</comment>
+  </data>
+  <data name="CalculPanoramaItemTitle" xml:space="preserve">
+    <value>berechnung</value>
+    <comment>Le titre du PanoramaItem du calcul</comment>
+  </data>
+  <data name="DenutritionDetailPageContent" xml:space="preserve">
+    <value>Unterernährung:
+Mangelernährung ist ein Zustand, die infolge der Unangemessenheit Nährstoffaufnahme in Bezug auf Energieverbrauch der Organisation. Wenn die Eingänge unzureichend sowie unzureichend sind, sprechen wir von Unterernährung.
+Mangelernährung wird auf Abschnitt Marasmus der Internationalen Klassifikation der Krankheiten eingestuft.
+
+Pathophysiologie
+Mangelernährung kann mehrere Ursprünge. Die Ätiologie ist vielfältig und kann eine organische Erkrankung, psychiatrische oder soziale einzubeziehen. Unterernährung wird als primärer, wenn sie durch eine direkte Ursache induziert wird, und sekundäre, wenn es in Folge einer anderen Krankheit verursacht wird. Es gibt zwei pathophysiologischen Mechanismen: Mangel an Ein-und Hypermetabolismus.
+
+Unterernährung Mangel an Beiträgen
+Im Falle eines Mangels der Beiträge wird im nüchternen Zustand, die in mehreren Schritten entwickelt sich eingestellt. Energieträger in Fasten sind Glukosestoffwechsel, die Verwendung von Leber Glu-Synthese und für die Lipid-Metabolismus, die Verwendung von Fettsäuren und Ketogenese.
+
+* Fasten unmittelbare Anpassung an die Nahrung zeitweise für weniger als 12 Stunden genommen. Insulinsekretion sinkt, während Glucagon erhöht. Dieses Spiel führt zu einer hormonellen Stimulation der Lipolyse und Oxidation von Fettsäuren und Ketogenese. Um den Blutzuckerspiegel zu erhalten, wird ausschließlich Glykogenolyse stimuliert.
+
+* Fasten kurz: Anpassung an das Fehlen der Nahrungsaufnahme über einen Zeitraum von 12 Stunden an drei oder vier Tage. Insulinsekretion sinkt weiter. Die Depletion von Glykogen führt zu einer Abnahme des Blutzuckerspiegels. Die einzige Quelle von Glucose im Körper wird Glukoneogenese, die Glucose aus Aminosäuren in Muskelprotein Herstellung Harnstoff als Abfall. Die Ausscheidung von Harnstoff erhöht daher. Ketogenese weiter.
+
+* Längeres Fasten: nach etwa fünf Tage bis mehrere Wochen. Plasma Ketonkörper erhöht, während die Ausscheidung von Harnstoff stabilisiert sich bei 50 mg / kg / Tag. Diese Stabilisierung wird zur Stabilisierung der Einsparungen nach Proteolyse-Protein verwandt. New hormonelle Veränderungen auftreten, mit einer verminderten Produktion von Schilddrüsenhormonen. Diese Phase der längerem Fasten führt Marasmus.
+
+* Terminal-Bühne: Wenn Fettreserven aufgebraucht sind, die Plasmaspiegel von Fettsäuren und Ketonkörper werden gesenkt, während der Blutzuckerspiegel steigt. Tatsächlich gibt es dann eine erhöhte Mobilisierung von Skelettmuskel-Protein für die Glukoneogenese. Dies führt zu einer erhöhten Ausscheidung von Harnstoff und Stickstoff und führt zu einer hohen Morbidität und Mortalität.
+                
+Kreditkarten Wikipedia: http://fr.wikipedia.org/wiki/Dénutrition</value>
+  </data>
+  <data name="DenutritionDetailPageTitle" xml:space="preserve">
+    <value>Unterernährung</value>
+  </data>
+  <data name="DenutritionHubTileMessage" xml:space="preserve">
+    <value>Sie sind im Bereich der Mangelernährung.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de dénutrition</comment>
+  </data>
+  <data name="DenutritionHubTileTitle" xml:space="preserve">
+    <value>Unterernährung</value>
+    <comment>Le titre de la hubTile de denutrition</comment>
+  </data>
+  <data name="IMCCalculationError" xml:space="preserve">
+    <value>Ein Problem bei der Berechnung Ihres BMI.
+Bitte geben Sie Ihre Körpergröße und gewicht.</value>
+    <comment>Texte lors d'une erreur lors du calcul d'un IMC</comment>
+  </data>
+  <data name="InfoFromDenutritionIMC" xml:space="preserve">
+    <value>Sie sind im Bereich der Mangelernährung.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (denutrition).</comment>
+  </data>
+  <data name="InfoFromMaigreurIMC" xml:space="preserve">
+    <value>Sie sind im Bereich der Dünne.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (maigreur).</comment>
+  </data>
+  <data name="InfoFromNormalIMC" xml:space="preserve">
+    <value>Sie befinden sich im normalen Bereich.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (normal).</comment>
+  </data>
+  <data name="InfoFromObesiteIMC" xml:space="preserve">
+    <value>Sie befinden sich in der Zone des gemäßigten Fettleibigkeit.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite).</comment>
+  </data>
+  <data name="InfoFromObesiteSevereIMC" xml:space="preserve">
+    <value>Sie sind im Bereich der schweren Adipositas.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite severe).</comment>
+  </data>
+  <data name="InfoFromSurpoidsIMC" xml:space="preserve">
+    <value>Sie befinden sich in der Zone Übergewicht.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (surpoids).</comment>
+  </data>
+  <data name="InformationsPanoramaItemTitle" xml:space="preserve">
+    <value>informationen</value>
+  </data>
+  <data name="LiveTileBackTitleNormal" xml:space="preserve">
+    <value>Nichts ändern.</value>
+    <comment>Message dans le live tile lorsque l'utilisateur a un IMC normal.</comment>
+  </data>
+  <data name="MaigreurDetailPageContent" xml:space="preserve">
+    <value>Untergewicht:
+
+Die Gehäusehöhe ist der Zustand, von dem, was mager ist. Bei einer Person wird als Untergewicht bezeichnet. Als solche wird sie von der Weltgesundheitsorganisation als abnormalen Zustand von Personen, deren BMI zwischen 15 und 18,5 definiert.
+Krankhafte Dünnheit erhöht das Risiko für verschiedene Krankheiten, unter denen Infektionen und Osteoporose gehören, kann aber auch ein Symptom für eine von ihnen sein. Es kann auch ein nicht-pathologischen Zustand, das heißt, Verfassungs-, stabil und nicht von einer Störung begleitet ist.
+ÉtiologieLes Ursachen können sein
+
+* Soziologische Hunger, Armut
+* Psychiatrische: Magersucht, Depressionen
+* Medizin: Neoplasien, schwere Infektionen (tuberculose. ..), Typ 1 Diabetes, Sucht, Krankheit mit intestinaler Malabsorption, AIDS ...
+* Genetik: Erbliche
+* Morphologie: dünne Knochen, Muskeln Zwecke
+* Das Verfassungsgericht Dünnheit
+
+Kreditkarten Wikipedia: http://fr.wikipedia.org/wiki/Maigreur</value>
+  </data>
+  <data name="MaigreurDetailPageTitle" xml:space="preserve">
+    <value>Untergewicht</value>
+  </data>
+  <data name="MaigreurHubTileMessage" xml:space="preserve">
+    <value>Sie sind im Bereich der Dünne.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de maigreur</comment>
+  </data>
+  <data name="MaigreurHubTileTitle" xml:space="preserve">
+    <value>Untergewicht</value>
+    <comment>Le titre de la hubTile de maigreur</comment>
+  </data>
+  <data name="metricHeightTextBoxText" xml:space="preserve">
+    <value>Größe</value>
+    <comment>Le placeholder pour la taille</comment>
+  </data>
+  <data name="MetricIMCResultTextBlock" xml:space="preserve">
+    <value>Berechnen Sie Ihren BMI.</value>
+    <comment>Le résumé du calcul de votre IMC.</comment>
+  </data>
+  <data name="metricWeightTextBoxText" xml:space="preserve">
+    <value>Gewicht</value>
+    <comment>Le placeholder pour le poids</comment>
+  </data>
+  <data name="NormalDetailPageContent" xml:space="preserve">
+    <value>Verwechseln Sie nicht Körperfett und Gewicht.
+Das Gewicht eines Körpers ist eine Kraft, vor allem auf die Wirkung auf ihn ausgeübt das Gravitationsfeld.
+
+Reserven in Bezug auf BMI
+Es ist wichtig, im Hinterkopf behalten, dass der BMI nur ein Indikator, kein absolutes gegeben ist. Wegen ihrer Muskelmasse, einige Sportler haben einen BMI über 25 kg/m2, entstehen ihnen keine Gefahr. Darüber hinaus kann gemäß der Morphologie einer Person BMI variiert in einem guten Zustand. Eine Person kann, ohne zu fetten (zB Bixente Lizarazu, Mike Tyson oder Jonah Lomu) Kniebeugen, und ein anderer kann einen schlanken, aber zu viel Körperfett haben.
+Auch im Auge die Grenzen der von der WHO empfohlenen Grenzwerte zu halten. Sie sind bequem zu bedienen, sollten diese Schwellenwerte idealerweise nach Geschlecht, Alter und ethnischer Zugehörigkeit variieren und sollte sie mit Vorsicht zu individuellen Diagnose gelten.
+Das Urteil seines Gewichts durch die Fett-Mass-Index sollte mit Hilfe von einem Arzt durchgeführt werden und zu sehen, eine Ernährungsberaterin oder Ernährungsberater empfohlen wird.
+
+Kreditkarten Wikipedia: http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle</value>
+  </data>
+  <data name="NormalDetailPageTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NormalHubTileMessage" xml:space="preserve">
+    <value>Sie befinden sich im normalen Bereich. Bravo!</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone normale</comment>
+  </data>
+  <data name="NormalHubTileTitle" xml:space="preserve">
+    <value>Normal</value>
+    <comment>Le titre de la hubTile normal</comment>
+  </data>
+  <data name="ObesiteDetailPageContent" xml:space="preserve">
+    <value>Adipositas ist der Zustand eines Individuums mit einem Body-Mass deutlich über was wünschenswert oder akzeptabel, in der Regel aufgrund einer Ansammlung von Körperfett. Der menschliche Fettleibigkeit als Krankheit anerkannt wurde im Jahr 1997 von der WHO. Diese Organisation definiert "Übergewicht und Adipositas als ungewöhnliche oder übermäßige Ansammlung von Körperfett, die Gesundheit schädigen können." Seine Prävention ist ein Problem der öffentlichen Gesundheit in den entwickelten Ländern. Es kann einen erheblichen Einfluss auf die Gesundheit des Einzelnen.
+Diese multifaktorielle Erkrankung ist nun metaphorisch als einer Pandemie gesehen, obwohl dies nicht eine ansteckende Krankheit.
+
+Definition
+Die klinischen Formen sind zahlreich, mit den pathophysiologischen Mechanismen und pathologische Folgen anders, so ist es besser, von "Fettleibigkeit" zu sprechen. Überschüssiges Körperfett und Fettverteilung: Um diese zu bewerten Adipositas sollten zwei Parameter, die die Komplikationen der Krankheit beeinflussen unabhängig voneinander analysiert werden.
+
+Phänotypen
+4 Arten von Fettleibigkeit werden beschrieben:
+* Typ I: Überschüssiges Fett wird im Körper ohne bevorzugte Lokalisierung verteilt;
+* Typ II: überschüssige Fett wird auf dem Rumpf und Bauch konzentriert: es darum geht, abdominale Fettleibigkeit;
+* Typ III: Ansammlung von Fett im Bauchraum auftritt: es darum geht, viszerale Adipositas;
+* Typ IV: das Fett in den Hüften und Oberschenkeln (glutéofémoral Ebene) lokalisiert: Dies ist ein gynoid Fettleibigkeit.
+
+Kreditkarten Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteDetailPageTitle" xml:space="preserve">
+    <value>Fettleibigkeit</value>
+  </data>
+  <data name="ObesiteHubTileMessage" xml:space="preserve">
+    <value>Sie befinden sich in der Zone des gemäßigten Fettleibigkeit.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité modérée</comment>
+  </data>
+  <data name="ObesiteHubTileTitle" xml:space="preserve">
+    <value>Fettleibigkeit</value>
+    <comment>Le titre de la hubTile d'obesite</comment>
+  </data>
+  <data name="ObesiteSevereDetailPageContent" xml:space="preserve">
+    <value>Adipositas ist der Zustand eines Individuums mit einem Body-Mass deutlich über was wünschenswert oder akzeptabel, in der Regel aufgrund einer Ansammlung von Körperfett. Der menschliche Fettleibigkeit als Krankheit anerkannt wurde im Jahr 1997 von der WHO. Diese Organisation definiert "Übergewicht und Adipositas als ungewöhnliche oder übermäßige Ansammlung von Körperfett, die Gesundheit schädigen können." Seine Prävention ist ein Problem der öffentlichen Gesundheit in den entwickelten Ländern. Es kann einen erheblichen Einfluss auf die Gesundheit des Einzelnen.
+Diese multifaktorielle Erkrankung ist nun metaphorisch als einer Pandemie gesehen, obwohl dies nicht eine ansteckende Krankheit.
+
+Definition
+Die klinischen Formen sind zahlreich, mit den pathophysiologischen Mechanismen und pathologische Folgen anders, so ist es besser, von "Fettleibigkeit" zu sprechen. Überschüssiges Körperfett und Fettverteilung: Um diese zu bewerten Adipositas sollten zwei Parameter, die die Komplikationen der Krankheit beeinflussen unabhängig voneinander analysiert werden.
+
+Phänotypen
+4 Arten von Fettleibigkeit werden beschrieben:
+* Typ I: Überschüssiges Fett wird im Körper ohne bevorzugte Lokalisierung verteilt;
+* Typ II: überschüssige Fett wird auf dem Rumpf und Bauch konzentriert: es darum geht, abdominale Fettleibigkeit;
+* Typ III: Ansammlung von Fett im Bauchraum auftritt: es darum geht, viszerale Adipositas;
+* Typ IV: das Fett in den Hüften und Oberschenkeln (glutéofémoral Ebene) lokalisiert: Dies ist ein gynoid Fettleibigkeit.
+
+Kreditkarten Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteSevereDetailPageTitle" xml:space="preserve">
+    <value>Extremes Übergewicht</value>
+  </data>
+  <data name="ObesiteSevereHubTileMessage" xml:space="preserve">
+    <value>Sie sind im Bereich der schweren Adipositas.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité sévère</comment>
+  </data>
+  <data name="ObesiteSevereHubTileTitle" xml:space="preserve">
+    <value>Extremes Übergewicht</value>
+    <comment>Le titre de la hubTile d'obesite severe</comment>
+  </data>
+  <data name="ResumePanoramaItemTitle" xml:space="preserve">
+    <value>zusammenfassung</value>
+    <comment>Le titre du PanoramaItem du résumé</comment>
+  </data>
+  <data name="ResumePoidsText" xml:space="preserve">
+    <value>Gewicht</value>
+  </data>
+  <data name="ResumeTailleText" xml:space="preserve">
+    <value>Größe</value>
+  </data>
+  <data name="StackPanelDenutritionTitle" xml:space="preserve">
+    <value>Unterernährung</value>
+  </data>
+  <data name="StackPanelDenutritionZoneInfoText" xml:space="preserve">
+    <value>Sie sind im Bereich der Mangelernährung</value>
+  </data>
+  <data name="StackPanelDenutritionZoneText" xml:space="preserve">
+    <value>mindestens 16,5</value>
+  </data>
+  <data name="StackPanelMaigreurTitle" xml:space="preserve">
+    <value>Untergewicht</value>
+  </data>
+  <data name="StackPanelMaigreurZoneInfoText" xml:space="preserve">
+    <value>Sie sind im Bereich der dünnen</value>
+  </data>
+  <data name="StackPanelMaigreurZoneText" xml:space="preserve">
+    <value>16,5 bis 18,5</value>
+  </data>
+  <data name="StackPanelNormalTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StackPanelNormalZoneText" xml:space="preserve">
+    <value>18,5 bis 25</value>
+  </data>
+  <data name="StackPanelObesiteSevereTitle" xml:space="preserve">
+    <value>Extremes Übergewicht</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneInfoText" xml:space="preserve">
+    <value>Sie sind im Bereich der schwere Adipositas</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneText" xml:space="preserve">
+    <value>35 plus</value>
+  </data>
+  <data name="StackPanelObesiteTitle" xml:space="preserve">
+    <value>Mäßig adipösen</value>
+  </data>
+  <data name="StackPanelObesiteZoneInfoText" xml:space="preserve">
+    <value>Sie befinden sich in der Zone des gemäßigten Fettleibigkeit</value>
+  </data>
+  <data name="StackPanelObesiteZoneText" xml:space="preserve">
+    <value>30 bis 35</value>
+  </data>
+  <data name="StackPanelSurpoidsTitle" xml:space="preserve">
+    <value>Übergewicht</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneInfoText" xml:space="preserve">
+    <value>Sie befinden sich in der Gegend von Übergewicht</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneText" xml:space="preserve">
+    <value>25 bis 30</value>
+  </data>
+  <data name="SurpoidsDetailPageContent" xml:space="preserve">
+    <value>Übergewicht ist der Zustand einer Person mit einem BMI betrachtet etwas höher als normal oder durchschnittlich in einer bestimmten Gesellschaft.
+
+Es wird von der Weltgesundheitsorganisation als ein Attribut von Personen mit einem BMI zwischen 25 und 30 Kilogramm pro Quadratmeter und ist definiert, nach diesen Kriterien, begrenzt durch die dünne (oder normales Gewicht) und "moderate Adipositas.
+
+Kreditkarten Wikipedia: http://fr.wikipedia.org/wiki/Surpoids</value>
+  </data>
+  <data name="SurpoidsDetailPageTitle" xml:space="preserve">
+    <value>Übergewicht</value>
+  </data>
+  <data name="SurpoidsHubTileMessage" xml:space="preserve">
+    <value>Sie befinden sich in der Zone Übergewicht.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de surpoids</comment>
+  </data>
+  <data name="SurpoidsHubTileTitle" xml:space="preserve">
+    <value>Übergewicht</value>
+    <comment>Le titre de la hubTile de surpoids</comment>
+  </data>
+  <data name="WeightToGainFirstPart" xml:space="preserve">
+    <value>Gewinnen </value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase avant le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToGainLastPart" xml:space="preserve">
+    <value> kilos.</value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase apres le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToLoseFirstPart" xml:space="preserve">
+    <value>Verlieren</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase avant le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="WeightToLoseLastPart" xml:space="preserve">
+    <value> kilos.</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase apres le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="AProposAucuneInformationCollecteeText" xml:space="preserve">
+    <value>IMC Calculator sammelt keine Informationen über Sie.</value>
+    <comment>Texte décrivant que l'application ne collecte aucune données concernant l'utilisateur.</comment>
+  </data>
+  <data name="AProposAuthor" xml:space="preserve">
+    <value>von Rémi Lavedrine</value>
+    <comment>Le nom de l'auteur de l'application</comment>
+  </data>
+  <data name="AProposDonnerVotreAvisText" xml:space="preserve">
+    <value>kritik</value>
+  </data>
+  <data name="AProposEnvoyerCommentairesText" xml:space="preserve">
+    <value>Senden Sie Ihre Kommentare, Fragen, Lob:</value>
+  </data>
+  <data name="AProposNonResponsableText" xml:space="preserve">
+    <value>IMC Calculator übernimmt keine Haftung für den Missbrauch Sie die Daten zur Verfügung gestellt tun kann</value>
+    <comment>Texte decrivant que l'application ne peut etre tenu responsable de la mauvaise utilisation que l'utilisateur peut en faire.</comment>
+  </data>
+  <data name="AProposPanoramaAProposTitle" xml:space="preserve">
+    <value>etwa</value>
+    <comment>Le titre de l'item à propos du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaLegaleseTitle" xml:space="preserve">
+    <value>legalese</value>
+    <comment>Le titre de l'item legalese du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaNouveautesTitle" xml:space="preserve">
+    <value>nachrichten</value>
+    <comment>Le titre de l'item nouveautés du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposThanksTo" xml:space="preserve">
+    <value>dankeschön an</value>
+    <comment>Texte décrivant les remerciements.</comment>
+  </data>
+  <data name="AProposVersion10" xml:space="preserve">
+    <value>version 1.0</value>
+  </data>
+  <data name="AProposVersion10Content" xml:space="preserve">
+    <value>Erste Version der Anwendung</value>
+  </data>
+  <data name="AProposVersion11" xml:space="preserve">
+    <value>version 1.1</value>
+  </data>
+  <data name="AProposVersion11Content" xml:space="preserve">
+    <value>Hinzugefügt Live-Tile bei der Berechnung BMI und Image-Management und die Berechnung, wenn der Benutzer ist ein Mann oder eine Frau.</value>
+  </data>
+  <data name="AProposVersion13" xml:space="preserve">
+    <value>version 1.3</value>
+  </data>
+  <data name="AProposVersion13Content" xml:space="preserve">
+    <value>Hinzugefügt Abschnitt über und wurde ein Fehler in der Berechnung des BMI für bestimmte Werte von BMI und das Missverhältnis der gute Image der Live-Kachel.</value>
+  </data>
+  <data name="AProposViePriveeText" xml:space="preserve">
+    <value>privatsphäre</value>
+  </data>
+</root>

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AProposText" xml:space="preserve">
+    <value>over</value>
+  </data>
+  <data name="CalculateIMCButtonText" xml:space="preserve">
+    <value>Berekenen</value>
+    <comment>Le bouton permettant de calculer son IMC.</comment>
+  </data>
+  <data name="CalculPanoramaItemTitle" xml:space="preserve">
+    <value>berekening</value>
+    <comment>Le titre du PanoramaItem du calcul</comment>
+  </data>
+  <data name="DenutritionDetailPageContent" xml:space="preserve">
+    <value>Ondervoeding:
+Ondervoeding is een aandoening als gevolg van tekortschietende inname van nutriënten in relatie tot energie-uitgaven van de organisatie. Als ingangen zijn onvoldoende maar ook als onvoldoende is, spreken we van ondervoeding.
+Ondervoeding is ingedeeld naar sectie marasmus van de Internationale Classificatie van Ziekten.
+
+Pathofysiologie
+Ondervoeding kan meerdere oorzaken. De etiologie is gevarieerd en kan een organische ziekte, psychiatrische of sociale betrekken. Ondervoeding heet primaire wanneer wordt geïnduceerd door een rechtstreeks gevolg en secundaire wanneer wordt veroorzaakt door een andere toestand. Er bestaan ​​twee pathofysiologische mechanismen: gebrek aan in-en hypermetabolisme.
+
+Ondervoeding tekort aan bijdragen
+In het geval van een tekort van de bijdragen is het opzetten van de nuchtere toestand, die zich ontwikkelt in verschillende stappen. Energiebronnen in het vasten zijn, voor het glucose metabolisme, het gebruik van lever glycogeen en glucose-synthese en voor het vetmetabolisme, het gebruik van vetzuren en ketogenese.
+
+* Vasten onmiddellijke aanpassing om het voedsel met tussenpozen genomen voor minder dan twaalf uur. Insuline afneemt, terwijl glucagon toeneemt. Dit spel leidt tot hormonale stimulatie van de lipolyse en vetzuur oxidatie en ketogenese. Om de bloedglucosespiegel te handhaven, wordt glycogenolyse uitsluitend gestimuleerd.
+
+* Vasten Kortom: aanpassing aan de afwezigheid van voedselinname over een periode van twaalf uur tot drie of vier dagen. Insuline secretie daalt verder. De uitputting van glycogeen veroorzaakt een afname van het bloedglucosegehalte. De enige bron van glucose in het lichaam wordt gluconeogenese, die glucose uit aminozuren in de spieren eiwitten productie ureum als afval produceert. De uitscheiding van ureum is dus groter. Ketogenese verder.
+
+* Langdurig vasten: na ongeveer vijf dagen tot enkele weken. Plasma ketonlichamen toegenomen, terwijl de uitscheiding van ureum stabiliseert op 50 mg / kg / dag. Deze stabilisatie verband met stabilisatie van de besparingen genoemde proteolyse eiwit. Nieuwe hormonale veranderingen optreden, met een verminderde productie van schildklierhormonen. Deze fase van langdurig vasten resultaten in marasmus.
+
+* Terminale fase: Wanneer vetreserves zijn uitgeput, plasmaspiegels van vetzuren en ketonlichamen worden verlaagd, terwijl de bloedsuikerspiegel stijgt. Inderdaad, er is dan een verhoogde mobilisatie van de skeletspieren eiwitten voor de gluconeogenese. Dit leidt tot uitscheiding van ureum en stikstof en resulteert in een hoge morbiditeit en mortaliteit.
+                
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Dénutrition</value>
+  </data>
+  <data name="DenutritionDetailPageTitle" xml:space="preserve">
+    <value>Ondervoeding</value>
+  </data>
+  <data name="DenutritionHubTileMessage" xml:space="preserve">
+    <value>U bent op het gebied van ondervoeding.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de dénutrition</comment>
+  </data>
+  <data name="DenutritionHubTileTitle" xml:space="preserve">
+    <value>Ondervoeding</value>
+    <comment>Le titre de la hubTile de denutrition</comment>
+  </data>
+  <data name="IMCCalculationError" xml:space="preserve">
+    <value>Is een probleem opgetreden bij het berekenen van je BMI.
+Gelieve uw lengte en gewicht opnieuw in te voeren.</value>
+    <comment>Texte lors d'une erreur lors du calcul d'un IMC</comment>
+  </data>
+  <data name="InfoFromDenutritionIMC" xml:space="preserve">
+    <value>U bent op het gebied van ondervoeding.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (denutrition).</comment>
+  </data>
+  <data name="InfoFromMaigreurIMC" xml:space="preserve">
+    <value>U bent op het gebied van slankheid.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (maigreur).</comment>
+  </data>
+  <data name="InfoFromNormalIMC" xml:space="preserve">
+    <value>U bent in het normale bereik.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (normal).</comment>
+  </data>
+  <data name="InfoFromObesiteIMC" xml:space="preserve">
+    <value>U bevindt zich in de zone van matige obesitas.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite).</comment>
+  </data>
+  <data name="InfoFromObesiteSevereIMC" xml:space="preserve">
+    <value>U bent op het gebied van ernstig overgewicht.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite severe).</comment>
+  </data>
+  <data name="InfoFromSurpoidsIMC" xml:space="preserve">
+    <value>U bent in het overgewicht zone.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (surpoids).</comment>
+  </data>
+  <data name="InformationsPanoramaItemTitle" xml:space="preserve">
+    <value>gegevens</value>
+  </data>
+  <data name="LiveTileBackTitleNormal" xml:space="preserve">
+    <value>Laat niets aan veranderen.</value>
+    <comment>Message dans le live tile lorsque l'utilisateur a un IMC normal.</comment>
+  </data>
+  <data name="MaigreurDetailPageContent" xml:space="preserve">
+    <value>Dunheid:
+
+Geringe dikte is de staat van wat is mager. In het geval van een persoon genoemd ondergewicht. Als zodanig wordt gedefinieerd door de Wereldgezondheidsorganisatie als de abnormale toestand van personen met een BMI tussen de 15 en 18,5.
+Pathologische dun verhoogd risico van verschillende ziekten waaronder ook infecties en osteoporose, maar kan ook een symptoom van een. Het kan ook een niet-pathologische toestand, dat wil zeggen grondwettelijk stabiel en niet vergezeld van een verstoring.
+ÉtiologieLes oorzaken kunnen
+
+* Sociologische hongersnood, armoede
+* Psychiatrische: anorexia nervosa, depressie
+* Medisch: neoplasie, ernstige infectie (tuberculose. ..), type 1 diabetes, verslaving, ziekte met intestinale malabsorptie, aids ...
+* Genetica: Erfelijke
+* Morfologie: dunne botten, spieren doeleinden
+* Het Grondwettelijk dun
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Maigreur</value>
+  </data>
+  <data name="MaigreurDetailPageTitle" xml:space="preserve">
+    <value>Dunheid</value>
+  </data>
+  <data name="MaigreurHubTileMessage" xml:space="preserve">
+    <value>U bent op het gebied van slankheid.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de maigreur</comment>
+  </data>
+  <data name="MaigreurHubTileTitle" xml:space="preserve">
+    <value>Dunheid</value>
+    <comment>Le titre de la hubTile de maigreur</comment>
+  </data>
+  <data name="metricHeightTextBoxText" xml:space="preserve">
+    <value>Grootte</value>
+    <comment>Le placeholder pour la taille</comment>
+  </data>
+  <data name="MetricIMCResultTextBlock" xml:space="preserve">
+    <value>Bereken je BMI.</value>
+    <comment>Le résumé du calcul de votre IMC.</comment>
+  </data>
+  <data name="metricWeightTextBoxText" xml:space="preserve">
+    <value>Gewicht</value>
+    <comment>Le placeholder pour le poids</comment>
+  </data>
+  <data name="NormalDetailPageContent" xml:space="preserve">
+    <value>Het moet niet worden verward massa (ernstige) en gewicht.
+Het gewicht van een lichaam is een kracht, vooral door de actie uitgeoefend op hem het zwaartekrachtveld.
+
+Reserves met betrekking tot de BMI
+Het is belangrijk om in gedachten te houden dat de BMI is slechts een indicatie, niet gegeven een absolute. Door hun spiermassa, sommige atleten een BMI hebben boven de 25 kg/m2, zij lopen geen gevaar. Bovendien blijkt uit de morfologie van BMI een persoon varieert in vorm. Een persoon kan kraakpand zijn zonder vet (bijv. Bixente Lizarazu, Mike Tyson of Jonah Lomu), en een ander kan een slanke, maar te veel lichaamsvet hebben.
+Ook rekening houden met de grenzen van de drempels aanbevolen door de WHO. Ze zijn handig in gebruik, moeten deze drempels idealiter verschillen per geslacht, leeftijd en etniciteit en ze moeten met de nodige voorzichtigheid gelden voor individuele diagnose.
+Het oordeel van het gewicht door het vet mass index moet worden gedaan met de hulp van een arts en het zien van een voedingsdeskundige of diëtist wordt aanbevolen.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle</value>
+  </data>
+  <data name="NormalDetailPageTitle" xml:space="preserve">
+    <value>Normaal</value>
+  </data>
+  <data name="NormalHubTileMessage" xml:space="preserve">
+    <value>U bent in het normale bereik. Bravo!</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone normale</comment>
+  </data>
+  <data name="NormalHubTileTitle" xml:space="preserve">
+    <value>Normaal</value>
+    <comment>Le titre de la hubTile normal</comment>
+  </data>
+  <data name="ObesiteDetailPageContent" xml:space="preserve">
+    <value>Obesitas is de toestand van een individu met een body mass ruim boven wat wenselijk is of aanvaardbaar, meestal als gevolg van een ophoping van lichaamsvet. De menselijke obesitas is erkend als een ziekte in 1997 door de WHO. Deze organisatie definieert "overgewicht en obesitas als een abnormale of overmatige accumulatie van lichaamsvet die schadelijk kunnen zijn gezondheid." De preventie is een probleem voor de volksgezondheid in de ontwikkelde landen. Het kan een aanzienlijke impact hebben op de gezondheid van het individu.
+Deze ziekte wordt nu multifactoriële metaforisch als een pandemie, hoewel dit niet een infectieuze ziekte.
+
+definitie
+De klinische vormen zijn talrijk, met de pathofysiologische mechanismen en pathologische gevolgen anders, dus is het beter om te spreken van "overgewicht". Om deze obesitas te evalueren dient te worden geanalyseerd twee parameters die de complicaties van de ziekte beïnvloeden onafhankelijk van elkaar: overtollig lichaamsvet en vetverdeling.
+
+fenotypes
+4 types van obesitas worden beschreven:
+* Type I: het overtollige vet wordt verspreid in het lichaam zonder preferentiële lokalisatie;
+* Type II: het overtollige vet concentreert zich op de romp en buik: het gaat om abdominale obesitas;
+* Type III: vetophoping vindt plaats in de buik: het gaat om het viscerale obesitas;
+* Type IV: het vet is gelokaliseerd in de heupen en dijen (glutéofémoral niveau): dit is een gynoid obesitas.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteDetailPageTitle" xml:space="preserve">
+    <value>Zwaarlijvigheid</value>
+  </data>
+  <data name="ObesiteHubTileMessage" xml:space="preserve">
+    <value>U bevindt zich in de zone van matige obesitas.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité modérée</comment>
+  </data>
+  <data name="ObesiteHubTileTitle" xml:space="preserve">
+    <value>Zwaarlijvigheid</value>
+    <comment>Le titre de la hubTile d'obesite</comment>
+  </data>
+  <data name="ObesiteSevereDetailPageContent" xml:space="preserve">
+    <value>Obesitas is de toestand van een individu met een body mass ruim boven wat wenselijk is of aanvaardbaar, meestal als gevolg van een ophoping van lichaamsvet. De menselijke obesitas is erkend als een ziekte in 1997 door de WHO. Deze organisatie definieert "overgewicht en obesitas als een abnormale of overmatige accumulatie van lichaamsvet die schadelijk kunnen zijn gezondheid." De preventie is een probleem voor de volksgezondheid in de ontwikkelde landen. Het kan een aanzienlijke impact hebben op de gezondheid van het individu.
+Deze ziekte wordt nu multifactoriële metaforisch als een pandemie, hoewel dit niet een infectieuze ziekte.
+
+definitie
+De klinische vormen zijn talrijk, met de pathofysiologische mechanismen en pathologische gevolgen anders, dus is het beter om te spreken van "overgewicht". Om deze obesitas te evalueren dient te worden geanalyseerd twee parameters die de complicaties van de ziekte beïnvloeden onafhankelijk van elkaar: overtollig lichaamsvet en vetverdeling.
+
+fenotypes
+4 types van obesitas worden beschreven:
+* Type I: het overtollige vet wordt verspreid in het lichaam zonder preferentiële lokalisatie;
+* Type II: het overtollige vet concentreert zich op de romp en buik: het gaat om abdominale obesitas;
+* Type III: vetophoping vindt plaats in de buik: het gaat om het viscerale obesitas;
+* Type IV: het vet is gelokaliseerd in de heupen en dijen (glutéofémoral niveau): dit is een gynoid obesitas.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteSevereDetailPageTitle" xml:space="preserve">
+    <value>Ernstige obesitas</value>
+  </data>
+  <data name="ObesiteSevereHubTileMessage" xml:space="preserve">
+    <value>U bent op het gebied van ernstig overgewicht.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité sévère</comment>
+  </data>
+  <data name="ObesiteSevereHubTileTitle" xml:space="preserve">
+    <value>Ernstige obesitas</value>
+    <comment>Le titre de la hubTile d'obesite severe</comment>
+  </data>
+  <data name="ResumePanoramaItemTitle" xml:space="preserve">
+    <value>overzicht</value>
+    <comment>Le titre du PanoramaItem du résumé</comment>
+  </data>
+  <data name="ResumePoidsText" xml:space="preserve">
+    <value>Gewicht</value>
+  </data>
+  <data name="ResumeTailleText" xml:space="preserve">
+    <value>Grootte</value>
+  </data>
+  <data name="StackPanelDenutritionTitle" xml:space="preserve">
+    <value>Ondervoeding</value>
+  </data>
+  <data name="StackPanelDenutritionZoneInfoText" xml:space="preserve">
+    <value>U bent op het gebied van ondervoeding.</value>
+  </data>
+  <data name="StackPanelDenutritionZoneText" xml:space="preserve">
+    <value>minder dan 16.5</value>
+  </data>
+  <data name="StackPanelMaigreurTitle" xml:space="preserve">
+    <value>Slankheid</value>
+  </data>
+  <data name="StackPanelMaigreurZoneInfoText" xml:space="preserve">
+    <value>U bent op het gebied van slankheid.</value>
+  </data>
+  <data name="StackPanelMaigreurZoneText" xml:space="preserve">
+    <value>16.5 tot 18.5</value>
+  </data>
+  <data name="StackPanelNormalTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StackPanelNormalZoneText" xml:space="preserve">
+    <value>18.5 tot 25</value>
+  </data>
+  <data name="StackPanelObesiteSevereTitle" xml:space="preserve">
+    <value>Ernstige obesitas</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneInfoText" xml:space="preserve">
+    <value>U bent op het gebied van ernstig overgewicht.</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneText" xml:space="preserve">
+    <value>35 en</value>
+  </data>
+  <data name="StackPanelObesiteTitle" xml:space="preserve">
+    <value>Zwaarlijvigheid</value>
+  </data>
+  <data name="StackPanelObesiteZoneInfoText" xml:space="preserve">
+    <value>U bevindt zich in de zone van matige obesitas.</value>
+  </data>
+  <data name="StackPanelObesiteZoneText" xml:space="preserve">
+    <value>30 tot 35</value>
+  </data>
+  <data name="StackPanelSurpoidsTitle" xml:space="preserve">
+    <value>Overgewicht</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneInfoText" xml:space="preserve">
+    <value>Vous êtes dans la zone de surpoids</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneText" xml:space="preserve">
+    <value>25 tot 30</value>
+  </data>
+  <data name="SurpoidsDetailPageContent" xml:space="preserve">
+    <value>Overgewicht is de toestand van een persoon met een BMI beschouwd als iets hoger dan normale of gemiddelde in een bepaalde maatschappij.
+
+Het wordt gedefinieerd door de Wereldgezondheidsorganisatie als een attribuut van personen met een BMI tussen de 25 en 30 kilogram per vierkante meter en is volgens deze criteria, begrensd door de dunne (of normaal gewicht) en 'matig overgewicht.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Surpoids</value>
+  </data>
+  <data name="SurpoidsDetailPageTitle" xml:space="preserve">
+    <value>Overgewicht</value>
+  </data>
+  <data name="SurpoidsHubTileMessage" xml:space="preserve">
+    <value>U bent in het overgewicht zone.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de surpoids</comment>
+  </data>
+  <data name="SurpoidsHubTileTitle" xml:space="preserve">
+    <value>Overgewicht</value>
+    <comment>Le titre de la hubTile de surpoids</comment>
+  </data>
+  <data name="WeightToGainFirstPart" xml:space="preserve">
+    <value>Win </value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase avant le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToGainLastPart" xml:space="preserve">
+    <value> kilo.</value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase apres le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToLoseFirstPart" xml:space="preserve">
+    <value>Verliezen </value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase avant le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="WeightToLoseLastPart" xml:space="preserve">
+    <value> kilo.</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase apres le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="AProposAucuneInformationCollecteeText" xml:space="preserve">
+    <value>IMC Calculator verzamelt geen informatie over uzelf..</value>
+    <comment>Texte décrivant que l'application ne collecte aucune données concernant l'utilisateur.</comment>
+  </data>
+  <data name="AProposAuthor" xml:space="preserve">
+    <value>door Remi Lavedrine</value>
+    <comment>Le nom de l'auteur de l'application</comment>
+  </data>
+  <data name="AProposDonnerVotreAvisText" xml:space="preserve">
+    <value>te herzien</value>
+  </data>
+  <data name="AProposEnvoyerCommentairesText" xml:space="preserve">
+    <value>Stuur uw opmerkingen, vragen, lof :</value>
+  </data>
+  <data name="AProposNonResponsableText" xml:space="preserve">
+    <value>IMC Calculator kan niet verantwoordelijk worden gesteld voor verkeerd gebruik kun je de geleverde gegevens.</value>
+    <comment>Texte decrivant que l'application ne peut etre tenu responsable de la mauvaise utilisation que l'utilisateur peut en faire.</comment>
+  </data>
+  <data name="AProposPanoramaAProposTitle" xml:space="preserve">
+    <value>over</value>
+    <comment>Le titre de l'item à propos du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaLegaleseTitle" xml:space="preserve">
+    <value>legalese</value>
+    <comment>Le titre de l'item legalese du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaNouveautesTitle" xml:space="preserve">
+    <value>nieuw</value>
+    <comment>Le titre de l'item nouveautés du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposThanksTo" xml:space="preserve">
+    <value>dank aan</value>
+    <comment>Texte décrivant les remerciements.</comment>
+  </data>
+  <data name="AProposVersion10" xml:space="preserve">
+    <value>version 1.0</value>
+  </data>
+  <data name="AProposVersion10Content" xml:space="preserve">
+    <value>Eerste versie van de applicatie</value>
+  </data>
+  <data name="AProposVersion11" xml:space="preserve">
+    <value>version 1.1</value>
+  </data>
+  <data name="AProposVersion11Content" xml:space="preserve">
+    <value>Toegevoegd Live-tegel bij de berekening van BMI en image management en de berekening wanneer de gebruiker is een man of een vrouw.</value>
+  </data>
+  <data name="AProposVersion13" xml:space="preserve">
+    <value>version 1.3</value>
+  </data>
+  <data name="AProposVersion13Content" xml:space="preserve">
+    <value>Toegevoegd sectie over en vast een fout in de berekening van de BMI voor bepaalde waarden van BMI en de mismatch van het goede imago van de Live Tile.</value>
+  </data>
+  <data name="AProposViePriveeText" xml:space="preserve">
+    <value>privacy</value>
+  </data>
+</root>

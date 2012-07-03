@@ -81,93 +81,95 @@
             			</TextBlock.Projection>
             		</TextBlock>
             		<TextBlock x:Name="feedbackWeightTextBlock" TextWrapping="Wrap" Text="0 kg" TextAlignment="Center" LineHeight="48" FontSize="29.333" FontWeight="Bold" Margin="45,10,45,14" Grid.Column="1"/>
-            		<StackPanel Margin="8,1,8,7" Grid.Row="1" Grid.ColumnSpan="2">
-                        <Grid Height="60" Background="#FFE7260E">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.15*"/>
-                                <RowDefinition Height="0.55*"/>
-                                <RowDefinition Height="0.3*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteSevereTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteSevereZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="HardObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteSevereInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-                        </Grid>
-                        <Grid Height="60" Background="#FFED9200">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.15*"/>
-                                <RowDefinition Height="0.55*"/>
-                                <RowDefinition Height="0.3*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="ModerateObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelObesiteZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-                        </Grid>
-                        <Grid Height="60" Background="#FFE4C004">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.15*"/>
-                                <RowDefinition Height="0.55*"/>
-                                <RowDefinition Height="0.3*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelSurpoidsTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelSurpoidsZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="SurpoidsZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelSurpoidsInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-                        </Grid>
-                        <Grid Height="100" Background="#FF0F9D3E">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.33*"/>
-                                <RowDefinition Height="0.33*"/>
-                                <RowDefinition Height="0.33*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock x:Name="LoseKilosToNormalWeightTextBlock" TextWrapping="Wrap" Text="Perdez x kilos pour revenir dans la zone normale" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="0" Grid.Column="0"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelNormalTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelNormalZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="GainKilosToNormalWeightTextBlock" TextWrapping="Wrap" Text="Gagnez x kilos pour revenir dans la zone normale" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-                        </Grid>
-                        <Grid Height="60" Background="#FFE4C004">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.15*"/>
-                                <RowDefinition Height="0.55*"/>
-                                <RowDefinition Height="0.3*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelMaigreurTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelMaigreurZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="MaigreurZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelMaigreurInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-                        </Grid>
-                        <Grid Height="60" Background="#FFE7260E">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.5*"/>
-                                <ColumnDefinition Width="0.5*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.15*"/>
-                                <RowDefinition Height="0.55*"/>
-                                <RowDefinition Height="0.3*"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelDenutritionTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="29.333" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelDenutritionZoneText, Source={StaticResource LocalizedStrings}}" FontSize="29.333" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="DenutritionZoneTextBlock" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.StackPanelDenutritionInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
-                         </Grid>
-                    </StackPanel>
+            		<ScrollViewer Margin="0" Grid.Row="1" Grid.ColumnSpan="2">
+            			<StackPanel>
+            				<Grid Background="#FFE7260E" Height="80">
+            					<Grid.ColumnDefinitions>
+            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.5*"/>
+            					</Grid.ColumnDefinitions>
+            					<Grid.RowDefinitions>
+            						<RowDefinition Height="0.15*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.3*"/>
+            					</Grid.RowDefinitions>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            					<TextBlock x:Name="HardObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            				</Grid>
+            				<Grid Background="#FFED9200" Height="80">
+            					<Grid.ColumnDefinitions>
+            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.5*"/>
+            					</Grid.ColumnDefinitions>
+            					<Grid.RowDefinitions>
+            						<RowDefinition Height="0.15*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.3*"/>
+            					</Grid.RowDefinitions>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            					<TextBlock x:Name="ModerateObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            				</Grid>
+            				<Grid Background="#FFE4C004" Height="80">
+            					<Grid.ColumnDefinitions>
+            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.5*"/>
+            					</Grid.ColumnDefinitions>
+            					<Grid.RowDefinitions>
+            						<RowDefinition Height="0.15*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.3*"/>
+            					</Grid.RowDefinitions>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            					<TextBlock x:Name="SurpoidsZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            				</Grid>
+            				<Grid Background="#FF0F9D3E" Height="80">
+            					<Grid.ColumnDefinitions>
+            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.5*"/>
+            					</Grid.ColumnDefinitions>
+            					<Grid.RowDefinitions>
+            						<RowDefinition Height="0.33*"/>
+            						<RowDefinition Height="0.33*"/>
+            						<RowDefinition Height="0.33*"/>
+            					</Grid.RowDefinitions>
+            					<TextBlock x:Name="LoseKilosToNormalWeightTextBlock" TextWrapping="Wrap" Text="Perdez x kilos pour revenir dans la zone normale" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="0" Grid.Column="0"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelNormalTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelNormalZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            					<TextBlock x:Name="GainKilosToNormalWeightTextBlock" TextWrapping="Wrap" Text="Gagnez x kilos pour revenir dans la zone normale" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            				</Grid>
+            				<Grid Background="#FFE4C004" Height="80">
+            					<Grid.ColumnDefinitions>
+            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.5*"/>
+            					</Grid.ColumnDefinitions>
+            					<Grid.RowDefinitions>
+            						<RowDefinition Height="0.15*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.3*"/>
+            					</Grid.RowDefinitions>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            					<TextBlock x:Name="MaigreurZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            				</Grid>
+            				<Grid Background="#FFE7260E" Height="80">
+            					<Grid.ColumnDefinitions>
+            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.5*"/>
+            					</Grid.ColumnDefinitions>
+            					<Grid.RowDefinitions>
+            						<RowDefinition Height="0.15*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.3*"/>
+            					</Grid.RowDefinitions>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            					<TextBlock x:Name="DenutritionZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            				</Grid>
+            			</StackPanel>
+            		</ScrollViewer>
             	</Grid>
             </controls:PanoramaItem>
             <controls:PanoramaItem Header="{Binding Path=LocalizedResources.InformationsPanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Width="660" Orientation="Horizontal">

@@ -154,9 +154,21 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AppResources.da-DK.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.de-DE.resx" />
+    <EmbeddedResource Include="AppResources.en-GB.resx" />
+    <EmbeddedResource Include="AppResources.es-ES.resx" />
+    <EmbeddedResource Include="AppResources.it-IT.resx" />
+    <EmbeddedResource Include="AppResources.nb-NO.resx" />
+    <EmbeddedResource Include="AppResources.nl-NL.resx" />
     <EmbeddedResource Include="AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppResources.sv-SE.resx">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
