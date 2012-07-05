@@ -461,4 +461,16 @@ Credits Wikipedia : http://fr.wikipedia.org/wiki/Surpoids</value>
   <data name="AProposViePriveeText" xml:space="preserve">
     <value>vie privée</value>
   </data>
+  <data name="IMCResultTextFirstPart" xml:space="preserve">
+    <value>Votre IMC est de </value>
+    <comment>Le début de la phrase du résultat de l'IMC.</comment>
+  </data>
+  <data name="IMCResultTextSecondPart" xml:space="preserve">
+    <value>.</value>
+    <comment>La fin de la phrase du résultat de l'IMC.</comment>
+  </data>
+  <data name="PanoramaTitle" xml:space="preserve">
+    <value>Calculer votre IMC</value>
+    <comment>Le titre du panorama principal ou l'on peut calculer son IMC et avoir les résultats.</comment>
+  </data>
 </root>

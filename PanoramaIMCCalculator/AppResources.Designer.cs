@@ -283,6 +283,24 @@ namespace PanoramaIMCCalculator {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Votre IMC est de .
+        /// </summary>
+        public static string IMCResultTextFirstPart {
+            get {
+                return ResourceManager.GetString("IMCResultTextFirstPart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ..
+        /// </summary>
+        public static string IMCResultTextSecondPart {
+            get {
+                return ResourceManager.GetString("IMCResultTextSecondPart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Vous êtes dans la zone de dénutrition..
         /// </summary>
         public static string InfoFromDenutritionIMC {
@@ -529,6 +547,15 @@ namespace PanoramaIMCCalculator {
         public static string ObesiteSevereHubTileTitle {
             get {
                 return ResourceManager.GetString("ObesiteSevereHubTileTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Calculer votre IMC.
+        /// </summary>
+        public static string PanoramaTitle {
+            get {
+                return ResourceManager.GetString("PanoramaTitle", resourceCulture);
             }
         }
         

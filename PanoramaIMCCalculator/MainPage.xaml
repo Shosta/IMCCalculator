@@ -20,7 +20,7 @@
     <Grid x:Name="LayoutRoot" Background="Transparent">
  
         <!--Contrôle Panorama-->
-        <controls:Panorama Title="Calculer votre IMC" Foreground="White">
+        <controls:Panorama Title="{Binding Path=LocalizedResources.PanoramaTitle, Source={StaticResource LocalizedStrings}}" Foreground="White">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="PanoramaBackground.png"/>
             </controls:Panorama.Background>
@@ -60,8 +60,8 @@
             <controls:PanoramaItem Header="{Binding Path=LocalizedResources.ResumePanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Foreground="White">
             	<Grid>
             		<Grid.ColumnDefinitions>
-            			<ColumnDefinition Width="0.5*"/>
-                        <ColumnDefinition Width="0.5*"/>
+            			<ColumnDefinition Width="0.6*"/>
+                        <ColumnDefinition Width="0.4*"/>
             		</Grid.ColumnDefinitions>
             		<Grid.RowDefinitions>
             			<RowDefinition Height="0.143*"/>
@@ -85,8 +85,8 @@
             			<StackPanel>
             				<Grid Background="#FFE7260E" Height="80">
             					<Grid.ColumnDefinitions>
-            						<ColumnDefinition Width="0.5*"/>
-            						<ColumnDefinition Width="0.5*"/>
+            						<ColumnDefinition Width="0.7*"/>
+            						<ColumnDefinition Width="0.3*"/>
             					</Grid.ColumnDefinitions>
             					<Grid.RowDefinitions>
             						<RowDefinition Height="0.15*"/>
@@ -95,7 +95,7 @@
             					</Grid.RowDefinitions>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            					<TextBlock x:Name="HardObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            					<TextBlock x:Name="HardObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteSevereZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
             				</Grid>
             				<Grid Background="#FFED9200" Height="80">
             					<Grid.ColumnDefinitions>
@@ -109,7 +109,7 @@
             					</Grid.RowDefinitions>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            					<TextBlock x:Name="ModerateObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            					<TextBlock x:Name="ModerateObesityZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelObesiteZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Visibility="Collapsed"/>
             				</Grid>
             				<Grid Background="#FFE4C004" Height="80">
             					<Grid.ColumnDefinitions>
@@ -123,7 +123,7 @@
             					</Grid.RowDefinitions>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            					<TextBlock x:Name="SurpoidsZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+            					<TextBlock x:Name="SurpoidsZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelSurpoidsZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Visibility="Collapsed"/>
             				</Grid>
             				<Grid Background="#FF0F9D3E" Height="80">
             					<Grid.ColumnDefinitions>
@@ -146,13 +146,13 @@
             						<ColumnDefinition Width="0.5*"/>
             					</Grid.ColumnDefinitions>
             					<Grid.RowDefinitions>
-            						<RowDefinition Height="0.15*"/>
-            						<RowDefinition Height="0.55*"/>
             						<RowDefinition Height="0.3*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.15*"/>
             					</Grid.RowDefinitions>
+            					<TextBlock x:Name="MaigreurZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="2"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            					<TextBlock x:Name="MaigreurZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelMaigreurInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
             				</Grid>
             				<Grid Background="#FFE7260E" Height="80">
             					<Grid.ColumnDefinitions>
@@ -160,19 +160,19 @@
             						<ColumnDefinition Width="0.5*"/>
             					</Grid.ColumnDefinitions>
             					<Grid.RowDefinitions>
-            						<RowDefinition Height="0.15*"/>
-            						<RowDefinition Height="0.55*"/>
             						<RowDefinition Height="0.3*"/>
+            						<RowDefinition Height="0.55*"/>
+            						<RowDefinition Height="0.15*"/>
             					</Grid.RowDefinitions>
+            					<TextBlock x:Name="DenutritionZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionZoneInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Column="0" Grid.ColumnSpan="2"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionTitle, Source={StaticResource LocalizedStrings}}" FontWeight="Bold" FontSize="{StaticResource PhoneFontSizeMediumLarge}" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             					<TextBlock TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionZoneText, Source={StaticResource LocalizedStrings}}" FontSize="{StaticResource PhoneFontSizeMediumLarge}" FontWeight="Bold" Foreground="Black" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            					<TextBlock x:Name="DenutritionZoneTextBlock" TextWrapping="Wrap" Text="{Binding LocalizedResources.StackPanelDenutritionInfoText, Source={StaticResource LocalizedStrings}}" FontSize="16" FontWeight="Bold" Visibility="Collapsed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
             				</Grid>
             			</StackPanel>
             		</ScrollViewer>
             	</Grid>
             </controls:PanoramaItem>
-            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.InformationsPanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Width="660" Orientation="Horizontal">
+            <controls:PanoramaItem Header="{Binding Path=LocalizedResources.InformationsPanoramaItemTitle, Source={StaticResource LocalizedStrings}}" Width="610" Orientation="Horizontal">
             	<toolkit:WrapPanel toolkit:TiltEffect.IsTiltEnabled="True">
             		<Button BorderThickness="0" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Click="displayDenutritionView">
                         <toolkit:HubTile x:Name="DenutritionHubTile" Height="Auto" Width="Auto" Source="Resources/Images/HubTileImages/HommeDenutrition.png" Margin="0" Title="{Binding Path=LocalizedResources.DenutritionHubTileTitle, Source={StaticResource LocalizedStrings}}" toolkit:TiltEffect.IsTiltEnabled="True" FontSize="25.333"/>

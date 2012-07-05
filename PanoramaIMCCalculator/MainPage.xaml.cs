@@ -90,15 +90,15 @@ namespace PanoramaIMCCalculator
             {
                 HardObesityZoneTextBlock.Visibility = Visibility.Visible;
             }
-            else if (30 < imc && imc < 35)
+            else if (30 < imc && imc <= 35)
             {
                 ModerateObesityZoneTextBlock.Visibility = Visibility.Visible;
             }
-            else if (25 < imc && imc < 30)
+            else if (25 < imc && imc <= 30)
             {
                 SurpoidsZoneTextBlock.Visibility = Visibility.Visible;
             }
-            else if (16.5 < imc && imc < 18.5)
+            else if (16.5 <= imc && imc < 18.5)
             {
                 MaigreurZoneTextBlock.Visibility = Visibility.Visible;
             }
@@ -126,7 +126,7 @@ namespace PanoramaIMCCalculator
             String s_imc = Math.Round(imc, 2).ToString("R"); // On prend toutes les valeurs de décimal. Si on ne les veut pas, il suffit de mettre F0 à la place de R.
             int nbDecimal = s_imc.Length - s_imc.IndexOf(",");
 
-            s_imc = "Votre IMC est de " + s_imc + "\n" + manager.infoFromIMC(imc);
+            s_imc = AppResources.IMCResultTextFirstPart + s_imc + AppResources.IMCResultTextSecondPart + "\n" + manager.infoFromIMC(imc);
 
             if (imc < 18.5)
             {
