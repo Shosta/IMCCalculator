@@ -15,12 +15,22 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
     shell:SystemTray.IsVisible="False">
-
+	<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar
+            IsMenuEnabled="True"
+            Mode="Minimized"
+            BackgroundColor="#222222"
+            ForegroundColor="#EFEFEF"
+            Opacity="0.99"
+            IsVisible="True"
+            />
+	</phone:PhoneApplicationPage.ApplicationBar>
+	
     <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
  
         <!--Contrôle Panorama-->
-        <controls:Panorama Title="{Binding Path=LocalizedResources.PanoramaTitle, Source={StaticResource LocalizedStrings}}" Foreground="White">
+        <controls:Panorama x:Name="MainPanorama" Title="{Binding Path=LocalizedResources.PanoramaTitle, Source={StaticResource LocalizedStrings}}" Foreground="White" SelectionChanged="MainPanorama_SelectionChanged">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="PanoramaBackground.png"/>
             </controls:Panorama.Background>
@@ -49,7 +59,7 @@
                         <TextBox x:Name="metricWeightTextBox" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.metricWeightTextBoxText, Source={StaticResource LocalizedStrings}}" FontSize="32" FontWeight="Bold" InputScope="Number" Foreground="Black" Margin="0,2,0,-1" Grid.Row="2" d:LayoutOverrides="Height" Grid.ColumnSpan="2" GotFocus="gotFocusOnTextBox" LostFocus="lostFocusOnTextBox"/>
             			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="kg" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" FontSize="32" FontWeight="Bold"/>
                         <TextBlock x:Name="metricIMCResultTextBlock" TextWrapping="Wrap" TextAlignment="Center" FontSize="26.667" Foreground="White" Margin="8,-1,8,1" Grid.Row="3" Grid.ColumnSpan="3"><Run Text="{Binding Path=LocalizedResources.MetricIMCResultTextBlock, Source={StaticResource LocalizedStrings}}"/></TextBlock>
-                        <Button Content="{Binding Path=LocalizedResources.CalculateIMCButtonText, Source={StaticResource LocalizedStrings}}" Click="clickCalculateMetricIMC" Foreground="White" Margin="0,-1,-2,0" Grid.Row="4" d:LayoutOverrides="GridBox" Grid.Column="1"/>
+                        <Button Content="{Binding Path=LocalizedResources.CalculateIMCButtonText, Source={StaticResource LocalizedStrings}}" Click="clickCalculateMetricIMC" Foreground="White" Margin="0,-1,-2,0" Grid.Row="4" d:LayoutOverrides="GridBox" Grid.Column="1" Visibility="Collapsed"/>
             		</Grid>
             	</ScrollViewer>
                 <!--Liste double trait avec habillage du texte-->

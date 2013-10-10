@@ -11,6 +11,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using PanoramaIMCCalculator.Model;
+using System.Collections.Specialized;
+using Microsoft.Phone.Shell;
+using System.Windows.Navigation;
 
 namespace PanoramaIMCCalculator
 {
@@ -18,6 +21,8 @@ namespace PanoramaIMCCalculator
     {
 
         public static Boolean isMale = true;
+
+        #region Object
 
         // Constructeur
         public MainPage()
@@ -27,7 +32,28 @@ namespace PanoramaIMCCalculator
             // Affecter l'exemple de données au contexte de données du contrôle ListBox
             DataContext = App.ViewModel;
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
+
+            CompletePageInitialization();
         }
+
+        /// <summary>
+        /// Overrides PhoneApplicationPage.OnNavigatedTo().
+        /// </summary>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            this.CompletePageInitialization();
+        }
+
+        private void CompletePageInitialization()
+        {
+            RebuildAppBar();
+        }
+
+        #endregion
+
+        #region MainPage Model
 
         // Charger les données pour les éléments ViewModel
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
@@ -38,6 +64,86 @@ namespace PanoramaIMCCalculator
             }
         }
 
+        #endregion
+
+        #region AppBar
+
+         /// <summary>
+         /// 
+         /// </summary>
+        private void RebuildAppBar()
+        {
+            this.ApplicationBar.Buttons.Clear();
+            this.ApplicationBar.MenuItems.Clear();
+
+            switch (MainPanorama.SelectedIndex)
+            {
+                case -1:
+                case 0:
+                    ApplicationBar.Buttons.Add(CalculateBMIAppBarButton);
+                    ApplicationBar.Mode = ApplicationBarMode.Default;
+                    break;
+
+                default:
+                    ApplicationBar.Mode = ApplicationBarMode.Minimized;
+                    break;
+            }
+
+            // Create a new menu item with the localized string from AppResources.
+            ApplicationBar.MenuItems.Add(AboutAppBarMenuItem);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private IApplicationBarIconButton _calculateBMIAppBarButton = null;
+        /// <summary>
+        /// 
+        /// </summary>
+        private IApplicationBarIconButton CalculateBMIAppBarButton
+        {
+            get
+            {
+                if (this._calculateBMIAppBarButton != null)
+                    return this._calculateBMIAppBarButton;
+
+                this._calculateBMIAppBarButton = new ApplicationBarIconButton
+                {
+                    IconUri = new Uri("/Resources/Images/AppBarIcons/scale.png", UriKind.Relative),
+                    Text = AppResources.CalculateIMCButtonText,
+                };
+                this._calculateBMIAppBarButton.Click += this.OnCalculateBMIAppBarButtonOnClick;
+                return this._calculateBMIAppBarButton;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private IApplicationBarMenuItem _aboutAppBarMenuItem = null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private IApplicationBarMenuItem AboutAppBarMenuItem
+        {
+            get
+            {
+                if (this._aboutAppBarMenuItem != null)
+                    return this._aboutAppBarMenuItem;
+
+                this._aboutAppBarMenuItem = new ApplicationBarMenuItem
+                {
+                    Text = AppResources.AProposText
+                };
+                this._aboutAppBarMenuItem.Click += this.displayAboutView;
+                return this._aboutAppBarMenuItem;
+            }
+        }
+
+        #endregion
+
+        #region Summary Page display info
 
         /// <summary>
         /// Set the visibility of all imc info textBlocks to Collapsed.
@@ -109,6 +215,10 @@ namespace PanoramaIMCCalculator
 
         }
 
+        #endregion
+
+        #region IMC Formula
+
         // IMC calculation.
         /// <summary>
         /// Calculate an IMC for metric height and weight value
@@ -158,6 +268,9 @@ namespace PanoramaIMCCalculator
             return imc;
         }
 
+        #endregion
+
+        #region User Interface management
 
         // User interface components management
 
@@ -192,6 +305,25 @@ namespace PanoramaIMCCalculator
             mainViewScrollViewer.Height = 498;
         }
 
+        const int kCalculatePanoramaItem = 0;
+        const int kSummaryPanoramaItem = 1;
+        const int kInfoPanoramaItem = 2;
+        private void PanoramaItemGotFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            Console.WriteLine("Got Focus"); 
+            //ApplicationBar = ((ApplicationBar)Application.Current.Resources["CalculateBMIAppBar"]);    
+        }
+
+        private void PanoramaItem_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // TODO: Add event handler implementation here.
+            //ApplicationBar = ((ApplicationBar)Application.Current.Resources["HiddenApplicationBar"]);
+        }
+
+        #endregion
+
+        #region Calculate Button Action Management
 
         // Calculate Button action management
         private void defineFeedbackHeightandWeightTextBlocks(string height, string weight)
@@ -200,16 +332,9 @@ namespace PanoramaIMCCalculator
             feedbackWeightTextBlock.Text = weight;
         }
 
-        private string getGender()
-        {
-            string gender = "Homme";
-            if (!isMale)
-            {
-                gender = "Femme";
-            }
+        #endregion
 
-            return gender;
-        }
+        #region Hub Tiles
 
         private void changeAllHubTilesToStartState()
         {
@@ -281,39 +406,22 @@ namespace PanoramaIMCCalculator
             }
         }
 
-        private void clickCalculateMetricIMC(object sender, System.Windows.RoutedEventArgs e)
-        {
-            try
-            {
-                string s_height = metricHeightTextBox.Text;
-                if (s_height.Contains("."))
-                    s_height = s_height.Substring(0, s_height.IndexOf("."));
+        #endregion
 
-                string s_weight = metricWeightTextBox.Text;
-                if (s_weight.Contains("."))
-                    s_weight = s_weight.Substring(0, s_weight.IndexOf("."));
-
-                Double height = Double.Parse(s_height);
-                Double weight = Double.Parse(s_weight);
-                Double imc = calculateMetricIMC(height, weight);
-
-
-                defineFeedbackHeightandWeightTextBlocks(metricHeightTextBox.Text + " cm", metricWeightTextBox.Text + " kg");
-                
-                // Manage the Tile according to the imc result.
-                TileManager tileManager = new TileManager();
-                IMCCalculatorManager imcManager = new IMCCalculatorManager();
-                tileManager.changeBackTile(imc, height, weight, imcManager.infoFromIMC(imc));
-                changeBackHubTile(imc);
-            }
-            catch
-            {
-                metricIMCResultTextBlock.Text = AppResources.IMCCalculationError;
-            }
-        }
-
+        #region Gender Management
 
         // Gender management
+
+        private string getGender()
+        {
+            string gender = "Homme";
+            if (!isMale)
+            {
+                gender = "Femme";
+            }
+
+            return gender;
+        }
 
         private void changeToWomen(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -333,6 +441,87 @@ namespace PanoramaIMCCalculator
             changeAllHubTilesToStartState();
         }
 
+        #endregion
+
+        #region Button Action Management
+
+        private void clickCalculateMetricIMC(object sender, System.Windows.RoutedEventArgs e)
+        {
+            try
+            {
+                string s_height = metricHeightTextBox.Text;
+                if (s_height.Contains("."))
+                    s_height = s_height.Substring(0, s_height.IndexOf("."));
+
+                string s_weight = metricWeightTextBox.Text;
+                if (s_weight.Contains("."))
+                    s_weight = s_weight.Substring(0, s_weight.IndexOf("."));
+
+                Double height = Double.Parse(s_height);
+                Double weight = Double.Parse(s_weight);
+                Double imc = calculateMetricIMC(height, weight);
+
+                defineFeedbackHeightandWeightTextBlocks(metricHeightTextBox.Text + " cm", metricWeightTextBox.Text + " kg");
+
+                // Manage the Tile according to the imc result.
+                TileManager tileManager = new TileManager();
+                IMCCalculatorManager imcManager = new IMCCalculatorManager();
+                tileManager.changeBackTile(imc, height, weight, imcManager.infoFromIMC(imc));
+                changeBackHubTile(imc);
+            }
+            catch
+            {
+                metricIMCResultTextBlock.Text = AppResources.IMCCalculationError;
+            }
+        }
+
+#endregion
+
+        #region AppBar Action Management
+
+        private void OnCalculateBMIAppBarButtonOnClick(object sender, EventArgs eventArgs)
+        {
+            this.calculateImcAndUpdateUI();
+        }
+
+        /// <summary>
+        /// Calculate the BMI and Update the MainPageUI.
+        /// </summary>
+        private void calculateImcAndUpdateUI()
+        {
+            // TODO: Add event handler implementation here.
+            try
+            {
+                string s_height = this.metricHeightTextBox.Text;
+                if (s_height.Contains("."))
+                    s_height = s_height.Substring(0, s_height.IndexOf("."));
+
+                string s_weight = metricWeightTextBox.Text;
+                if (s_weight.Contains("."))
+                    s_weight = s_weight.Substring(0, s_weight.IndexOf("."));
+
+                Double height = Double.Parse(s_height);
+                Double weight = Double.Parse(s_weight);
+                Double imc = calculateMetricIMC(height, weight);
+
+
+                defineFeedbackHeightandWeightTextBlocks(metricHeightTextBox.Text + " cm", metricWeightTextBox.Text + " kg");
+
+                // Manage the Tile according to the imc result.
+                TileManager tileManager = new TileManager();
+                IMCCalculatorManager imcManager = new IMCCalculatorManager();
+                tileManager.changeBackTile(imc, height, weight, imcManager.infoFromIMC(imc));
+                changeBackHubTile(imc);
+            }
+            catch
+            {
+                metricIMCResultTextBlock.Text = AppResources.IMCCalculationError;
+            }
+        }
+
+        #endregion
+
+        #region Navigation Logic
 
         // Navigation logic
 
@@ -350,8 +539,7 @@ namespace PanoramaIMCCalculator
 
         private void displayMaigreurView(object sender, System.Windows.RoutedEventArgs e)
         {
-        	// TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
-            string gender = "Homme";
+        	string gender = "Homme";
             if (!isMale)
                 gender = "Femme";
 
@@ -361,7 +549,6 @@ namespace PanoramaIMCCalculator
 
         private void displayNormalView(object sender, System.Windows.RoutedEventArgs e)
         {
-            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
             string gender = "Homme";
             if (!isMale)
                 gender = "Femme";
@@ -372,7 +559,6 @@ namespace PanoramaIMCCalculator
 
         private void displaySurpoidsView(object sender, System.Windows.RoutedEventArgs e)
         {
-            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
             string gender = "Homme";
             if (!isMale)
                 gender = "Femme";
@@ -383,7 +569,6 @@ namespace PanoramaIMCCalculator
 
         private void displayObesiteView(object sender, System.Windows.RoutedEventArgs e)
         {
-            // TODO : ajoutez ici l’implémentation du gestionnaire d’événements.
             string gender = "Homme";
             if (!isMale)
                 gender = "Femme";
@@ -391,6 +576,19 @@ namespace PanoramaIMCCalculator
             Uri uri = new Uri("/ZoneDetailPage.xaml?type=Obese&gender=" + gender, UriKind.Relative);
             NavigationService.Navigate(uri);
         }
+
+        private void displayAboutView(object sender, EventArgs e)
+        {
+            Uri uri = new Uri("/PanoramaIMCCalculator;component/AboutPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
+        }
+
+        private void MainPanorama_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+        	this.RebuildAppBar();
+        }
         
+        #endregion
+
     }
 }
