@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AProposText" xml:space="preserve">
+    <value>om</value>
+  </data>
+  <data name="CalculateIMCButtonText" xml:space="preserve">
+    <value>Beräkna</value>
+    <comment>Le bouton permettant de calculer son IMC.</comment>
+  </data>
+  <data name="CalculPanoramaItemTitle" xml:space="preserve">
+    <value>beräkningen</value>
+    <comment>Le titre du PanoramaItem du calcul</comment>
+  </data>
+  <data name="DenutritionDetailPageContent" xml:space="preserve">
+    <value>Undernäring:
+Undernäring är ett tillstånd till följd av bristfälliga näringsintag i förhållande till energiförbrukning av organisationen. När ingångarna är bristfälliga samt att vara otillräckliga, talar vi om undernäring.
+Undernäring är klassificerat som avsnitt undernäring i International Classification of Diseases.
+
+Patofysiologi
+Undernäring kan ha flera ursprung. Etiologin är omväxlande och kan innebära en organisk sjukdom, psykiatrisk eller social. Undernäring kallas primär när det induceras genom en direkt orsak, och sekundär när det uppstår i resultat av ett annat tillstånd. Det finns två patofysiologiska mekanismer: brist på insatsvaror och hypermetabolism.
+
+Undernäring brist på bidrag
+Vid brist på bidragen sätts in fastande tillstånd, som utvecklas i flera steg. Energikällor i fastande är t glukosmetabolism, användningen av leverglykogen och glukos-syntes och för lipidmetabolism, användningen av fettsyror och ketogenes.
+
+* Fasta omedelbara anpassning till maten tas intermittent mindre än tolv timmar. Insulinutsöndring minskar, medan glukagon ökar. Detta spel leder till hormonell stimulering av lipolys och fettsyraoxidation och ketogenes. För att upprätthålla blodglukos är glykogenolys stimuleras exklusivt.
+
+* Fasta kort: anpassning till avsaknaden av födointag under en period av tolv timmar till tre eller fyra dagar. Insulinutsöndring minskar ytterligare. Utarmning av glykogen orsakar en sänkning av blodglukos. Den enda källan till glukos i kroppen blir glukoneogenes, som producerar glukos från aminosyror i muskelprotein tillverkning karbamid som avfall. Utsöndringen av urea ökar därför. Ketogenes fortsätter.
+
+* Utdragen fasta: efter ca fem dagar till flera veckor. Plasma ketonkroppar ökar, medan utsöndringen av urea stabiliseras vid 50 mg / kg / dag. Denna stabilisering är relaterad till stabilisering av de besparingar som avses proteolys protein. Nya hormonella förändringar, med en minskad produktion av sköldkörtelhormon. Denna fas av utdragen fasta resultat i undernäring.
+
+* Terminal steg: När fettdepåer är slut, är plasmanivåerna av fettsyror och ketonkroppar sänks, medan de stiger blodsockret. Tvärtom finns då en ökad mobilisering av skelettmuskulaturen protein för glukoneogenes. Detta leder till ökad utsöndring av urea och kväve och resulterar i hög morbiditet och mortalitet.
+                
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Dénutrition</value>
+  </data>
+  <data name="DenutritionDetailPageTitle" xml:space="preserve">
+    <value>Undernäring</value>
+  </data>
+  <data name="DenutritionHubTileMessage" xml:space="preserve">
+    <value>Du är i området av undernäring.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de dénutrition</comment>
+  </data>
+  <data name="DenutritionHubTileTitle" xml:space="preserve">
+    <value>Undernäring</value>
+    <comment>Le titre de la hubTile de denutrition</comment>
+  </data>
+  <data name="IMCCalculationError" xml:space="preserve">
+    <value>Ett problem uppstod när beräkna din BMI.
+Var god ange din längd och vikt.</value>
+    <comment>Texte lors d'une erreur lors du calcul d'un IMC</comment>
+  </data>
+  <data name="InfoFromDenutritionIMC" xml:space="preserve">
+    <value>Du är i området av undernäring.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (denutrition).</comment>
+  </data>
+  <data name="InfoFromMaigreurIMC" xml:space="preserve">
+    <value>Du är i området tunnhet.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (maigreur).</comment>
+  </data>
+  <data name="InfoFromNormalIMC" xml:space="preserve">
+    <value>Du är i det normala intervallet.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (normal).</comment>
+  </data>
+  <data name="InfoFromObesiteIMC" xml:space="preserve">
+    <value>Du är i zonen måttlig fetma.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite).</comment>
+  </data>
+  <data name="InfoFromObesiteSevereIMC" xml:space="preserve">
+    <value>Du är i området av svår fetma.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite severe).</comment>
+  </data>
+  <data name="InfoFromSurpoidsIMC" xml:space="preserve">
+    <value>Du är i överviktiga zonen.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (surpoids).</comment>
+  </data>
+  <data name="InformationsPanoramaItemTitle" xml:space="preserve">
+    <value>data som</value>
+  </data>
+  <data name="LiveTileBackTitleNormal" xml:space="preserve">
+    <value>Ändra inte på någonting.</value>
+    <comment>Message dans le live tile lorsque l'utilisateur a un IMC normal.</comment>
+  </data>
+  <data name="MaigreurDetailPageContent" xml:space="preserve">
+    <value>Tunnhet:
+
+Tunnhet är tillståndet för vad som är mager. I fallet med en människa benämnes undervikt. Som sådan är det definieras av World Health Organization som onormalt tillstånd av individer vars BMI är mellan 15 och 18,5.
+Patologisk tunnhet ökar risken för olika sjukdomar bland vilka inkluderar infektioner och benskörhet, men kan också vara ett symptom på en av dem. Det kan också vara en icke-patologiskt tillstånd, det vill säga konstitutionell, stabilt och inte åtföljs av någon störning.
+ÉtiologieLes Orsakerna kan vara
+
+* Sociologisk svält, fattigdom
+* Psykiska: anorexia nervosa, depression
+* Medicinsk: neoplasi, svår infektion (tuberculose. ..), typ 1-diabetes, missbruk, sjukdom med intestinal malabsorption, AIDS ...
+* Genetik: Ärftlig
+* Morfologi: tunna ben, muskler ändamål
+* Det konstitutionella tunnhet
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Maigreur</value>
+  </data>
+  <data name="MaigreurDetailPageTitle" xml:space="preserve">
+    <value>Tunnhet</value>
+  </data>
+  <data name="MaigreurHubTileMessage" xml:space="preserve">
+    <value>Du är i området tunnhet.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de maigreur</comment>
+  </data>
+  <data name="MaigreurHubTileTitle" xml:space="preserve">
+    <value>Tunnhet</value>
+    <comment>Le titre de la hubTile de maigreur</comment>
+  </data>
+  <data name="metricHeightTextBoxText" xml:space="preserve">
+    <value>Storlek</value>
+    <comment>Le placeholder pour la taille</comment>
+  </data>
+  <data name="MetricIMCResultTextBlock" xml:space="preserve">
+    <value>Beräkna ditt BMI.</value>
+    <comment>Le résumé du calcul de votre IMC.</comment>
+  </data>
+  <data name="metricWeightTextBoxText" xml:space="preserve">
+    <value>Vikt</value>
+    <comment>Le placeholder pour le poids</comment>
+  </data>
+  <data name="NormalDetailPageContent" xml:space="preserve">
+    <value>Det ska inte förväxlas massa (svår) och vikt.
+Vikten av en kropp är en kraft, främst på grund av de åtgärder utövas på honom gravitationsfält.
+
+Reserver avseende BMI
+Det är viktigt att hålla i minnet att BMI är endast en indikator, inte en absolut ges. På grund av sin muskelmassa, vissa idrottsmän har ett BMI över 25 kg/m2, ådrar de ingen fara. Dessutom, enligt morfologin av en persons BMI varierar i gott skick. En person kan vara knäböj utan att vara fet (t.ex. Bixente Lizarazu, Mike Tyson och Jona Lomu), och en annan kan ha en smal, men för mycket kroppsfett.
+Håll också i minnet ramen för de tröskelvärden som rekommenderas av WHO. De är bekväma att använda, bör dessa gränsvärden varierar helst efter kön, ålder och etnicitet och de bör tillämpas med försiktighet till individuell diagnos.
+Domen av sin vikt genom fett mass index bör göras med hjälp av en läkare och se en nutritionist eller dietist rekommenderas.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle</value>
+  </data>
+  <data name="NormalDetailPageTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NormalHubTileMessage" xml:space="preserve">
+    <value>Du är i det normala intervallet. Bravo!</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone normale</comment>
+  </data>
+  <data name="NormalHubTileTitle" xml:space="preserve">
+    <value>Normal</value>
+    <comment>Le titre de la hubTile normal</comment>
+  </data>
+  <data name="ObesiteDetailPageContent" xml:space="preserve">
+    <value>Fetma är tillståndet för en individ med ett body mass långt över vad som är önskvärt eller acceptabelt, oftast på grund av en ansamling av kroppsfett. Den mänskliga fetma har erkänts som en sjukdom 1997 av WHO. Denna organisation definierar "övervikt och fetma som en onormal eller överdriven ansamling av kroppsfett som kan skada hälsan." Det förebyggande är ett folkhälsoproblem i de utvecklade länderna. Den kan ha en betydande inverkan på hälsan hos den enskilde.
+Detta multifaktoriell sjukdom ses nu metaforiskt som en pandemi, även om detta inte är en smittsam sjukdom.
+
+definition
+De kliniska formerna är många, med de patofysiologiska mekanismer och patologiska konsekvenser olika, så det är bättre att tala om "fetma". Att utvärdera dessa fetma bör analyseras två parametrar som påverkar komplikationer av sjukdomen oberoende av varandra: överviktig, och fett distribution.
+
+fenotyper
+4 typer av fetma beskrivs:
+* Typ I: överflödigt fett fördelas i kroppen utan företrädesrätt lokalisering;
+* Typ II: överflödigt fett är koncentrerad på bålen och buken: det gäller att bukfetma;
+* Typ III: ansamling av fett sker i buken: det gäller att bukfetma;
+* Typ IV: fettet är lokaliserat i höfter och lår (glutéofémoral nivå): Detta är en gynoid fetma.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteDetailPageTitle" xml:space="preserve">
+    <value>Fetma</value>
+  </data>
+  <data name="ObesiteHubTileMessage" xml:space="preserve">
+    <value>Du är i zonen måttlig fetma.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité modérée</comment>
+  </data>
+  <data name="ObesiteHubTileTitle" xml:space="preserve">
+    <value>Fetma</value>
+    <comment>Le titre de la hubTile d'obesite</comment>
+  </data>
+  <data name="ObesiteSevereDetailPageContent" xml:space="preserve">
+    <value>Fetma är tillståndet för en individ med ett body mass långt över vad som är önskvärt eller acceptabelt, oftast på grund av en ansamling av kroppsfett. Den mänskliga fetma har erkänts som en sjukdom 1997 av WHO. Denna organisation definierar "övervikt och fetma som en onormal eller överdriven ansamling av kroppsfett som kan skada hälsan." Det förebyggande är ett folkhälsoproblem i de utvecklade länderna. Den kan ha en betydande inverkan på hälsan hos den enskilde.
+Detta multifaktoriell sjukdom ses nu metaforiskt som en pandemi, även om detta inte är en smittsam sjukdom.
+
+definition
+De kliniska formerna är många, med de patofysiologiska mekanismer och patologiska konsekvenser olika, så det är bättre att tala om "fetma". Att utvärdera dessa fetma bör analyseras två parametrar som påverkar komplikationer av sjukdomen oberoende av varandra: överviktig, och fett distribution.
+
+fenotyper
+4 typer av fetma beskrivs:
+* Typ I: överflödigt fett fördelas i kroppen utan företrädesrätt lokalisering;
+* Typ II: överflödigt fett är koncentrerad på bålen och buken: det gäller att bukfetma;
+* Typ III: ansamling av fett sker i buken: det gäller att bukfetma;
+* Typ IV: fettet är lokaliserat i höfter och lår (glutéofémoral nivå): Detta är en gynoid fetma.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteSevereDetailPageTitle" xml:space="preserve">
+    <value>Svår fetma</value>
+  </data>
+  <data name="ObesiteSevereHubTileMessage" xml:space="preserve">
+    <value>Du är i området av svår fetma.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité sévère</comment>
+  </data>
+  <data name="ObesiteSevereHubTileTitle" xml:space="preserve">
+    <value>Svår fetma</value>
+    <comment>Le titre de la hubTile d'obesite severe</comment>
+  </data>
+  <data name="ResumePanoramaItemTitle" xml:space="preserve">
+    <value>sammanfattning</value>
+    <comment>Le titre du PanoramaItem du résumé</comment>
+  </data>
+  <data name="ResumePoidsText" xml:space="preserve">
+    <value>Vikt</value>
+  </data>
+  <data name="ResumeTailleText" xml:space="preserve">
+    <value>Storlek</value>
+  </data>
+  <data name="StackPanelDenutritionTitle" xml:space="preserve">
+    <value>Undernäring</value>
+  </data>
+  <data name="StackPanelDenutritionZoneInfoText" xml:space="preserve">
+    <value>Du är i området av undernäring.</value>
+  </data>
+  <data name="StackPanelDenutritionZoneText" xml:space="preserve">
+    <value>mindre än 16.5</value>
+  </data>
+  <data name="StackPanelMaigreurTitle" xml:space="preserve">
+    <value>Tunnhet</value>
+  </data>
+  <data name="StackPanelMaigreurZoneInfoText" xml:space="preserve">
+    <value>Du är i området tunnhet.</value>
+  </data>
+  <data name="StackPanelMaigreurZoneText" xml:space="preserve">
+    <value>16.5 till 18.5</value>
+  </data>
+  <data name="StackPanelNormalTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StackPanelNormalZoneText" xml:space="preserve">
+    <value>18.5 till 25</value>
+  </data>
+  <data name="StackPanelObesiteSevereTitle" xml:space="preserve">
+    <value>Svår fetma</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneInfoText" xml:space="preserve">
+    <value>Du är i området av svår fetma.</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneText" xml:space="preserve">
+    <value>35 och mer</value>
+  </data>
+  <data name="StackPanelObesiteTitle" xml:space="preserve">
+    <value>Måttlig fetma</value>
+  </data>
+  <data name="StackPanelObesiteZoneInfoText" xml:space="preserve">
+    <value>Du är i zonen måttlig fetma.</value>
+  </data>
+  <data name="StackPanelObesiteZoneText" xml:space="preserve">
+    <value>30 till 35</value>
+  </data>
+  <data name="StackPanelSurpoidsTitle" xml:space="preserve">
+    <value>Övervikt</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneInfoText" xml:space="preserve">
+    <value>Du är i överviktiga zonen.</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneText" xml:space="preserve">
+    <value>25 till 30</value>
+  </data>
+  <data name="SurpoidsDetailPageContent" xml:space="preserve">
+    <value>Övervikt är tillståndet för en person med ett BMI vara något högre än normalt eller genomsnittet i ett givet samhälle.
+
+Det definieras av World Health Organization som ett attribut för enskilda personer med ett BMI mellan 25 och 30 kg per kvadratmeter och är, enligt dessa kriterier, som begränsas av den tunna (eller normal vikt) och "måttlig fetma.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Surpoids</value>
+  </data>
+  <data name="SurpoidsDetailPageTitle" xml:space="preserve">
+    <value>Övervikt</value>
+  </data>
+  <data name="SurpoidsHubTileMessage" xml:space="preserve">
+    <value>Du är i överviktiga zonen.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de surpoids</comment>
+  </data>
+  <data name="SurpoidsHubTileTitle" xml:space="preserve">
+    <value>Övervikt</value>
+    <comment>Le titre de la hubTile de surpoids</comment>
+  </data>
+  <data name="WeightToGainFirstPart" xml:space="preserve">
+    <value>Vinn </value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase avant le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToGainLastPart" xml:space="preserve">
+    <value> kilo.</value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase apres le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToLoseFirstPart" xml:space="preserve">
+    <value>Förlorar </value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase avant le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="WeightToLoseLastPart" xml:space="preserve">
+    <value> kilo.</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase apres le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="AProposAucuneInformationCollecteeText" xml:space="preserve">
+    <value>IMC Calculator samlar ingen information om dig själv.</value>
+    <comment>Texte décrivant que l'application ne collecte aucune données concernant l'utilisateur.</comment>
+  </data>
+  <data name="AProposAuthor" xml:space="preserve">
+    <value>genom Rémi Lavedrine</value>
+    <comment>Le nom de l'auteur de l'application</comment>
+  </data>
+  <data name="AProposDonnerVotreAvisText" xml:space="preserve">
+    <value>granska</value>
+  </data>
+  <data name="AProposEnvoyerCommentairesText" xml:space="preserve">
+    <value>Skicka dina kommentarer, frågor, beröm :</value>
+  </data>
+  <data name="AProposNonResponsableText" xml:space="preserve">
+    <value>IMC Calculator kan inte hållas ansvariga för felaktig kan du göra de uppgifter som lämnats.</value>
+    <comment>Texte decrivant que l'application ne peut etre tenu responsable de la mauvaise utilisation que l'utilisateur peut en faire.</comment>
+  </data>
+  <data name="AProposPanoramaAProposTitle" xml:space="preserve">
+    <value>ca</value>
+    <comment>Le titre de l'item à propos du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaLegaleseTitle" xml:space="preserve">
+    <value>legalese</value>
+    <comment>Le titre de l'item legalese du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaNouveautesTitle" xml:space="preserve">
+    <value>ny</value>
+    <comment>Le titre de l'item nouveautés du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposThanksTo" xml:space="preserve">
+    <value>tack till</value>
+    <comment>Texte décrivant les remerciements.</comment>
+  </data>
+  <data name="AProposVersion10" xml:space="preserve">
+    <value>version 1.0</value>
+  </data>
+  <data name="AProposVersion10Content" xml:space="preserve">
+    <value>Första versionen av programmet</value>
+  </data>
+  <data name="AProposVersion11" xml:space="preserve">
+    <value>version 1.1</value>
+  </data>
+  <data name="AProposVersion11Content" xml:space="preserve">
+    <value>Lade Live Tile vid beräkning BMI och bildhantering samt beräkning när användaren är en man eller en kvinna.</value>
+  </data>
+  <data name="AProposVersion13" xml:space="preserve">
+    <value>version 1.3</value>
+  </data>
+  <data name="AProposVersion13Content" xml:space="preserve">
+    <value>Lade avsnitt om och fixeras en bugg i beräkningen av BMI för vissa värden på BMI och obalansen av det goda bilden av den Live Tile.</value>
+  </data>
+  <data name="AProposViePriveeText" xml:space="preserve">
+    <value>integritet</value>
+  </data>
+  <data name="IMCResultTextFirstPart" xml:space="preserve">
+    <value>Ditt BMI är </value>
+    <comment>Le début de la phrase du résultat de l'IMC.</comment>
+  </data>
+  <data name="IMCResultTextSecondPart" xml:space="preserve">
+    <value>.</value>
+    <comment>La fin de la phrase du résultat de l'IMC</comment>
+  </data>
+  <data name="PanoramaTitle" xml:space="preserve">
+    <value>Beräkna ditt BMI</value>
+    <comment>Le titre du panorama principal ou l'on peut calculer son IMC et avoir les résultats.</comment>
+  </data>
+</root>

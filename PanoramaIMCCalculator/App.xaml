@@ -8,7 +8,14 @@
 
     <!--Ressources d'applications-->
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:PanoramaIMCCalculator" x:Key="LocalizedStrings"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <local:LocalizedStrings xmlns:local="clr-namespace:PanoramaIMCCalculator" x:Key="LocalizedStrings"/>
+                </ResourceDictionary>
+                <ResourceDictionary Source="/PanoramaIMCCalculator;component/SharedResources.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

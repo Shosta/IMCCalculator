@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AProposText" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="CalculateIMCButtonText" xml:space="preserve">
+    <value>Calculate</value>
+    <comment>Le bouton permettant de calculer son IMC.</comment>
+  </data>
+  <data name="CalculPanoramaItemTitle" xml:space="preserve">
+    <value>calculation</value>
+    <comment>Le titre du PanoramaItem du calcul</comment>
+  </data>
+  <data name="DenutritionDetailPageContent" xml:space="preserve">
+    <value>Severely underweight:
+Malnutrition is a condition resulting from inadequate nutrient intakes in relation to energy expenditure of the organization. When inputs are inadequate as well as being insufficient, we speak of malnutrition.
+Malnutrition is classified to section marasmus of the International Classification of Diseases.
+
+Pathophysiology
+Malnutrition can have multiple origins. The etiology is varied and may involve an organic disease, psychiatric or social. Undernutrition is called primary when it is induced by a direct cause, and secondary when it is caused in result of another condition. There are two pathophysiological mechanisms: lack of inputs and hypermetabolism.
+
+Malnutrition deficiency of contributions
+In case of deficiency of contributions is set up the fasting state, which evolves in several steps. Energy sources in fasting are, for glucose metabolism, the use of hepatic glycogen and glucose synthesis and for lipid metabolism, the use of fatty acids and ketogenesis.
+
+* Fasting immediate adaptation to the food taken intermittently for less than twelve hours. Insulin secretion decreases, while glucagon increases. This game leads to hormonal stimulation of lipolysis and fatty acid oxidation and ketogenesis. To maintain blood glucose, glycogenolysis is stimulated exclusively.
+
+* Fasting short: adaptation to the absence of food intake over a period of twelve hours to three or four days. Insulin secretion decreases further. Depletion of glycogen causes a decrease in blood glucose. The only source of glucose in the body becomes gluconeogenesis, which produces glucose from amino acids in muscle protein manufacturing urea as waste. The excretion of urea therefore increases. Ketogenesis continues.
+
+* Prolonged Fasting: after about five days to several weeks. Plasma ketone bodies increased, while the excretion of urea stabilizes at 50 mg / kg / day. This stabilization is related to stabilization of the savings referred to proteolysis protein. New hormonal changes occur, with a decreased production of thyroid hormones. This phase of prolonged fasting results in marasmus.
+
+* Terminal stage: When fat stores are depleted, plasma levels of fatty acids and ketone bodies are lowered, while the blood sugar rises. Indeed, there is then an increased mobilization of skeletal muscle protein for gluconeogenesis. This leads to increased excretion of urea and nitrogen and results in high morbidity and mortality.
+                
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Dénutrition</value>
+  </data>
+  <data name="DenutritionDetailPageTitle" xml:space="preserve">
+    <value>Undernutrition</value>
+  </data>
+  <data name="DenutritionHubTileMessage" xml:space="preserve">
+    <value>You are in the severely underweight category.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de dénutrition</comment>
+  </data>
+  <data name="DenutritionHubTileTitle" xml:space="preserve">
+    <value>Undernutrition</value>
+    <comment>Le titre de la hubTile de denutrition</comment>
+  </data>
+  <data name="IMCCalculationError" xml:space="preserve">
+    <value>A problem occurred when calculating your BMI.
+Please re-enter your height and weight.</value>
+    <comment>Texte lors d'une erreur lors du calcul d'un IMC</comment>
+  </data>
+  <data name="InfoFromDenutritionIMC" xml:space="preserve">
+    <value>You are in the severely underweight category.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (denutrition).</comment>
+  </data>
+  <data name="InfoFromMaigreurIMC" xml:space="preserve">
+    <value>You are in the underweight category.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (maigreur).</comment>
+  </data>
+  <data name="InfoFromNormalIMC" xml:space="preserve">
+    <value>You are in the healthy weight category.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (normal).</comment>
+  </data>
+  <data name="InfoFromObesiteIMC" xml:space="preserve">
+    <value>You are in the moderately obese category.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite).</comment>
+  </data>
+  <data name="InfoFromObesiteSevereIMC" xml:space="preserve">
+    <value>You are in the severely obese category.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite severe).</comment>
+  </data>
+  <data name="InfoFromSurpoidsIMC" xml:space="preserve">
+    <value>You are in the overweight category.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (surpoids).</comment>
+  </data>
+  <data name="InformationsPanoramaItemTitle" xml:space="preserve">
+    <value>news</value>
+  </data>
+  <data name="LiveTileBackTitleNormal" xml:space="preserve">
+    <value>Do not change anything.</value>
+    <comment>Message dans le live tile lorsque l'utilisateur a un IMC normal.</comment>
+  </data>
+  <data name="MaigreurDetailPageContent" xml:space="preserve">
+    <value>Thinness:
+
+Thinness is the state of what is lean. In the case of a person is referred to as underweight. As such, it is defined by the World Health Organization as the abnormal condition of individuals whose BMI is between 15 and 18.5.
+Pathological thinness increases the risk of various diseases among which include infections and osteoporosis but may also be a symptom of one of them. It can also be a non-pathological state, that is to say constitutional, stable and not accompanied by any disturbance.
+ÉtiologieLes causes can be
+
+* Sociological famine, poverty
+* Psychiatric: anorexia nervosa, depression
+* Medical: neoplasia, severe infection (tuberculose. ..), type 1 diabetes, addiction, disease with intestinal malabsorption, AIDS ...
+* Genetics: Hereditary
+* Morphology: thin bones, muscles purposes
+* The Constitutional thinness
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Maigreur</value>
+  </data>
+  <data name="MaigreurDetailPageTitle" xml:space="preserve">
+    <value>Thinness</value>
+  </data>
+  <data name="MaigreurHubTileMessage" xml:space="preserve">
+    <value>You are in the underweight category.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de maigreur</comment>
+  </data>
+  <data name="MaigreurHubTileTitle" xml:space="preserve">
+    <value>Thinness</value>
+    <comment>Le titre de la hubTile de maigreur</comment>
+  </data>
+  <data name="metricHeightTextBoxText" xml:space="preserve">
+    <value>Height</value>
+    <comment>Le placeholder pour la taille</comment>
+  </data>
+  <data name="MetricIMCResultTextBlock" xml:space="preserve">
+    <value>Calculate your BMI.</value>
+    <comment>Le résumé du calcul de votre IMC.</comment>
+  </data>
+  <data name="metricWeightTextBoxText" xml:space="preserve">
+    <value>Weight</value>
+    <comment>Le placeholder pour le poids</comment>
+  </data>
+  <data name="NormalDetailPageContent" xml:space="preserve">
+    <value>It should not be confused mass (severe) and weight.
+The weight of a body is a force, mainly due to the action exercised upon him the gravitational field.
+
+Reserves in respect of BMI
+It is important to keep in mind that BMI is only an indicator, not an absolute given. Because of their muscle mass, some athletes have a BMI above 25 kg/m2, they incur no danger. Moreover, according to the morphology of a person's BMI varies in good shape. A person may be squat without being oily (eg Bixente Lizarazu, Mike Tyson or Jonah Lomu), and another may have a slender but too much body fat.
+Also, keep in mind the limits of the thresholds recommended by WHO. They are convenient to use, these thresholds should ideally vary by sex, age and ethnicity and they should apply with caution to individual diagnosis.
+The judgment of its weight through the fat mass index should be done with the help of a doctor and seeing a nutritionist or dietitian is recommended.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle</value>
+  </data>
+  <data name="NormalDetailPageTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NormalHubTileMessage" xml:space="preserve">
+    <value>You are in the healthy weight category. Well done!!</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone normale</comment>
+  </data>
+  <data name="NormalHubTileTitle" xml:space="preserve">
+    <value>Normal</value>
+    <comment>Le titre de la hubTile normal</comment>
+  </data>
+  <data name="ObesiteDetailPageContent" xml:space="preserve">
+    <value>Obesity is the condition of an individual with a body mass well above what is desirable or acceptable, usually due to an accumulation of body fat. The human obesity has been recognized as a disease in 1997 by WHO. This organization defines "overweight and obesity as an abnormal or excessive accumulation of body fat that can harm health." Its prevention is a public health problem in developed countries. It can have a significant impact on the health of the individual.
+This multifactorial disease is now seen metaphorically as a pandemic, although this is not an infectious disease.
+
+Definition
+The clinical forms are numerous, with the pathophysiological mechanisms and pathological consequences different, so it is better to speak of "obesity". To evaluate these obesity should be analyzed two parameters that affect the complications of the disease independently from each other: excess body fat, and fat distribution.
+
+Phenotypes
+4 types of obesity are described:
+* Type I: excess fat is distributed in the body without preferential localization;
+* Type II: excess fat is concentrated on the trunk and abdomen: it comes to abdominal obesity;
+* Type III: fat accumulation occurs in the abdomen: it comes to visceral obesity;
+* Type IV: the fat is localized in the hips and thighs (glutéofémoral level): this is a gynoid obesity.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteDetailPageTitle" xml:space="preserve">
+    <value>Obesity</value>
+  </data>
+  <data name="ObesiteHubTileMessage" xml:space="preserve">
+    <value>You are in the moderately obese category</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité modérée</comment>
+  </data>
+  <data name="ObesiteHubTileTitle" xml:space="preserve">
+    <value>Obesity</value>
+    <comment>Le titre de la hubTile d'obesite</comment>
+  </data>
+  <data name="ObesiteSevereDetailPageContent" xml:space="preserve">
+    <value>Obesity is the condition of an individual with a body mass well above what is desirable or acceptable, usually due to an accumulation of body fat. The human obesity has been recognized as a disease in 1997 by WHO. This organization defines "overweight and obesity as an abnormal or excessive accumulation of body fat that can harm health." Its prevention is a public health problem in developed countries. It can have a significant impact on the health of the individual.
+This multifactorial disease is now seen metaphorically as a pandemic, although this is not an infectious disease.
+
+Definition
+The clinical forms are numerous, with the pathophysiological mechanisms and pathological consequences different, so it is better to speak of "obesity". To evaluate these obesity should be analyzed two parameters that affect the complications of the disease independently from each other: excess body fat, and fat distribution.
+
+Phenotypes
+4 types of obesity are described:
+* Type I: excess fat is distributed in the body without preferential localization;
+* Type II: excess fat is concentrated on the trunk and abdomen: it comes to abdominal obesity;
+* Type III: fat accumulation occurs in the abdomen: it comes to visceral obesity;
+* Type IV: the fat is localized in the hips and thighs (glutéofémoral level): this is a gynoid obesity.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteSevereDetailPageTitle" xml:space="preserve">
+    <value>Severely Obese</value>
+  </data>
+  <data name="ObesiteSevereHubTileMessage" xml:space="preserve">
+    <value>You are in the severely obese category.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité sévère</comment>
+  </data>
+  <data name="ObesiteSevereHubTileTitle" xml:space="preserve">
+    <value>Severe obesity</value>
+    <comment>Le titre de la hubTile d'obesite severe</comment>
+  </data>
+  <data name="ResumePanoramaItemTitle" xml:space="preserve">
+    <value>summary</value>
+    <comment>Le titre du PanoramaItem du résumé</comment>
+  </data>
+  <data name="ResumePoidsText" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="ResumeTailleText" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="StackPanelDenutritionTitle" xml:space="preserve">
+    <value>Undernutrition</value>
+  </data>
+  <data name="StackPanelDenutritionZoneInfoText" xml:space="preserve">
+    <value>You are in the severely underweight category.</value>
+  </data>
+  <data name="StackPanelDenutritionZoneText" xml:space="preserve">
+    <value>less than 16.5</value>
+  </data>
+  <data name="StackPanelMaigreurTitle" xml:space="preserve">
+    <value>Thinness</value>
+  </data>
+  <data name="StackPanelMaigreurZoneInfoText" xml:space="preserve">
+    <value>You are in the underweight category.</value>
+  </data>
+  <data name="StackPanelMaigreurZoneText" xml:space="preserve">
+    <value>from 16.5 to 18.5</value>
+  </data>
+  <data name="StackPanelNormalTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StackPanelNormalZoneText" xml:space="preserve">
+    <value>from 18.5 to 25</value>
+  </data>
+  <data name="StackPanelObesiteSevereTitle" xml:space="preserve">
+    <value>Severe Obesity</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneInfoText" xml:space="preserve">
+    <value>You are in the severely obese category.</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneText" xml:space="preserve">
+    <value>over 35</value>
+  </data>
+  <data name="StackPanelObesiteTitle" xml:space="preserve">
+    <value>obesity</value>
+  </data>
+  <data name="StackPanelObesiteZoneInfoText" xml:space="preserve">
+    <value>You are in the moderately obese category.</value>
+  </data>
+  <data name="StackPanelObesiteZoneText" xml:space="preserve">
+    <value>from 30 to 35</value>
+  </data>
+  <data name="StackPanelSurpoidsTitle" xml:space="preserve">
+    <value>Overweight</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneInfoText" xml:space="preserve">
+    <value>You are in the overweight category</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneText" xml:space="preserve">
+    <value>from 25 to 30</value>
+  </data>
+  <data name="SurpoidsDetailPageContent" xml:space="preserve">
+    <value>Overweight is the state of a person with a BMI considered slightly higher than normal or average in a given society.
+
+It is defined by the World Health Organization as an attribute of individuals with a BMI between 25 and 30 kilograms per square meter and is, according to these criteria, bounded by the thin (or normal weight) and 'moderate obesity.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Surpoids</value>
+  </data>
+  <data name="SurpoidsDetailPageTitle" xml:space="preserve">
+    <value>Overweight</value>
+  </data>
+  <data name="SurpoidsHubTileMessage" xml:space="preserve">
+    <value>You are in the overweight category.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de surpoids</comment>
+  </data>
+  <data name="SurpoidsHubTileTitle" xml:space="preserve">
+    <value>Overweight</value>
+    <comment>Le titre de la hubTile de surpoids</comment>
+  </data>
+  <data name="WeightToGainFirstPart" xml:space="preserve">
+    <value>Gain </value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase avant le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToGainLastPart" xml:space="preserve">
+    <value> kilos.</value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase apres le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToLoseFirstPart" xml:space="preserve">
+    <value>Lose</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase avant le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="WeightToLoseLastPart" xml:space="preserve">
+    <value> kilos.</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase apres le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="AProposAucuneInformationCollecteeText" xml:space="preserve">
+    <value>IMC Calculator does not collect any information about yourself.</value>
+    <comment>Texte décrivant que l'application ne collecte aucune données concernant l'utilisateur.</comment>
+  </data>
+  <data name="AProposAuthor" xml:space="preserve">
+    <value>from Rémi Lavedrine</value>
+    <comment>Le nom de l'auteur de l'application</comment>
+  </data>
+  <data name="AProposDonnerVotreAvisText" xml:space="preserve">
+    <value>comments and reviews</value>
+  </data>
+  <data name="AProposEnvoyerCommentairesText" xml:space="preserve">
+    <value>Send your comments, questions, praise to :</value>
+  </data>
+  <data name="AProposNonResponsableText" xml:space="preserve">
+    <value>IMC Calculator can not be held responsible for misuse you can do the data provided.</value>
+    <comment>Texte decrivant que l'application ne peut etre tenu responsable de la mauvaise utilisation que l'utilisateur peut en faire.</comment>
+  </data>
+  <data name="AProposPanoramaAProposTitle" xml:space="preserve">
+    <value>about</value>
+    <comment>Le titre de l'item à propos du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaLegaleseTitle" xml:space="preserve">
+    <value>legalese</value>
+    <comment>Le titre de l'item legalese du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaNouveautesTitle" xml:space="preserve">
+    <value>new</value>
+    <comment>Le titre de l'item nouveautés du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposThanksTo" xml:space="preserve">
+    <value>thanks to</value>
+    <comment>Texte décrivant les remerciements.</comment>
+  </data>
+  <data name="AProposVersion10" xml:space="preserve">
+    <value>version 1.0</value>
+  </data>
+  <data name="AProposVersion10Content" xml:space="preserve">
+    <value>First version of the application</value>
+  </data>
+  <data name="AProposVersion11" xml:space="preserve">
+    <value>version 1.1</value>
+  </data>
+  <data name="AProposVersion11Content" xml:space="preserve">
+    <value>Added Live Tile when calculating BMI, image management and calculation when the user is a man or a woman.</value>
+  </data>
+  <data name="AProposVersion13" xml:space="preserve">
+    <value>version 1.3</value>
+  </data>
+  <data name="AProposVersion13Content" xml:space="preserve">
+    <value>Added the about section and fixed a bug in the calculation for certain BMI values and the mismatch of the good image of the live tile.</value>
+  </data>
+  <data name="AProposViePriveeText" xml:space="preserve">
+    <value>privacy</value>
+  </data>
+  <data name="IMCResultTextFirstPart" xml:space="preserve">
+    <value>Your BMI is</value>
+  </data>
+  <data name="IMCResultTextSecondPart" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="PanoramaTitle" xml:space="preserve">
+    <value>Calculate your BMI.</value>
+  </data>
+</root>

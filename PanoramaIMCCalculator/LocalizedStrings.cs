@@ -20,9 +20,9 @@ namespace PanoramaIMCCalculator
         public LocalizedStrings()
         { }
 
-        private static PanoramaIMCCalculator.AppResources localizedResources = new PanoramaIMCCalculator.AppResources();
+        private static PanoramaIMCCalculator.Resources.AppResources.AppResources localizedResources = new PanoramaIMCCalculator.Resources.AppResources.AppResources();
 
-        public PanoramaIMCCalculator.AppResources LocalizedResources { get { return localizedResources; } }
+        public PanoramaIMCCalculator.Resources.AppResources.AppResources LocalizedResources { get { return localizedResources; } }
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>

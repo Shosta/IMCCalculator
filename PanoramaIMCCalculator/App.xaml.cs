@@ -12,12 +12,26 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using PanoramaIMCCalculator.Model;
+using PanoramaIMCCalculator.Managers;
 
 namespace PanoramaIMCCalculator
 {
     public partial class App : Application
     {
+        public enum bmiItemType
+        {
+            severeObesity,
+            obesity,
+            overweight,
+            normal,
+            thinness,
+            undernutrition
+        }
+
+        public static Boolean isMale = true;
+
+        
+
         private static MainViewModel viewModel = null;
 
         /// <summary>

@@ -1,35 +1,25 @@
 ﻿using System;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Linq;
-using PanoramaIMCCalculator.Model;
-using System.Windows.Media.Imaging;
+using PanoramaIMCCalculator.Managers;
 using System.IO.IsolatedStorage;
 using System.IO;
-using System.Windows.Resources;
+using PanoramaIMCCalculator.Resources.AppResources;
 
-namespace PanoramaIMCCalculator
+namespace PanoramaIMCCalculator.Managers
 {
     public class TileManager
     {
         private string backTitleForIMC(double imc, double currentHeight, double currentWeight)
         {
             IMCCalculatorManager imcManager = new IMCCalculatorManager();
-            
+
             string backTitle = "";
             if (imc < 16.5) // Dénutrition
             {
                 backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
-}
+            }
             if (16.5 <= imc && imc < 18.5) // Maigreur
             {
                 backTitle = imcManager.weightToGainFromIMC(imc, currentHeight, currentWeight);
@@ -41,11 +31,11 @@ namespace PanoramaIMCCalculator
             if (30 < imc) // Obésité et Obésité sévère
             {
                 backTitle = imcManager.weightToLoseFromIMC(imc, currentHeight, currentWeight);
-             }
+            }
             if (18.5 <= imc && imc <= 25) // Zone normale
             {
                 backTitle = AppResources.LiveTileBackTitleNormal;
-             }
+            }
 
             return backTitle;
         }
@@ -56,7 +46,7 @@ namespace PanoramaIMCCalculator
             // On recupere le nom de la ressource en fonction de l'imc.
             if (imc < 16.5) // Dénutrition
             {
-                 backBackgroundImageName = "BackTileDenutrition";
+                backBackgroundImageName = "BackTileDenutrition";
             }
             if (16.5 <= imc && imc < 18.5) // Maigreur
             {
@@ -76,7 +66,7 @@ namespace PanoramaIMCCalculator
             }
 
             // On ajoute l'extension en fonction du genre de la personne.
-            if (MainPage.isMale)
+            if (App.isMale)
             {
                 backBackgroundImageName = backBackgroundImageName + ".png";
             }
@@ -122,7 +112,7 @@ namespace PanoramaIMCCalculator
             IMCCalculatorManager imcManager = new IMCCalculatorManager();
             string backTitle = backTitleForIMC(imc, currentHeight, currentWeight);
             string backBackgroundImageName = imageFileNameForIMC(imc);
-           
+
 
             // Application Tile is always the first Tile, even if it is not pinned to Start.
             ShellTile TileToFind = ShellTile.ActiveTiles.First();

@@ -61,27 +61,33 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutPage.xaml.cs">
+    <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AppResources.Designer.cs">
+    <Compile Include="Resources\AppResources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Converters\BmiZoneSelectedConverters.cs" />
+    <Compile Include="Converters\StringToColorConverters.cs" />
+    <Compile Include="Converters\StringToImageConverters.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\IMCCalculatorManager.cs" />
+    <Compile Include="Managers\Model\BMIItem.cs" />
+    <Compile Include="Managers\IMCCalculatorManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TileManager.cs" />
+    <Compile Include="Managers\TileManager.cs" />
+    <Compile Include="ViewModels\BMIItemViewModel.cs" />
     <Compile Include="ViewModels\ItemViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="ZoneDetailPage.xaml.cs">
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\ZoneDetailPage.xaml.cs">
       <DependentUpon>ZoneDetailPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -90,7 +96,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="AboutPage.xaml">
+    <Page Include="Views\AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,11 +104,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="SharedResources.xaml">
       <SubType>Designer</SubType>
-    </DesignData>
-    <Page Include="ZoneDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ZoneDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,20 +172,20 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AppResources.da-DK.resx">
+    <EmbeddedResource Include="Resources\AppResources\AppResources.da-DK.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources.de-DE.resx" />
-    <EmbeddedResource Include="AppResources.en-GB.resx" />
-    <EmbeddedResource Include="AppResources.es-ES.resx" />
-    <EmbeddedResource Include="AppResources.it-IT.resx" />
-    <EmbeddedResource Include="AppResources.nb-NO.resx" />
-    <EmbeddedResource Include="AppResources.nl-NL.resx" />
-    <EmbeddedResource Include="AppResources.resx">
+    <EmbeddedResource Include="Resources\AppResources\AppResources.de-DE.resx" />
+    <EmbeddedResource Include="Resources\AppResources\AppResources.en-GB.resx" />
+    <EmbeddedResource Include="Resources\AppResources\AppResources.es-ES.resx" />
+    <EmbeddedResource Include="Resources\AppResources\AppResources.it-IT.resx" />
+    <EmbeddedResource Include="Resources\AppResources\AppResources.nb-NO.resx" />
+    <EmbeddedResource Include="Resources\AppResources\AppResources.nl-NL.resx" />
+    <EmbeddedResource Include="Resources\AppResources\AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources.sv-SE.resx">
+    <EmbeddedResource Include="Resources\AppResources\AppResources.sv-SE.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

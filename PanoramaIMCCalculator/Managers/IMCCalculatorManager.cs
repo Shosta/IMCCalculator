@@ -8,8 +8,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using PanoramaIMCCalculator.Resources.AppResources;
 
-namespace PanoramaIMCCalculator.Model
+namespace PanoramaIMCCalculator.Managers
 {
     public class IMCCalculatorManager
     {
@@ -43,7 +44,7 @@ namespace PanoramaIMCCalculator.Model
 
             double kiloToGain = desiredWeight - currentWeight;
 
-            return AppResources.WeightToGainFirstPart + Math.Round(kiloToGain, 2) + AppResources.WeightToGainLastPart;
+            return AppResources.WeightToGainFirstPart + " " + Math.Round(kiloToGain, 2) + AppResources.WeightToGainLastPart;
         }
 
         /// <summary>
@@ -60,7 +61,7 @@ namespace PanoramaIMCCalculator.Model
 
             double kiloToLose = currentWeight - desiredWeight;
 
-            return AppResources.WeightToLoseFirstPart + Math.Round(kiloToLose, 2) + AppResources.WeightToLoseLastPart;
+            return AppResources.WeightToLoseFirstPart + " " + Math.Round(kiloToLose, 2) + AppResources.WeightToLoseLastPart;
         }
         
         /// <summary>

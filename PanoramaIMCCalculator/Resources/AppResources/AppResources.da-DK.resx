@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AProposText" xml:space="preserve">
+    <value>om</value>
+  </data>
+  <data name="CalculateIMCButtonText" xml:space="preserve">
+    <value>Beregn</value>
+    <comment>Le bouton permettant de calculer son IMC.</comment>
+  </data>
+  <data name="CalculPanoramaItemTitle" xml:space="preserve">
+    <value>beregning</value>
+    <comment>Le titre du PanoramaItem du calcul</comment>
+  </data>
+  <data name="DenutritionDetailPageContent" xml:space="preserve">
+    <value>Underernæring:
+Fejlernæring er en tilstand, som følge af utilstrækkelige indtag af næringsstoffer i forhold til energiforbruget af organisationen. Når input er utilstrækkelig samt at det er utilstrækkeligt, vi taler om underernæring.
+Fejlernæring er klassificeret i hovedafdeling marasmus af International Classification of Diseases.
+
+Patofysiologi
+Fejlernæring kan have flere oprindelser. Ætiologien er varieret og kan indebære en organisk sygdom, psykiatriske eller sociale. Underernæring kaldes primær når den induceres af en direkte årsag, og sekundær, når det bringes i resultatet af en anden tilstand. Der er to patofysiologiske mekanismer: manglende input og hypermetabolisme.
+
+Fejlernæring mangel bidrag
+I tilfælde af mangel af bidrag er sat op fastende tilstand, som udvikler sig i flere trin. Energikilder i fastende er for glucosemetabolisme, anvendelse af hæpatisk glycogen og glucose-syntese og for lipidmetabolisme, anvendelse af fedtsyrer og ketogenese.
+
+* Faste umiddelbare tilpasning til den mad, der med mellemrum i mindre end tolv timer. Insulinsekretion falder, mens glucagon øges. Dette spil fører til hormonal stimulering af lipolyse og fedtsyre oxidation og ketogenese. At opretholde blodglucose, er glycogenolyse stimuleret udelukkende.
+
+* Faste kort: tilpasning til fraværet af fødeindtagelse over en periode på tolv timer til tre eller fire dage. Insulinsekretion falder yderligere. Udtømning af glycogen forårsager et fald i blodglucose. Den eneste kilde til glucose i legemet bliver gluconeogenese, som producerer glucose fra aminosyrer i muskelprotein fremstilling urinstof som affald. Udskillelse af urinstof derfor øges. Ketogenese fortsætter.
+
+* Forlænget Fasten: Efter cirka fem dage til flere uger. Plasma ketonstoffer forøget, mens udskillelse af urinstof stabiliseres ved 50 mg / kg / dag. Denne stabilisering er relateret til stabilisering af de besparelser, der er omhandlet proteolyse protein. Nye hormonelle forandringer sker, med en nedsat produktion af thyreoideahormoner. Denne fase af længerevarende faste resultater i marasmus.
+
+* Terminal fase: Når fedtdepoterne er opbrugt, er plasmakoncentrationer af fedtsyrer og ketonstoffer sænkes, mens blodsukkeret stiger. Faktisk er der så en øget mobilisering af skeletmuskulatur protein for glukoneogenese. Dette fører til forøget udskillelse af urinstof og nitrogen, og resulterer i høje morbiditet og mortalitet.
+                
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Dénutrition </value>
+  </data>
+  <data name="DenutritionDetailPageTitle" xml:space="preserve">
+    <value>Underernæring</value>
+  </data>
+  <data name="DenutritionHubTileMessage" xml:space="preserve">
+    <value>Du befinder dig i området for fejlernæring.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de dénutrition</comment>
+  </data>
+  <data name="DenutritionHubTileTitle" xml:space="preserve">
+    <value>Underernæring</value>
+    <comment>Le titre de la hubTile de denutrition</comment>
+  </data>
+  <data name="IMCCalculationError" xml:space="preserve">
+    <value>Et problem ved beregning af dit BMI.
+Prøv venligst igen indtaste din højde og vægt.</value>
+    <comment>Texte lors d'une erreur lors du calcul d'un IMC</comment>
+  </data>
+  <data name="InfoFromDenutritionIMC" xml:space="preserve">
+    <value>Du befinder dig i området for fejlernæring.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (denutrition).</comment>
+  </data>
+  <data name="InfoFromMaigreurIMC" xml:space="preserve">
+    <value>Du befinder dig i området for tynde.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (maigreur).</comment>
+  </data>
+  <data name="InfoFromNormalIMC" xml:space="preserve">
+    <value>Du befinder dig i det normale område.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (normal).</comment>
+  </data>
+  <data name="InfoFromObesiteIMC" xml:space="preserve">
+    <value>Du befinder dig i den zone af moderat fedme.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite).</comment>
+  </data>
+  <data name="InfoFromObesiteSevereIMC" xml:space="preserve">
+    <value>Du befinder dig i området for svær overvægt.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (obesite severe).</comment>
+  </data>
+  <data name="InfoFromSurpoidsIMC" xml:space="preserve">
+    <value>Du befinder dig i den overvægtige zone.</value>
+    <comment>Le texte d'information renvoyé par rapport à un IMCdonné (surpoids).</comment>
+  </data>
+  <data name="InformationsPanoramaItemTitle" xml:space="preserve">
+    <value>oplysninger</value>
+  </data>
+  <data name="LiveTileBackTitleNormal" xml:space="preserve">
+    <value>Ikke ændre noget.</value>
+    <comment>Message dans le live tile lorsque l'utilisateur a un IMC normal.</comment>
+  </data>
+  <data name="MaigreurDetailPageContent" xml:space="preserve">
+    <value>Undervægt:
+
+Tynde er den tilstand, hvad der er magert. I tilfælde af en person kaldes undervægt. Som sådan er det defineret af WHO som den abnorme tilstand af personer, hvis BMI er mellem 15 og 18,5.
+Patologisk tynde øger risikoen for forskellige sygdomme, blandt hvilke indbefatter infektioner og osteoporose, men kan også være et symptom på en af ​​dem. Det kan også være en ikke-patologisk tilstand, dvs konstitutionelle, stabile og ikke ledsaget af nogen forstyrrelse.
+ÉtiologieLes årsager kan være
+
+* Sociologisk hungersnød, fattigdom
+* Psykiatrisk: anorexia nervosa, depression
+* Medical: neoplasi, alvorlig infektion (tuberculose. ..), type 1 diabetes, afhængighed, sygdom med intestinal malabsorption, AIDS ...
+* Genetics: Arvelig
+* Morfologi: tynde knogler, muskler formål
+* Forfatningsdomstolen tynd
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Maigreur</value>
+  </data>
+  <data name="MaigreurDetailPageTitle" xml:space="preserve">
+    <value>Undervægt</value>
+  </data>
+  <data name="MaigreurHubTileMessage" xml:space="preserve">
+    <value>Du befinder dig i området for tynde.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de maigreur</comment>
+  </data>
+  <data name="MaigreurHubTileTitle" xml:space="preserve">
+    <value>Undervægt</value>
+    <comment>Le titre de la hubTile de maigreur</comment>
+  </data>
+  <data name="metricHeightTextBoxText" xml:space="preserve">
+    <value>Størrelse</value>
+    <comment>Le placeholder pour la taille</comment>
+  </data>
+  <data name="MetricIMCResultTextBlock" xml:space="preserve">
+    <value>Beregn dit BMI.</value>
+    <comment>Le résumé du calcul de votre IMC.</comment>
+  </data>
+  <data name="metricWeightTextBoxText" xml:space="preserve">
+    <value>Vægt</value>
+    <comment>Le placeholder pour le poids</comment>
+  </data>
+  <data name="NormalDetailPageContent" xml:space="preserve">
+    <value>Må ikke forveksle masse (svær) og vægt.
+Vægten af ​​et legeme er en kraft, hovedsageligt på grund af handlingen udøves ham tyngdefeltet.
+
+Reserver i forbindelse med BMI
+Det er vigtigt at huske på, at BMI er kun en indikator, ikke en given absolut. På grund af deres muskelmasse, har nogle atleter en BMI over 25 kg/m2, de pådrager ingen fare. Ifølge morfologien af ​​en persons BMI varierer i god form. En person kan være squat uden at være fedtet (f.eks Bixente Lizarazu, Mike Tyson eller Jonas Lomu), og en anden kan have en slank, men for meget kropsfedt.
+Også huske på de grænser af de tærskler, der anbefales af WHO. De er nem at bruge, skal disse taerskler ideelt varierer efter køn, alder og etnicitet, og de bør gælde med forsigtighed til individuel diagnose.
+Den dom af sin vægt gennem fedtmasse indekset bør ske ved hjælp af en læge og se en ernæringsekspert eller diætist anbefales.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle</value>
+  </data>
+  <data name="NormalDetailPageTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NormalHubTileMessage" xml:space="preserve">
+    <value>Du befinder dig i normalområdet. Bravo!</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone normale</comment>
+  </data>
+  <data name="NormalHubTileTitle" xml:space="preserve">
+    <value>Normal</value>
+    <comment>Le titre de la hubTile normal</comment>
+  </data>
+  <data name="ObesiteDetailPageContent" xml:space="preserve">
+    <value>Fedme er tilstanden af ​​et individ med en kropsvægt godt stykke over hvad der er ønskeligt eller acceptable, sædvanligvis som følge af en akkumulering af kropsfedt. Den menneskelige fedme er blevet anerkendt som en sygdom i 1997 af WHO. Denne organisation definerer "overvægt og fedme som en unormal eller overdreven ophobning af kropsfedt, der kan skade sundheden." Dens forebyggelse er et problem for folkesundheden i de udviklede lande. Det kan have en betydelig indvirkning på sundheden hos den enkelte.
+Dette multifaktoriel sygdom ses nu metaforisk som en pandemi, selvom dette ikke er en smitsom sygdom.
+
+Definition
+De kliniske former er mange, med de patofysiologiske mekanismer og patologiske konsekvenser forskellige, så det er bedre at tale om "fedme". At vurdere disse fedme bør analyseres to parametre, der påvirker de komplikationer af sygdommen uafhængigt af hinanden: overskydende kropsfedt, og fedtfordeling.
+
+Fænotyper
+4 typer af fedme er beskrevet:
+* Type I: overskydende fedt er fordelt i kroppen uden præferentiel lokalisering;
+* Type II: overskydende fedt er koncentreret om stammen og maven: det kommer til abdominal fedme;
+* Type III: fedtophobning forekommer i maven: det kommer til visceral fedme;
+* Type IV: fedtet er lokaliseret i hofter og lår (glutéofémoral niveau): dette er en gynoid fedme.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteDetailPageTitle" xml:space="preserve">
+    <value>Fedme</value>
+  </data>
+  <data name="ObesiteHubTileMessage" xml:space="preserve">
+    <value>Du befinder dig i den zone af moderat overvægt</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité modérée</comment>
+  </data>
+  <data name="ObesiteHubTileTitle" xml:space="preserve">
+    <value>Fedme</value>
+    <comment>Le titre de la hubTile d'obesite</comment>
+  </data>
+  <data name="ObesiteSevereDetailPageContent" xml:space="preserve">
+    <value>Fedme er tilstanden af ​​et individ med en kropsvægt godt stykke over hvad der er ønskeligt eller acceptable, sædvanligvis som følge af en akkumulering af kropsfedt. Den menneskelige fedme er blevet anerkendt som en sygdom i 1997 af WHO. Denne organisation definerer "overvægt og fedme som en unormal eller overdreven ophobning af kropsfedt, der kan skade sundheden." Dens forebyggelse er et problem for folkesundheden i de udviklede lande. Det kan have en betydelig indvirkning på sundheden hos den enkelte.
+Dette multifaktoriel sygdom ses nu metaforisk som en pandemi, selvom dette ikke er en smitsom sygdom.
+
+Definition
+De kliniske former er mange, med de patofysiologiske mekanismer og patologiske konsekvenser forskellige, så det er bedre at tale om "fedme". At vurdere disse fedme bør analyseres to parametre, der påvirker de komplikationer af sygdommen uafhængigt af hinanden: overskydende kropsfedt, og fedtfordeling.
+
+Fænotyper
+4 typer af fedme er beskrevet:
+* Type I: overskydende fedt er fordelt i kroppen uden præferentiel lokalisering;
+* Type II: overskydende fedt er koncentreret om stammen og maven: det kommer til abdominal fedme;
+* Type III: fedtophobning forekommer i maven: det kommer til visceral fedme;
+* Type IV: fedtet er lokaliseret i hofter og lår (glutéofémoral niveau): dette er en gynoid fedme.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Obésité</value>
+  </data>
+  <data name="ObesiteSevereDetailPageTitle" xml:space="preserve">
+    <value>Svær fedme</value>
+  </data>
+  <data name="ObesiteSevereHubTileMessage" xml:space="preserve">
+    <value>Du befinder dig i området for svær overvægt.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone d'obésité sévère</comment>
+  </data>
+  <data name="ObesiteSevereHubTileTitle" xml:space="preserve">
+    <value>Svær fedme</value>
+    <comment>Le titre de la hubTile d'obesite severe</comment>
+  </data>
+  <data name="ResumePanoramaItemTitle" xml:space="preserve">
+    <value>oversigt</value>
+    <comment>Le titre du PanoramaItem du résumé</comment>
+  </data>
+  <data name="ResumePoidsText" xml:space="preserve">
+    <value>Vægt</value>
+  </data>
+  <data name="ResumeTailleText" xml:space="preserve">
+    <value>Størrelse</value>
+  </data>
+  <data name="StackPanelDenutritionTitle" xml:space="preserve">
+    <value>Underernæring</value>
+  </data>
+  <data name="StackPanelDenutritionZoneInfoText" xml:space="preserve">
+    <value>Du befinder dig i området for fejlernæring</value>
+  </data>
+  <data name="StackPanelDenutritionZoneText" xml:space="preserve">
+    <value>mindst 16,5</value>
+  </data>
+  <data name="StackPanelMaigreurTitle" xml:space="preserve">
+    <value>Undervægt</value>
+  </data>
+  <data name="StackPanelMaigreurZoneInfoText" xml:space="preserve">
+    <value>Du befinder dig i området for tynde.</value>
+  </data>
+  <data name="StackPanelMaigreurZoneText" xml:space="preserve">
+    <value>16,5 til 18,5</value>
+  </data>
+  <data name="StackPanelNormalTitle" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="StackPanelNormalZoneText" xml:space="preserve">
+    <value>18,5 til 25</value>
+  </data>
+  <data name="StackPanelObesiteSevereTitle" xml:space="preserve">
+    <value>Svær fedme</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneInfoText" xml:space="preserve">
+    <value>Du befinder dig i området for svær overvægt.</value>
+  </data>
+  <data name="StackPanelObesiteSevereZoneText" xml:space="preserve">
+    <value>35 og</value>
+  </data>
+  <data name="StackPanelObesiteTitle" xml:space="preserve">
+    <value>Moderat fedme</value>
+  </data>
+  <data name="StackPanelObesiteZoneInfoText" xml:space="preserve">
+    <value>Du befinder dig i den zone af moderat overvægt.</value>
+  </data>
+  <data name="StackPanelObesiteZoneText" xml:space="preserve">
+    <value>30 til 35</value>
+  </data>
+  <data name="StackPanelSurpoidsTitle" xml:space="preserve">
+    <value>Overvægt</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneInfoText" xml:space="preserve">
+    <value>Du befinder dig i området for overvægt.</value>
+  </data>
+  <data name="StackPanelSurpoidsZoneText" xml:space="preserve">
+    <value>25 til 30</value>
+  </data>
+  <data name="SurpoidsDetailPageContent" xml:space="preserve">
+    <value>Overvægt er en tilstand af en person med et BMI betragtes som lidt højere end normalt eller gennemsnittet i et givet samfund.
+
+Det er defineret af World Health Organization som en attribut af personer med en BMI mellem 25 og 30 kilo per kvadratmeter og er, i henhold til disse kriterier, der afgrænses af tynde (eller normal vægt) og »moderat fedme.
+
+Credit Wikipedia: http://fr.wikipedia.org/wiki/Surpoids</value>
+  </data>
+  <data name="SurpoidsDetailPageTitle" xml:space="preserve">
+    <value>Overvægt</value>
+  </data>
+  <data name="SurpoidsHubTileMessage" xml:space="preserve">
+    <value>Du befinder dig i den overvægtige zone.</value>
+    <comment>Message dans la hubTile lorsque l'utilisateur est dans la zone de surpoids</comment>
+  </data>
+  <data name="SurpoidsHubTileTitle" xml:space="preserve">
+    <value>Overvægt</value>
+    <comment>Le titre de la hubTile de surpoids</comment>
+  </data>
+  <data name="WeightToGainFirstPart" xml:space="preserve">
+    <value>Vind </value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase avant le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToGainLastPart" xml:space="preserve">
+    <value> kilos.</value>
+    <comment>Lorsque l'on doit gagner des kilos, la première partie de la phrase apres le nombre de kilos à gagner.</comment>
+  </data>
+  <data name="WeightToLoseFirstPart" xml:space="preserve">
+    <value>Taber</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase avant le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="WeightToLoseLastPart" xml:space="preserve">
+    <value> kilos.</value>
+    <comment>Lorsque l'on doit perdre des kilos, la première partie de la phrase apres le nombre de kilos à perdre.</comment>
+  </data>
+  <data name="AProposAucuneInformationCollecteeText" xml:space="preserve">
+    <value>BMI Calculator ikke indsamle oplysninger om dig.</value>
+    <comment>Texte décrivant que l'application ne collecte aucune données concernant l'utilisateur.</comment>
+  </data>
+  <data name="AProposAuthor" xml:space="preserve">
+    <value>af Rémi Lavedrine</value>
+    <comment>Le nom de l'auteur de l'application</comment>
+  </data>
+  <data name="AProposDonnerVotreAvisText" xml:space="preserve">
+    <value>review</value>
+  </data>
+  <data name="AProposEnvoyerCommentairesText" xml:space="preserve">
+    <value>Send dine kommentarer, spørgsmål, ros:</value>
+  </data>
+  <data name="AProposNonResponsableText" xml:space="preserve">
+    <value>BMI Calculator kan ikke holdes ansvarlig for misbrug, man kan gøre de oplysninger.</value>
+    <comment>Texte decrivant que l'application ne peut etre tenu responsable de la mauvaise utilisation que l'utilisateur peut en faire.</comment>
+  </data>
+  <data name="AProposPanoramaAProposTitle" xml:space="preserve">
+    <value>om</value>
+    <comment>Le titre de l'item à propos du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaLegaleseTitle" xml:space="preserve">
+    <value>legalese</value>
+    <comment>Le titre de l'item legalese du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposPanoramaNouveautesTitle" xml:space="preserve">
+    <value>nyheder</value>
+    <comment>Le titre de l'item nouveautés du Panorama dans l'à propos</comment>
+  </data>
+  <data name="AProposThanksTo" xml:space="preserve">
+    <value>tak til</value>
+    <comment>Texte décrivant les remerciements.</comment>
+  </data>
+  <data name="AProposVersion10" xml:space="preserve">
+    <value>version 1.0</value>
+  </data>
+  <data name="AProposVersion10Content" xml:space="preserve">
+    <value>Første version af programmet</value>
+  </data>
+  <data name="AProposVersion11" xml:space="preserve">
+    <value>version 1.1</value>
+  </data>
+  <data name="AProposVersion11Content" xml:space="preserve">
+    <value>Tilføjet Live-Tile ved beregning af BMI og image ledelse og beregning når brugeren er en mand eller en kvinde.</value>
+  </data>
+  <data name="AProposVersion13" xml:space="preserve">
+    <value>version 1.3</value>
+  </data>
+  <data name="AProposVersion13Content" xml:space="preserve">
+    <value>Tilføjet afsnit om og rettet en fejl i beregningen af ​​BMI for visse værdier af BMI og misforhold mellem det gode billede af den levende flise.</value>
+  </data>
+  <data name="AProposViePriveeText" xml:space="preserve">
+    <value>privatliv</value>
+  </data>
+  <data name="IMCResultTextFirstPart" xml:space="preserve">
+    <value>Dit BMI er</value>
+  </data>
+  <data name="IMCResultTextSecondPart" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="PanoramaTitle" xml:space="preserve">
+    <value>Beregn dit BMI</value>
+  </data>
+</root>

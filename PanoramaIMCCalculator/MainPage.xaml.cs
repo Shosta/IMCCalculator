@@ -1,26 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
-using PanoramaIMCCalculator.Model;
-using System.Collections.Specialized;
+using PanoramaIMCCalculator.Managers;
 using Microsoft.Phone.Shell;
 using System.Windows.Navigation;
+using System.Windows.Input;
+using System.Windows.Media;
+using PanoramaIMCCalculator.Resources.AppResources;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace PanoramaIMCCalculator
 {
     public partial class MainPage : PhoneApplicationPage
     {
-
-        public static Boolean isMale = true;
 
         #region Object
 
@@ -30,7 +24,7 @@ namespace PanoramaIMCCalculator
             InitializeComponent();
 
             // Affecter l'exemple de données au contexte de données du contrôle ListBox
-            DataContext = App.ViewModel;
+            DataContext = App.ViewModel.BMIItemViewModel;
             this.Loaded += new RoutedEventHandler(MainPage_Loaded);
 
             CompletePageInitialization();
@@ -46,6 +40,9 @@ namespace PanoramaIMCCalculator
             this.CompletePageInitialization();
         }
 
+        /// <summary>
+        /// Rebuild the AppplicationBar when the user navigate to this page.
+        /// </summary>
         private void CompletePageInitialization()
         {
             RebuildAppBar();
@@ -66,7 +63,44 @@ namespace PanoramaIMCCalculator
 
         #endregion
 
-        #region AppBar
+        #region Placeholder on Height and Weight TextBox
+
+        /// <summary>
+        /// Fired when the Height or Weight textBo got the Focus. It removes the text to simulate a placeholder.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <author>Rémi Lavedrine</author>
+        /// <date>14/11/2013</date>
+        private void textBox_GotFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            textBox.Text = "";
+        }
+
+        /// <summary>
+        /// Fired when the Height or Weight textBo got the Focus. It replace the text to the default one if it's empty to simulate a placeholder.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <author>Rémi Lavedrine</author>
+        /// <date>14/11/2013</date>
+        private void textBox_LostFocus(object sender, System.Windows.RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "")
+            {
+                if (tb == metricHeightTextBox)
+                    metricHeightTextBox.Text = AppResources.metricHeightTextBoxText;
+
+                if (tb == metricWeightTextBox)
+                    metricWeightTextBox.Text = AppResources.metricWeightTextBoxText;
+            }
+        }
+
+        #endregion
+
+        #region AppBar Building
 
          /// <summary>
          /// 
@@ -76,7 +110,7 @@ namespace PanoramaIMCCalculator
             this.ApplicationBar.Buttons.Clear();
             this.ApplicationBar.MenuItems.Clear();
 
-            switch (MainPanorama.SelectedIndex)
+            switch (MainPivot.SelectedIndex)
             {
                 case -1:
                 case 0:
@@ -143,6 +177,250 @@ namespace PanoramaIMCCalculator
 
         #endregion
 
+        #region AppBar Actions
+
+        /// <summary>
+        /// Navigate to the About Page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <author>Rémi Lavedrine</author>
+        /// <date>14/11/2013</date>
+        private void displayAboutView(object sender, EventArgs e)
+        {
+            Uri uri = new Uri("/PanoramaIMCCalculator;component/Views/AboutPage.xaml", UriKind.Relative);
+            NavigationService.Navigate(uri);
+        }
+
+        private void OnCalculateBMIAppBarButtonOnClick(object sender, EventArgs eventArgs)
+        {
+            this.calculateImcAndUpdateUI();
+
+            this.Focus();
+        }
+
+        /// <summary>
+        /// Calculate the BMI and Update the MainPageUI.
+        /// </summary>
+        /// <author>Rémi Lavedrine</author>
+        /// <date>14/11/2013</date>
+        private void calculateImcAndUpdateUI()
+        {
+            try
+            {
+                string s_height = this.metricHeightTextBox.Text;
+                if (s_height.Contains("."))
+                    s_height = s_height.Substring(0, s_height.IndexOf("."));
+
+                string s_weight = metricWeightTextBox.Text;
+                if (s_weight.Contains("."))
+                    s_weight = s_weight.Substring(0, s_weight.IndexOf("."));
+
+                Double height = Double.Parse(s_height);
+                Double weight = Double.Parse(s_weight);
+                Double imc = calculateMetricIMC(height, weight);
+
+                displayIMCinfo(imc);
+
+                //defineFeedbackHeightandWeightTextBlocks(metricHeightTextBox.Text + " cm", metricWeightTextBox.Text + " kg");
+
+                // Manage the Tile according to the imc result.
+                TileManager tileManager = new TileManager();
+                IMCCalculatorManager imcManager = new IMCCalculatorManager();
+                tileManager.changeBackTile(imc, height, weight, imcManager.infoFromIMC(imc));
+                //changeBackHubTile(imc);
+            }
+            catch
+            {
+                metricIMCResultTextBlock.Text = AppResources.IMCCalculationError;
+            }
+        }
+
+        #endregion
+
+        #region IMC Formula
+
+        // IMC calculation.
+        /// <summary>
+        /// Calculate an IMC for metric height and weight value
+        /// </summary>
+        /// <param name="height">the user height in cm</param>
+        /// <param name="weight"> the user weight in kg</param>
+        /// <returns></returns>
+        private double calculateMetricIMC(double height, double weight)
+        {
+            IMCCalculatorManager manager = new IMCCalculatorManager();
+            double imc = manager.calculateMetricIMC(height, weight);
+
+            String s_imc = Math.Round(imc, 2).ToString("R"); // On prend toutes les valeurs de décimal. Si on ne les veut pas, il suffit de mettre F0 à la place de R.
+            int nbDecimal = s_imc.Length - s_imc.IndexOf(",");
+
+            s_imc = AppResources.IMCResultTextFirstPart + " " + s_imc + AppResources.IMCResultTextSecondPart + "\n" + manager.infoFromIMC(imc);
+
+            if (imc < 18.5)
+            {
+                //displayGainWeightTextBlockFromIMC(imc, height, weight);
+                s_imc = s_imc + "\n" + manager.weightToGainFromIMC(imc, height, weight);
+            }
+            else if (imc > 25)
+            {
+                //displayLoseWeightTextBlockFromIMC(imc, height, weight);
+                s_imc = s_imc + "\n" + manager.weightToLoseFromIMC(imc, height, weight);
+            }
+            metricIMCResultTextBlock.Text = s_imc;
+
+            return imc;
+        }
+
+        /// <summary>
+        /// Calculate an IMC for english height and weight value
+        /// </summary>
+        /// <param name="height">the user height in po</param>
+        /// <param name="weight"> the user weight in lb</param>
+        /// <returns></returns>
+        private double calculateEnglishIMC(int height, double weight)
+        {
+            double imc = 0.0;
+
+            imc = (weight * 703) / (height * height); // Multiply by 703 is in the formula.
+
+            return imc;
+        }
+
+        #endregion
+
+        #region Summary Page display info
+
+        /// <summary>
+        /// Display the correct info according to the current imc on the stack panel.
+        /// </summary>
+        /// <param name="imc">The current IMC.</param>
+        private void displayIMCinfo(double imc)
+        {
+            var type = App.bmiItemType.normal;
+
+            if (imc > 35)
+            {
+                type = App.bmiItemType.severeObesity;
+            }
+            else if (30 < imc && imc <= 35)
+            {
+                type = App.bmiItemType.obesity;
+            }
+            else if (25 < imc && imc <= 30)
+            {
+                type = App.bmiItemType.overweight;
+            }
+            else if (16.5 <= imc && imc < 18.5)
+            {
+                type = App.bmiItemType.thinness;
+            }
+            else if (imc < 16.5)
+            {
+                type = App.bmiItemType.undernutrition;
+            }
+
+            ObservableCollection<BMIItem> observableBmiItemsCollection = App.ViewModel.BMIItemViewModel.BMIItems;
+            var bmiItem = observableBmiItemsCollection.Where(i => i.Type == type).FirstOrDefault();
+            if (bmiItem != null)
+            {
+                bmiItem.IsUsed = true;
+            }
+            var bmiItems = observableBmiItemsCollection.Where(i => i.Type != type).ToList();
+            foreach (var item in bmiItems)
+            {
+                item.IsUsed = false;
+            } 
+        }
+
+        #endregion
+
+        #region TextBox & Keyboard Management
+
+        /// <summary>
+        /// Fired everytime the user press the keyboard.
+        /// If the user press the "Enter" key for the metricHeightTextBox then focus the weight text box to allow the user to enter his weight.
+        /// If the user press the "Enter" key for the metricWeightTextBox then focus the page to hide the keyboard and let the user press the "Calculate" button.
+        /// </summary>
+        /// <param name="sender">The object responsible for firing this event</param>
+        /// <param name="e">The event fired.</param>
+        /// <author>Rémi Lavedrine</author>
+        /// <date>13/11/2013</date>
+        private void metricHeightTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Enter:
+                    if (sender == this.metricWeightTextBox)
+                    {
+                        // Focus the page to hide the keyboard and let the user press the "Activate" button.
+                        this.Focus();
+                    }
+                    else if (sender == this.metricHeightTextBox)
+                    {
+                        // Focus the confirmation text box to allow the user to enter his email address once more.
+                        this.metricWeightTextBox.Focus();
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region Detail Page Navigation
+
+        /// <summary>
+        /// Navigate to the Detail Page. It passes only the bmi type to display the correct information.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <author>Rémi Lavedrine</author>
+        /// <date>14/11/2013</date>
+        private void OnClick_NavigateToDetailPage(object sender, RoutedEventArgs e)
+        {
+            // TODO 
+            DependencyObject tappedElement = e.OriginalSource as UIElement;
+            var tappedItem = this.FindParentOfType<ListBoxItem>(tappedElement);
+
+            if (tappedItem != null)
+            {
+                // DataContext contains reference to data item
+                BMIItem selectedBmiZone = tappedItem.DataContext as BMIItem;
+                string detailPageUri = selectedBmiZone.UrlToNavigate;
+
+                NavigationService.Navigate(ZoneDetailPage.GetUri(selectedBmiZone.Type));
+            }
+
+        }
+
+        private T FindParentOfType<T>(DependencyObject element) where T : DependencyObject
+        {
+            T result = null;
+            DependencyObject currentElement = element;
+            while (currentElement != null)
+            {
+                result = currentElement as T;
+                if (result != null)
+                {
+                    break;
+                }
+                currentElement = VisualTreeHelper.GetParent(currentElement);
+            }
+
+            return result;
+        }
+
+        #endregion
+
+        private void MainPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.RebuildAppBar();
+        }
+
+
+        /*
         #region Summary Page display info
 
         /// <summary>
@@ -589,6 +867,7 @@ namespace PanoramaIMCCalculator
         }
         
         #endregion
+*/
 
     }
 }
