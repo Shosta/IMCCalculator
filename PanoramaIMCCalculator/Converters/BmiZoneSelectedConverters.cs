@@ -25,9 +25,38 @@
 // Brief
 // This class converts the value of the given parameter to a style to hide or display some values according to the Bmi zone in which the user is courrently in.
 //
+// -------------------------------  Copyright ---------------------------------
+//            This software has been developped by France Telecom, FT/OLNC/RD/MAPS/DVC/MSF
+//
+//            Copyright (c) France Telecom 2013
+//
+// COPYRIGHT    : This file is the property of FRANCE TELECOM.
+//                It cannot be copied, used, or modified without obtaining
+//                an authorization from the authors or a mandated
+//                member of FRANCE TELECOM.
+//                If such an authorization is provided, any modified version or
+//                copy of the software has to contain this header.
+//
+// WARRANTIES   : This software is made available by the authors in the  hope
+//                that it will be useful, but without any warranty.
+//                France Telecom is not liable for any consequence related to the
+//                use of the provided software.
+//
+// AUTHORS      : France Telecom  / OLNC / RD / MAPS / DVC / MSF
+// ----------------------------------------------------------------------------
+// Project    : MyMobistar
+// File       : BmiZoneSelectedConverters
+// Created    : 20/11/2013
+// Maintainer : Rémi Lavedrine
+// 
+// Brief
+// 
+//
 
+using PanoramaIMCCalculator.Managers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -35,7 +64,8 @@ using System.Windows.Data;
 
 namespace PanoramaIMCCalculator.Converters
 {
-    #region Unread/Read Messages TextBlock Styles Converter
+
+    #region Is User in BMI Zone TextBlock Styles Converter
 
     public class IsUserInBmiZoneStyleConverter : IValueConverter
     {
@@ -56,4 +86,5 @@ namespace PanoramaIMCCalculator.Converters
     }
 
     #endregion
+
 }

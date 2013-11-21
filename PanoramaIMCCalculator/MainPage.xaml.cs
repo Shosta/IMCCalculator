@@ -419,6 +419,21 @@ namespace PanoramaIMCCalculator
             this.RebuildAppBar();
         }
 
+        private void OnlistBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var lb = (ListBox)sender;
+            var selectedBmiZone = (BMIItem)lb.SelectedItem;
+
+            if (selectedBmiZone == null)
+                return;
+
+            lb.SelectedItem = null;
+
+            string detailPageUri = selectedBmiZone.UrlToNavigate;
+
+            NavigationService.Navigate(ZoneDetailPage.GetUri(selectedBmiZone.Type));
+        }
+
 
         /*
         #region Summary Page display info

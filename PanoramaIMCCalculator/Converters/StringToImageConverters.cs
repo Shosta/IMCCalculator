@@ -27,6 +27,7 @@
 //
 
 using PanoramaIMCCalculator.Managers;
+using PanoramaIMCCalculator.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -87,6 +88,60 @@ namespace PanoramaIMCCalculator.Converters
             }
 
             string imageUrl = "../Resources/Images/HubTileImages/" + gender + icon + selected  + ".png";
+            Uri uri = new Uri(imageUrl, UriKind.Relative);
+            img = new BitmapImage(uri);
+            return img;
+        }
+
+        object IValueConverter.ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
+        }
+    }
+
+    public class BmiItemTypeToImageConverter : IValueConverter
+    {
+        object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            App.bmiItemType type = (App.bmiItemType)value;
+            string selected = "Selected";
+            
+            string gender = App.isMale ? "Homme" : "Femme";
+
+            BitmapImage img = new BitmapImage();
+            img.CreateOptions = BitmapCreateOptions.BackgroundCreation;
+            String icon = "Normal";
+            switch (type)
+            {
+                case App.bmiItemType.severeObesity:
+                    icon = "Obese";
+                    break;
+
+                case App.bmiItemType.obesity:
+                    icon = "Obese";
+                    break;
+
+                case App.bmiItemType.overweight:
+                    icon = "Surpoids";
+                    break;
+
+                case App.bmiItemType.normal:
+                    icon = "NormalSelected";
+                    break;
+
+                case App.bmiItemType.thinness:
+                    icon = "Maigreur";
+                    break;
+
+                case App.bmiItemType.undernutrition:
+                    icon = "Denutrition";
+                    break;
+
+                default:
+                    break;
+            }
+
+            string imageUrl = "../Resources/Images/HubTileImages/" + gender + icon + selected + ".png";
             Uri uri = new Uri(imageUrl, UriKind.Relative);
             img = new BitmapImage(uri);
             return img;

@@ -32,10 +32,12 @@
 
     <!-- Converters -->
     <Converters:BmiTypeToSolidColorBrushConverter x:Key="BmiTypeToSolidColorBrushConverter" />
-    <Converters:BmiItemToImageConverter x:Key="BmiTypeToImageConverter" />
+    <Converters:BmiItemToImageConverter x:Key="BmiItemToImageConverter" />
+    <Converters:BmiItemTypeToImageConverter x:Key="BmiItemTypeToImageConverter" /> 
     <Converters:IsUserInBmiZoneStyleConverter x:Key="IsUserInBmiZoneStyleConverter" 
                                                           IsInBmiZone="{StaticResource IsInBmiZoneTextStyle}" 
                                                           IsNotInBmiZone="{StaticResource IsNotInBmiZoneTextStyle}"/>
+    
     
     <!-- Header Styles-->
     <Style x:Key="MainPagePivotItemHeaderStyle" BasedOn="{StaticResource PhoneTextTitle1Style}" TargetType="TextBlock">
@@ -152,10 +154,10 @@
                            FontSize="20" 
                            Grid.Row="3" 
                            Padding="0"
-                           Style="{Binding IsUsed, Converter={StaticResource IsUserInBmiZoneStyleConverter}}"
-                                   />
+                           Style="{Binding IsUsed, Converter={StaticResource IsUserInBmiZoneStyleConverter}}" />
         </Grid>
     </DataTemplate>
+    
     <Color x:Key="BackgroundBlackGradient">#FFB5B1B1</Color>
-
+    
 </ResourceDictionary>

@@ -61,7 +61,7 @@
         	<Image x:Name="ZoneImage" 
                    Margin="0,0,8,8" 
                    VerticalAlignment="Bottom" 
-                   Source="{Binding Type, Converter={StaticResource BmiTypeToImageConverter}}" 
+                   Source="{Binding Type, Converter={StaticResource BmiItemTypeToImageConverter}}" 
                    HorizontalAlignment="Right" 
                    Height="88" 
                    Width="90" 

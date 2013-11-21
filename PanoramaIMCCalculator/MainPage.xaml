@@ -13,7 +13,8 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False"
+    toolkit:TiltEffect.IsTiltEnabled="True">
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar
             IsMenuEnabled="True"
@@ -25,6 +26,7 @@
             />
     </phone:PhoneApplicationPage.ApplicationBar>
 
+    
     <toolkit:TransitionService.NavigationInTransition>
         <toolkit:NavigationInTransition>
             <toolkit:NavigationInTransition.Forward>
@@ -143,11 +145,15 @@
                 <StackPanel>
                     <!-- The Grid that contains all the information about the User. -->
                     <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Rectangle Fill="#00F4F4F5" 
+                        <Rectangle 
+                                Fill="#00F4F4F5" 
     							Stroke="White" 
     							StrokeThickness="5" 
     							RadiusX="10" 
@@ -155,7 +161,8 @@
     							Margin="8,0,8,4"
     							Height="Auto"
     							Width="Auto"/>
-                        <TextBlock TextWrapping="Wrap" 
+                        <TextBlock 
+                                TextWrapping="Wrap" 
     							Text="{Binding LocalizedResources.ResumeTailleText, Source={StaticResource LocalizedStrings}}" 
     							FontSize="18.667" 
     							HorizontalAlignment="Left" 
@@ -166,16 +173,29 @@
                                 <PlaneProjection RotationZ="90"/>
                             </TextBlock.Projection>
                         </TextBlock>
-                        <TextBlock x:Name="feedbackHeightTextBlock" TextWrapping="Wrap" Text="0 m" TextAlignment="Center" LineHeight="48" FontSize="29.333" FontWeight="Bold" Foreground="White" Margin="50,11,45,13"/>
+                        <TextBlock x:Name="feedbackHeightTextBlock" 
+                                   TextWrapping="Wrap" 
+                                   Text="0 m" 
+                                   TextAlignment="Center"  
+    							   VerticalAlignment="Center"
+                                   LineHeight="48" 
+                                   FontSize="29.333" 
+                                   FontWeight="Bold" 
+                                   Foreground="White" 
+                                   Margin="50,12,45,12"/>
 
-                        <Rectangle Fill="#00F4F4F5" 
+                        <Rectangle 
+                                Fill="#00F4F4F5" 
     							RadiusY="10" 
     							RadiusX="10" 
     							Stroke="White" 
     							StrokeThickness="5" 
     							Margin="8,0,8,4" 
-    							Grid.Column="1"/>
-                        <TextBlock TextWrapping="Wrap" 
+    							Grid.Column="1"
+    							Height="Auto"
+    							Width="Auto"/>
+                        <TextBlock   
+                                TextWrapping="Wrap" 
     							Text="{Binding LocalizedResources.ResumePoidsText, Source={StaticResource LocalizedStrings}}" 
     							FontSize="18.667" 
     							Margin="3,22,0,24" 
@@ -191,6 +211,7 @@
     							TextWrapping="Wrap" 
     							Text="0 kg" 
     							TextAlignment="Center" 
+    							VerticalAlignment="Center"
     							LineHeight="48" 
     							FontSize="29.333" 
     							FontWeight="Bold" 
@@ -200,20 +221,21 @@
 
                     <!-- The ListBox that contains all the BMI zones. -->
                     <ListBox Margin="0,12,0,24" 
-                             Height="530"
-                             ItemsSource="{Binding BMIItems}"
-                             >
-
+                             Height="524"
+                             ItemsSource="{Binding BMIItems}" 
+                             SelectionChanged="OnlistBox_SelectionChanged">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid Margin="12, 20, 20, 12" 
-                                      toolkit:TiltEffect.SuppressTilt="False">
-                                    <ContentControl
-                                    Content="{Binding }"
-    						        ContentTemplate="{StaticResource BMIZoneTemplate}"/>
-                                </Grid>
+                                
+                                    <Grid Margin="12, 20, 20, 12">
+                                        <ContentControl
+                                            Content="{Binding }"
+    						                ContentTemplate="{StaticResource BMIZoneTemplate}"/>
+                                    </Grid>
+                                
                             </DataTemplate>
                         </ListBox.ItemTemplate>
+                        
                     </ListBox>
 
                 </StackPanel>
@@ -226,7 +248,7 @@
                          ItemsSource="{Binding BMIItems}">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <toolkit:WrapPanel toolkit:TiltEffect.IsTiltEnabled="True"/>
+                            <toolkit:WrapPanel/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                     <ListBox.ItemTemplate>
@@ -240,7 +262,7 @@
                                         <toolkit:HubTile 
                                              Height="173" 
                                              Width="173" 
-                                             Source="{Binding Converter={StaticResource BmiTypeToImageConverter}}" 
+                                             Source="{Binding Converter={StaticResource BmiItemToImageConverter}}" 
                                              Margin="0" 
                                              Title="{Binding Title}" 
                                              Message="{Binding HubTileMessage}"

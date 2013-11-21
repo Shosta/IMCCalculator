@@ -120,6 +120,7 @@ namespace PanoramaIMCCalculator.Managers
             {
                 this._isUsed = value;
                 RaisePropertyChanged("IsUsed");
+                RaisePropertyChanged("HubTileMessage");
             }
         }
 
@@ -177,7 +178,7 @@ namespace PanoramaIMCCalculator.Managers
         {
             get
             {
-                return this._hubTileMessage;
+                return this.IsUsed ? this._hubTileMessage : string.Empty;
             }
 
             set
