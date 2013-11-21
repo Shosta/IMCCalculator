@@ -155,7 +155,7 @@ namespace PanoramaIMCCalculator
 
             // Créez le frame, mais ne le définissez pas encore comme RootVisual ; cela permet à l'écran de
             // démarrage de rester actif jusqu'à ce que l'application soit prête pour le rendu.
-            RootFrame = new PhoneApplicationFrame();
+            RootFrame = new TransitionFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
 
             // Gérer les erreurs de navigation
